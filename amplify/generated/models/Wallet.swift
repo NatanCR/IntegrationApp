@@ -2,35 +2,25 @@
 import Amplify
 import Foundation
 
-public struct Event: Model {
+public struct Wallet: Model {
   public let id: String
-  public var eventName: String
-  public var eventDate: String
-  public var activeEvent: Bool
+  public var value: Double?
   public var createdAt: Temporal.DateTime?
   public var updatedAt: Temporal.DateTime?
   
   public init(id: String = UUID().uuidString,
-      eventName: String,
-      eventDate: String,
-      activeEvent: Bool) {
+      value: Double? = nil) {
     self.init(id: id,
-      eventName: eventName,
-      eventDate: eventDate,
-      activeEvent: activeEvent,
+      value: value,
       createdAt: nil,
       updatedAt: nil)
   }
   internal init(id: String = UUID().uuidString,
-      eventName: String,
-      eventDate: String,
-      activeEvent: Bool,
+      value: Double? = nil,
       createdAt: Temporal.DateTime? = nil,
       updatedAt: Temporal.DateTime? = nil) {
       self.id = id
-      self.eventName = eventName
-      self.eventDate = eventDate
-      self.activeEvent = activeEvent
+      self.value = value
       self.createdAt = createdAt
       self.updatedAt = updatedAt
   }

@@ -8,7 +8,7 @@ extension Event {
     case id
     case eventName
     case eventDate
-    case eventMembers
+    case activeEvent
     case createdAt
     case updatedAt
   }
@@ -33,8 +33,8 @@ extension Event {
     model.fields(
       .field(event.id, is: .required, ofType: .string),
       .field(event.eventName, is: .required, ofType: .string),
-      .field(event.eventDate, is: .optional, ofType: .string),
-      .field(event.eventMembers, is: .optional, ofType: .embeddedCollection(of: EventMember.self)),
+      .field(event.eventDate, is: .required, ofType: .string),
+      .field(event.activeEvent, is: .required, ofType: .bool),
       .field(event.createdAt, is: .optional, isReadOnly: true, ofType: .dateTime),
       .field(event.updatedAt, is: .optional, isReadOnly: true, ofType: .dateTime)
     )
