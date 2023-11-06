@@ -13,6 +13,8 @@
 		052486D12AF96E1F004E1692 /* SheetCreateEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052486D02AF96E1F004E1692 /* SheetCreateEvent.swift */; };
 		052486D32AF96E41004E1692 /* TitleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052486D22AF96E41004E1692 /* TitleComponent.swift */; };
 		052486D52AF96FDE004E1692 /* SheetComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052486D42AF96FDE004E1692 /* SheetComponent.swift */; };
+		052486D72AF97E52004E1692 /* IconComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052486D62AF97E52004E1692 /* IconComponent.swift */; };
+		052486D92AF97F46004E1692 /* AddIconComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052486D82AF97F46004E1692 /* AddIconComponent.swift */; };
 		072FC0A9DFD3B9AA5A9C0334 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0818A478FD105E18FE49CAC2 /* Member.swift */; };
 		0779996E03AB90C7596C0775 /* FinanceAnswer+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2BC0F55FA211F727EE20ED /* FinanceAnswer+Schema.swift */; };
 		07DB8945B9F9A64CC22CFDAC /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 59A78B58B7CD66895A17FE22 /* amplifyconfiguration.json */; };
@@ -75,6 +77,8 @@
 		052486D02AF96E1F004E1692 /* SheetCreateEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetCreateEvent.swift; sourceTree = "<group>"; };
 		052486D22AF96E41004E1692 /* TitleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleComponent.swift; sourceTree = "<group>"; };
 		052486D42AF96FDE004E1692 /* SheetComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetComponent.swift; sourceTree = "<group>"; };
+		052486D62AF97E52004E1692 /* IconComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconComponent.swift; sourceTree = "<group>"; };
+		052486D82AF97F46004E1692 /* AddIconComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIconComponent.swift; sourceTree = "<group>"; };
 		0818A478FD105E18FE49CAC2 /* Member.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Member.swift; path = amplify/generated/models/Member.swift; sourceTree = "<group>"; };
 		0A3BBA140DDFA3E08A99B89E /* AnswerType.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = AnswerType.swift; path = amplify/generated/models/AnswerType.swift; sourceTree = "<group>"; };
 		1378B91BAD2131ED9B444B6B /* Quiz+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "Quiz+Schema.swift"; path = "amplify/generated/models/Quiz+Schema.swift"; sourceTree = "<group>"; };
@@ -148,6 +152,8 @@
 				052486CC2AF96D8E004E1692 /* DatePickerComponent.swift */,
 				052486D22AF96E41004E1692 /* TitleComponent.swift */,
 				052486D42AF96FDE004E1692 /* SheetComponent.swift */,
+				052486D62AF97E52004E1692 /* IconComponent.swift */,
+				052486D82AF97F46004E1692 /* AddIconComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -411,6 +417,7 @@
 				FA210D5BE2635F5ABB6AEFB7 /* AllEvents.swift in Sources */,
 				052486D52AF96FDE004E1692 /* SheetComponent.swift in Sources */,
 				913C085E5332031C4BE778EA /* AnswerType.swift in Sources */,
+				052486D72AF97E52004E1692 /* IconComponent.swift in Sources */,
 				FDE34C175D45DFE5597A0D41 /* Finance+Schema.swift in Sources */,
 				DF4B0B48D1D83B6BF69D1786 /* Finance.swift in Sources */,
 				0779996E03AB90C7596C0775 /* FinanceAnswer+Schema.swift in Sources */,
@@ -432,6 +439,7 @@
 				9D626597C91B04AAF3A28DED /* EventTask+Schema.swift in Sources */,
 				1010AEBF58686A0BBBC15FAE /* EventTask.swift in Sources */,
 				052486CB2AF96D66004E1692 /* TextFieldComponent.swift in Sources */,
+				052486D92AF97F46004E1692 /* AddIconComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

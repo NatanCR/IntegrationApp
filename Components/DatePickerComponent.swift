@@ -11,7 +11,7 @@ struct DatePickerComponent: View {
     @Binding var selectedDate: Date
     
     var body: some View {
-        DatePicker("00/00/00", selection: $selectedDate, displayedComponents: .date)
+        DatePicker( "", selection: $selectedDate, displayedComponents: .date)
     }
 }
 
