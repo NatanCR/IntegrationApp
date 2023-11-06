@@ -2,36 +2,14 @@
 import Amplify
 import Foundation
 
-public struct Event: Model {
-  public let id: String
-  public var eventName: String
-  public var eventDate: String
-  public var activeEvent: Bool
-  public var createdAt: Temporal.DateTime?
-  public var updatedAt: Temporal.DateTime?
-  
-  public init(id: String = UUID().uuidString,
-      eventName: String,
-      eventDate: String,
-      activeEvent: Bool) {
-    self.init(id: id,
-      eventName: eventName,
-      eventDate: eventDate,
-      activeEvent: activeEvent,
-      createdAt: nil,
-      updatedAt: nil)
-  }
-  internal init(id: String = UUID().uuidString,
-      eventName: String,
-      eventDate: String,
-      activeEvent: Bool,
-      createdAt: Temporal.DateTime? = nil,
-      updatedAt: Temporal.DateTime? = nil) {
-      self.id = id
-      self.eventName = eventName
-      self.eventDate = eventDate
-      self.activeEvent = activeEvent
-      self.createdAt = createdAt
-      self.updatedAt = updatedAt
-  }
+public struct Event: Embeddable {
+  var id: String?
+  var eventName: String?
+  var eventDate: String?
+  var eventMembers: [Member?]?
+  var quiz: [Quiz?]?
+  var finance: Finance?
+  var activeEvent: Bool?
+  var task: [EventTask?]?
+  var financeValidation: FinanceAnswer?
 }

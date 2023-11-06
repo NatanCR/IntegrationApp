@@ -2,26 +2,8 @@
 import Amplify
 import Foundation
 
-public struct Member: Model {
-  public let id: String
-  public var name: String
-  public var createdAt: Temporal.DateTime?
-  public var updatedAt: Temporal.DateTime?
-  
-  public init(id: String = UUID().uuidString,
-      name: String) {
-    self.init(id: id,
-      name: name,
-      createdAt: nil,
-      updatedAt: nil)
-  }
-  internal init(id: String = UUID().uuidString,
-      name: String,
-      createdAt: Temporal.DateTime? = nil,
-      updatedAt: Temporal.DateTime? = nil) {
-      self.id = id
-      self.name = name
-      self.createdAt = createdAt
-      self.updatedAt = updatedAt
-  }
+public struct Member: Embeddable {
+  var id: String
+  var name: String
+  var financeMember: Bool?
 }

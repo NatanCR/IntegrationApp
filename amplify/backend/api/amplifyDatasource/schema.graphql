@@ -1,67 +1,12 @@
-type Wallet @model
-@auth(rules: [{ allow: public}]) {
+type Wallet @model @auth(rules: [{allow: public}]) {
   id: ID!
   value: Float
 }
 
-type AllEvents @model
-@auth(rules: [{ allow: public}]) {
-  id: ID!
-  currentEvent: Event!
-  previousEvents: [Event]!
-}
-
-type Event @model
-@auth(rules: [{ allow: public}]) {
-  id: ID!
-  eventName: String!
-  eventDate: String!
-  eventMember: [Member]!
-  quiz: [Quiz]!
-  finance: Finance
-  activeEvent: Boolean!
-}
-
-type Member @model
-@auth(rules: [{ allow: public}]) {
-  id: ID!
-  name: String!
-}
-
-enum AnswerType {
-  MULTIPLE
-  UNIQUE
-}
-
-enum QuizCategory {
-  FINANCE
-  ACTIVITIES
-}
-
-type Quiz @model
-@auth(rules: [{ allow: public}]) {
-  id: ID!
-  title: String!
-  category: QuizCategory!
-  answerType: AnswerType!
-  answerOptions: [QuizAnswer]!
-}
-
-type QuizAnswer @model
-@auth(rules: [{ allow: public}]) {
-  id: ID!
-  title: String!
-  votes: Int
-}
-
-type Finance @model
-@auth(rules: [{ allow: public}]) {
-  id: ID!
-  title: String!
-  deadline: String!
-  totalValue: Float!
-  valueMembers: Int
-  collaborators: [Member]!
+type FinanceAnswer {
+  id: ID
+  title: String
+  collaborators: [Member]
 }
 
 enum Status {
@@ -69,25 +14,68 @@ enum Status {
   OFF
 }
 
-type Task @model
-@auth(rules: [{ allow: public}]) {
-  id: ID!
-  title: String!
-  deadline: String!
-  collaborators: [Member]!
-  status: Status!
+type EventTask {
+  id: ID
+  title: String
+  deadline: String
+  collaborators: [Member]
+  status: Status
   icon: String
 }
 
-type FinanceValidation @model
-@auth(rules: [{ allow: public}]) {
-  id: ID!
-  answer: [FinanceAnswer]!
+type Finance {
+  id: ID
+  title: String
+  deadline: String
+  totalValue: Float
+  valueMembers: Int
+  collaborators: [Member]
 }
 
-type FinanceAnswer @model
-@auth(rules: [{ allow: public}]) {
+type QuizAnswer {
+  id: ID
+  title: String
+  votes: Int
+}
+
+type Event {
+  id: ID
+  eventName: String
+  eventDate: String
+  eventMembers: [Member]
+  quiz: [Quiz]
+  finance: Finance
+  activeEvent: Boolean
+  task: [EventTask]
+  financeValidation: FinanceAnswer
+}
+
+type AllEvents @model @auth(rules: [{allow: public}]) {
   id: ID!
-  title: String!
-  collaborators: [Member]!
+  currentEvent: Event
+  previousEvent: [Event]
+}
+
+enum QuizCategory {
+  FINANCE
+  ACTIVITIES
+}
+
+enum AnswerType {
+  MULTIPLE
+  UNIQUE
+}
+
+type Quiz {
+  id: ID
+  title: String
+  category: QuizCategory
+  answerType: AnswerType
+  answerOptions: [QuizAnswer]
+}
+
+type Member {
+  id: ID!
+  name: String!
+  financeMember: Boolean
 }

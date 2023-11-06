@@ -10,17 +10,16 @@
 		072FC0A9DFD3B9AA5A9C0334 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0818A478FD105E18FE49CAC2 /* Member.swift */; };
 		0779996E03AB90C7596C0775 /* FinanceAnswer+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2BC0F55FA211F727EE20ED /* FinanceAnswer+Schema.swift */; };
 		07DB8945B9F9A64CC22CFDAC /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 59A78B58B7CD66895A17FE22 /* amplifyconfiguration.json */; };
-		218BFC27145B823365CA8C79 /* FinanceValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66283FCD89CE7A3D37E646F7 /* FinanceValidation.swift */; };
-		2BC659CBF86954ADF8B4952B /* Task+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B85C44A98965C007672BEA /* Task+Schema.swift */; };
+		1010AEBF58686A0BBBC15FAE /* EventTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA6E0E9DC6A9D7AC5A5C83 /* EventTask.swift */; };
 		2BF7E8017247BC8BF6813DCC /* AllEvents+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A61863889CDDFAE51C03773 /* AllEvents+Schema.swift */; };
 		3F34CF98D77F85C2EB04139B /* QuizCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53985C1525E255896158E27A /* QuizCategory.swift */; };
 		4395AFAE273AE9D84C80C1F6 /* Wallet+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D0B39DD9DAE004DF18460C /* Wallet+Schema.swift */; };
 		46083CDE48D9F101B894A95C /* QuizAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142C164908F44AAC24145E4A /* QuizAnswer.swift */; };
-		6C0C061BED8374C4C04AB616 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9325DE37524BD3733FA0D1D7 /* Task.swift */; };
 		6C334954EAA4ECE89A84A521 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97D2F6793A3AFA7454C6170 /* Quiz.swift */; };
 		7F5E0EC7A3EF3C98E7769949 /* Event+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C7A734010C2E6A10042C4D /* Event+Schema.swift */; };
 		913C085E5332031C4BE778EA /* AnswerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3BBA140DDFA3E08A99B89E /* AnswerType.swift */; };
 		99BDFACFE7F9D9C8D69089B9 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC1B7803B491C739B7F9A26 /* Event.swift */; };
+		9D626597C91B04AAF3A28DED /* EventTask+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9800C52AD99D2D6EF2E819 /* EventTask+Schema.swift */; };
 		AE22028FCA392B006AB85339 /* Quiz+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1378B91BAD2131ED9B444B6B /* Quiz+Schema.swift */; };
 		B1FE0A275CD7EB6334B4C0BF /* AmplifyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE3072566DBB99EFFDFEBB3 /* AmplifyModels.swift */; };
 		B38D21D3AB836C8B69D005E4 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682CC9CE2C02FAD37C0625AE /* Status.swift */; };
@@ -42,7 +41,6 @@
 		E9FCBBF4CC0A4300A119B9F5 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FC3EE45065C6E086CA1E35D /* awsconfiguration.json */; };
 		F263A42006C083F72D7935D3 /* Member+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E3DE02A009FA9A1A169C71 /* Member+Schema.swift */; };
 		F4F7C36D0E5DDBF04431E46E /* FinanceAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E738BF08672277F4CAFC70E /* FinanceAnswer.swift */; };
-		F7F3B875E011667CF99E5020 /* FinanceValidation+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981ED36C58D8A62DCFAD9BF7 /* FinanceValidation+Schema.swift */; };
 		FA210D5BE2635F5ABB6AEFB7 /* AllEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65769038C39234D4546F23D /* AllEvents.swift */; };
 		FDE34C175D45DFE5597A0D41 /* Finance+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0BDD28320DDE7053AE7256 /* Finance+Schema.swift */; };
 /* End PBXBuildFile section */
@@ -76,13 +74,11 @@
 		56C7A734010C2E6A10042C4D /* Event+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "Event+Schema.swift"; path = "amplify/generated/models/Event+Schema.swift"; sourceTree = "<group>"; };
 		59A78B58B7CD66895A17FE22 /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
 		59D0B39DD9DAE004DF18460C /* Wallet+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "Wallet+Schema.swift"; path = "amplify/generated/models/Wallet+Schema.swift"; sourceTree = "<group>"; };
-		66283FCD89CE7A3D37E646F7 /* FinanceValidation.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = FinanceValidation.swift; path = amplify/generated/models/FinanceValidation.swift; sourceTree = "<group>"; };
 		682CC9CE2C02FAD37C0625AE /* Status.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Status.swift; path = amplify/generated/models/Status.swift; sourceTree = "<group>"; };
 		6E738BF08672277F4CAFC70E /* FinanceAnswer.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = FinanceAnswer.swift; path = amplify/generated/models/FinanceAnswer.swift; sourceTree = "<group>"; };
 		7FC3EE45065C6E086CA1E35D /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
-		9325DE37524BD3733FA0D1D7 /* Task.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Task.swift; path = amplify/generated/models/Task.swift; sourceTree = "<group>"; };
 		93EDE9ABCC6912BA606DC10C /* QuizAnswer+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "QuizAnswer+Schema.swift"; path = "amplify/generated/models/QuizAnswer+Schema.swift"; sourceTree = "<group>"; };
-		981ED36C58D8A62DCFAD9BF7 /* FinanceValidation+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "FinanceValidation+Schema.swift"; path = "amplify/generated/models/FinanceValidation+Schema.swift"; sourceTree = "<group>"; };
+		AE9800C52AD99D2D6EF2E819 /* EventTask+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "EventTask+Schema.swift"; path = "amplify/generated/models/EventTask+Schema.swift"; sourceTree = "<group>"; };
 		BEE3072566DBB99EFFDFEBB3 /* AmplifyModels.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = AmplifyModels.swift; path = amplify/generated/models/AmplifyModels.swift; sourceTree = "<group>"; };
 		CCC54485086C00FF12342312 /* Wallet.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Wallet.swift; path = amplify/generated/models/Wallet.swift; sourceTree = "<group>"; };
 		D13CB5CE2AED6C3C00CFEE02 /* IntegrationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntegrationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,9 +94,9 @@
 		D16252F02AED71E40077D469 /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
 		D4F2F6DEDA85AAED111D342D /* Finance.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Finance.swift; path = amplify/generated/models/Finance.swift; sourceTree = "<group>"; };
 		D65769038C39234D4546F23D /* AllEvents.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = AllEvents.swift; path = amplify/generated/models/AllEvents.swift; sourceTree = "<group>"; };
-		D8B85C44A98965C007672BEA /* Task+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "Task+Schema.swift"; path = "amplify/generated/models/Task+Schema.swift"; sourceTree = "<group>"; };
 		DCC1B7803B491C739B7F9A26 /* Event.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Event.swift; path = amplify/generated/models/Event.swift; sourceTree = "<group>"; };
 		E97D2F6793A3AFA7454C6170 /* Quiz.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Quiz.swift; path = amplify/generated/models/Quiz.swift; sourceTree = "<group>"; };
+		F2FA6E0E9DC6A9D7AC5A5C83 /* EventTask.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = EventTask.swift; path = amplify/generated/models/EventTask.swift; sourceTree = "<group>"; };
 		FE2BC0F55FA211F727EE20ED /* FinanceAnswer+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "FinanceAnswer+Schema.swift"; path = "amplify/generated/models/FinanceAnswer+Schema.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -222,8 +218,6 @@
 				D4F2F6DEDA85AAED111D342D /* Finance.swift */,
 				FE2BC0F55FA211F727EE20ED /* FinanceAnswer+Schema.swift */,
 				6E738BF08672277F4CAFC70E /* FinanceAnswer.swift */,
-				981ED36C58D8A62DCFAD9BF7 /* FinanceValidation+Schema.swift */,
-				66283FCD89CE7A3D37E646F7 /* FinanceValidation.swift */,
 				49E3DE02A009FA9A1A169C71 /* Member+Schema.swift */,
 				0818A478FD105E18FE49CAC2 /* Member.swift */,
 				1378B91BAD2131ED9B444B6B /* Quiz+Schema.swift */,
@@ -232,10 +226,10 @@
 				142C164908F44AAC24145E4A /* QuizAnswer.swift */,
 				53985C1525E255896158E27A /* QuizCategory.swift */,
 				682CC9CE2C02FAD37C0625AE /* Status.swift */,
-				D8B85C44A98965C007672BEA /* Task+Schema.swift */,
-				9325DE37524BD3733FA0D1D7 /* Task.swift */,
 				59D0B39DD9DAE004DF18460C /* Wallet+Schema.swift */,
 				CCC54485086C00FF12342312 /* Wallet.swift */,
+				AE9800C52AD99D2D6EF2E819 /* EventTask+Schema.swift */,
+				F2FA6E0E9DC6A9D7AC5A5C83 /* EventTask.swift */,
 			);
 			name = AmplifyModels;
 			sourceTree = "<group>";
@@ -394,8 +388,6 @@
 				DF4B0B48D1D83B6BF69D1786 /* Finance.swift in Sources */,
 				0779996E03AB90C7596C0775 /* FinanceAnswer+Schema.swift in Sources */,
 				F4F7C36D0E5DDBF04431E46E /* FinanceAnswer.swift in Sources */,
-				F7F3B875E011667CF99E5020 /* FinanceValidation+Schema.swift in Sources */,
-				218BFC27145B823365CA8C79 /* FinanceValidation.swift in Sources */,
 				F263A42006C083F72D7935D3 /* Member+Schema.swift in Sources */,
 				072FC0A9DFD3B9AA5A9C0334 /* Member.swift in Sources */,
 				AE22028FCA392B006AB85339 /* Quiz+Schema.swift in Sources */,
@@ -404,10 +396,10 @@
 				46083CDE48D9F101B894A95C /* QuizAnswer.swift in Sources */,
 				3F34CF98D77F85C2EB04139B /* QuizCategory.swift in Sources */,
 				B38D21D3AB836C8B69D005E4 /* Status.swift in Sources */,
-				2BC659CBF86954ADF8B4952B /* Task+Schema.swift in Sources */,
-				6C0C061BED8374C4C04AB616 /* Task.swift in Sources */,
 				4395AFAE273AE9D84C80C1F6 /* Wallet+Schema.swift in Sources */,
 				BF2AE0C91D2DB16F34A11DD4 /* Wallet.swift in Sources */,
+				9D626597C91B04AAF3A28DED /* EventTask+Schema.swift in Sources */,
+				1010AEBF58686A0BBBC15FAE /* EventTask.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
