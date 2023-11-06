@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ComponentTextField: View {
+struct TextFieldComponent: View {
     @Binding var text: String
     var placeholder: String
     

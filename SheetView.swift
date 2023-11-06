@@ -16,7 +16,7 @@ struct SheetView: View {
         NavigationView {
             Form {
                 Section(header: TitleComponent(title:"Título").bold().foregroundColor(.black)) {
-                    ComponentTextField(text: $title, placeholder: "Digite o nome do evento...")
+                    TextFieldComponent(text: $title, placeholder: "Digite o nome do evento...")
     
                 }
                 Section(header: TitleComponent(title:"Data do evento").bold().foregroundColor(.black)) {
@@ -40,6 +40,6 @@ struct SheetView: View {
 }
 
 
-#Preview {
-    SheetView(title: <#Binding<String>#>, selectedDate: <#Binding<Date>#>, isSheetPresented: <#Binding<Bool>#>)
-}
+//#Preview {
+//    SheetView(title: <#Binding<String>#>, selectedDate: <#Binding<Date>#>, isSheetPresented: <#Binding<Bool>#>)
+//}
