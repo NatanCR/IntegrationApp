@@ -8,6 +8,7 @@ extension AllEvents {
     case id
     case currentEvent
     case previousEvent
+    case wallet
     case createdAt
     case updatedAt
   }
@@ -33,6 +34,7 @@ extension AllEvents {
       .field(allEvents.id, is: .required, ofType: .string),
       .field(allEvents.currentEvent, is: .optional, ofType: .embedded(type: Event.self)),
       .field(allEvents.previousEvent, is: .optional, ofType: .embeddedCollection(of: Event.self)),
+      .field(allEvents.wallet, is: .optional, ofType: .embedded(type: Wallet.self)),
       .field(allEvents.createdAt, is: .optional, isReadOnly: true, ofType: .dateTime),
       .field(allEvents.updatedAt, is: .optional, isReadOnly: true, ofType: .dateTime)
     )

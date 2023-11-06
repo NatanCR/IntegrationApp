@@ -16,5 +16,23 @@
         "amplifyDatasource": {}
       }
     }
+  },
+  "integra": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-integrationapp-integra-182350-authRole",
+      "UnauthRoleArn": "arn:aws:iam::501358168775:role/amplify-integrationapp-integra-182350-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::501358168775:role/amplify-integrationapp-integra-182350-authRole",
+      "Region": "sa-east-1",
+      "DeploymentBucketName": "amplify-integrationapp-integra-182350-deployment",
+      "UnauthRoleName": "amplify-integrationapp-integra-182350-unauthRole",
+      "StackName": "amplify-integrationapp-integra-182350",
+      "StackId": "arn:aws:cloudformation:sa-east-1:501358168775:stack/amplify-integrationapp-integra-182350/ca06f870-7cea-11ee-9e02-06c3c01d012c",
+      "AmplifyAppId": "d13jw1854frpus"
+    },
+    "categories": {
+      "api": {
+        "amplifyDatasource": {}
+      }
+    }
   }
 }

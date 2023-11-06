@@ -17,9 +17,8 @@ struct ContentView: View {
                 .foregroundStyle(.tint)
             Text("Hello, world!")
                 .task {
-                    await DataManagement.shared.createEventTable()
+                    await DataManagement.shared.createNewEvent(eventName: "Primeiro Integration")
                 }
-                
         }
         .padding()
     }

@@ -22,7 +22,7 @@ class DataManagement {
     /**Função para criar um item do nosso modelo na tabela do dynamo (ainda sem nenhum evento dentro)**/
     func createEventTable() async {
         do {
-            let newTable = AllEvents()
+            let newTable = AllEvents(wallet: Wallet(value: 0.0))
             saveTableID(tableID: newTable.id)
             
             let savedTable = try await Amplify.DataStore.save(newTable)
