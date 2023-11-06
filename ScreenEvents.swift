@@ -19,7 +19,7 @@ struct ScreenEvents: View {
             Text("Abrir Sheet")
         }
         .sheet(isPresented: $isSheetPresented, content: {
-            SheetView(title: $title, selectedDate: $selectedDate, isSheetPresented: $isSheetPresented)
+            SheetCreateEvent(title: $title, selectedDate: $selectedDate, isSheetPresented: $isSheetPresented)
 //            SheetComponent(isSheetPresented: $isSheetPresented)
         })
     }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SheetView: View {
+struct SheetCreateEvent: View {
     @Binding var title: String
     @Binding var selectedDate: Date
     @Binding var isSheetPresented: Bool
@@ -23,7 +23,7 @@ struct SheetView: View {
                     DatePickerComponent(selectedDate: $selectedDate)
                 }
                 Section(header: TitleComponent(title: "ícone").bold().foregroundColor(.black)) {
-                    
+                
                 }
             }
             .navigationTitle("Criar Evento")

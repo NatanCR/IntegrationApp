@@ -10,7 +10,7 @@
 		052486CB2AF96D66004E1692 /* TextFieldComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052486CA2AF96D66004E1692 /* TextFieldComponent.swift */; };
 		052486CD2AF96D8E004E1692 /* DatePickerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052486CC2AF96D8E004E1692 /* DatePickerComponent.swift */; };
 		052486CF2AF96DEE004E1692 /* ScreenEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052486CE2AF96DEE004E1692 /* ScreenEvents.swift */; };
-		052486D12AF96E1F004E1692 /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052486D02AF96E1F004E1692 /* SheetView.swift */; };
+		052486D12AF96E1F004E1692 /* SheetCreateEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052486D02AF96E1F004E1692 /* SheetCreateEvent.swift */; };
 		052486D32AF96E41004E1692 /* TitleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052486D22AF96E41004E1692 /* TitleComponent.swift */; };
 		052486D52AF96FDE004E1692 /* SheetComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052486D42AF96FDE004E1692 /* SheetComponent.swift */; };
 		072FC0A9DFD3B9AA5A9C0334 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0818A478FD105E18FE49CAC2 /* Member.swift */; };
@@ -72,7 +72,7 @@
 		052486CA2AF96D66004E1692 /* TextFieldComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldComponent.swift; sourceTree = "<group>"; };
 		052486CC2AF96D8E004E1692 /* DatePickerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerComponent.swift; sourceTree = "<group>"; };
 		052486CE2AF96DEE004E1692 /* ScreenEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenEvents.swift; sourceTree = "<group>"; };
-		052486D02AF96E1F004E1692 /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
+		052486D02AF96E1F004E1692 /* SheetCreateEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetCreateEvent.swift; sourceTree = "<group>"; };
 		052486D22AF96E41004E1692 /* TitleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleComponent.swift; sourceTree = "<group>"; };
 		052486D42AF96FDE004E1692 /* SheetComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetComponent.swift; sourceTree = "<group>"; };
 		0818A478FD105E18FE49CAC2 /* Member.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Member.swift; path = amplify/generated/models/Member.swift; sourceTree = "<group>"; };
@@ -164,7 +164,7 @@
 		D13CB5C52AED6C3C00CFEE02 = {
 			isa = PBXGroup;
 			children = (
-				052486D02AF96E1F004E1692 /* SheetView.swift */,
+				052486D02AF96E1F004E1692 /* SheetCreateEvent.swift */,
 				052486CE2AF96DEE004E1692 /* ScreenEvents.swift */,
 				052486C92AF96D26004E1692 /* Components */,
 				D13CB5D02AED6C3C00CFEE02 /* IntegrationApp */,
@@ -426,7 +426,7 @@
 				B38D21D3AB836C8B69D005E4 /* Status.swift in Sources */,
 				052486CD2AF96D8E004E1692 /* DatePickerComponent.swift in Sources */,
 				4395AFAE273AE9D84C80C1F6 /* Wallet+Schema.swift in Sources */,
-				052486D12AF96E1F004E1692 /* SheetView.swift in Sources */,
+				052486D12AF96E1F004E1692 /* SheetCreateEvent.swift in Sources */,
 				BF2AE0C91D2DB16F34A11DD4 /* Wallet.swift in Sources */,
 				052486D32AF96E41004E1692 /* TitleComponent.swift in Sources */,
 				9D626597C91B04AAF3A28DED /* EventTask+Schema.swift in Sources */,
