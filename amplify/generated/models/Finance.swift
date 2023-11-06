@@ -9,4 +9,13 @@ public struct Finance: Embeddable {
   var totalValue: Double?
   var valueMembers: Int?
   var collaborators: [Member?]?
+    
+    public init(id: String = UUID().uuidString, title: String? = nil, deadline: String? = nil, totalValue: Double? = nil, valueMembers: Int? = nil, collaborators: [Member?]? = nil) {
+        self.id = id
+        self.title = title
+        self.deadline = deadline
+        self.totalValue = totalValue
+        self.valueMembers = valueMembers
+        self.collaborators = collaborators
+    }
 }
