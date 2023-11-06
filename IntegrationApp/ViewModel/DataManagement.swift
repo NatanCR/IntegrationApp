@@ -11,6 +11,7 @@ import Amplify
 class DataManagement {
     public static var shared = DataManagement()
     
+    //MARK: - TABLE ID
     func saveTableID(tableID: String) {
         UserDefaults.standard.set(tableID, forKey: "tableID")
     }
@@ -19,6 +20,7 @@ class DataManagement {
         return UserDefaults.standard.string(forKey: "tableID") ?? ""
     }
     
+    //MARK: - CREATING DATA
     /**Função para criar um item do nosso modelo na tabela do dynamo (ainda sem nenhum evento dentro)**/
     func createEventTable() async {
         do {
@@ -32,20 +34,80 @@ class DataManagement {
             print("Could not save event to DataStore: \(error)")
         }
     }
-    
+    /**Função para criar um novo evento na tabela do dynamo**/
     func createNewEvent(eventName: String) async {
         do {
+            //cria um novo evento
             let newEvent = Event(eventName: eventName, eventDate: Formatters.shared.currentDateToString())
-            
-            var eventsData = try await Amplify.DataStore.query(AllEvents.self, byId: AppObjects.shared.tableID)
+            //recebe os dados do banco
+            var eventsData = await getDynamoTable()
+            //recebe o novo evento na variavel
             eventsData?.currentEvent = newEvent
-            
+            //tratamento se existe dados
             if let savedEventsData = eventsData {
+                //salva a nova tabela de dados
                 try await Amplify.DataStore.save(savedEventsData)
                 print("Saved event: \(savedEventsData.currentEvent?.eventName)")
             } else {
                 print("Could not save the instance of AllEvents")
             }
+        } catch {
+            print("Could not query DataStore: \(error)")
+        }
+    }
+    
+    //MARK: - GETTING DATA
+    /**Função para pegar a tabela de AllEvents do dynamo**/
+    func getDynamoTable() async -> AllEvents? {
+        do {
+            //requisita a tabela do banco e faz o tratamento se veio vazia
+            if let allEvents = try await Amplify.DataStore.query(AllEvents.self, byId: AppObjects.shared.tableID) {
+                print("Got allEvents table: \(allEvents.id)")
+                //retorna a tabela de dados
+                return allEvents
+            } else {
+                print("Could not get the instance of AllEvents")
+                return nil
+            }
+            
+        } catch {
+            print("Could not query DataStore: \(error)")
+            return nil
+        }
+    }
+    
+    /**Função para pegar a estrutura do evento atual*/
+    func getCurrentEvent() async -> Event? {
+        do {
+            //trata o recebimento dos dados para saber se esta vazio
+            if let currentEvent = await getDynamoTable()?.currentEvent {
+                print("Got the current event: \(currentEvent.eventName)")
+                //retorna o evento atual
+                return currentEvent
+            } else {
+                print("Could not get the current event in instance of AllEvents")
+                return nil
+            }
+        } catch {
+            print("Could not query DataStore: \(error)")
+            return nil
+        }
+    }
+    
+    //MARK: - SETTING DATA
+    /**Função para colocar o evento atual na lista de eventos passados**/
+    func setNewPreviousEvent() async {
+        do {
+            //trata o recebimento dos dados do evento atual
+            guard let currentEvent = await getCurrentEvent() else { print("Could not get the current event"); return }
+            //trata o recebimento dos dados da tabela do banco
+            guard var tableData = await getDynamoTable() else { print("Could not get the dynamo table"); return }
+            //adiciona o evento atual na lista de passados
+            tableData.previousEvent?.append(currentEvent)
+            //evento atual passa a ser nulo 
+            tableData.currentEvent = nil
+            //salva a nova tabela de dados
+            try await Amplify.DataStore.save(tableData)
         } catch {
             print("Could not query DataStore: \(error)")
         }
