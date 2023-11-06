@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SheetCreatEvent: View {
+struct ScreenEvents: View {
     @State private var isSheetPresented = false
     @State private var title = ""
     @State private var selectedDate = Date()
@@ -20,15 +20,9 @@ struct SheetCreatEvent: View {
         }
         .sheet(isPresented: $isSheetPresented, content: {
             SheetView(title: $title, selectedDate: $selectedDate, isSheetPresented: $isSheetPresented)
+//            SheetComponent(isSheetPresented: $isSheetPresented)
         })
     }
 }
 
-@main
-struct MyApp: App {
-    var body: some Scene {
-        WindowGroup {
-            SheetCreatEvent()
-        }
-    }
-}
+

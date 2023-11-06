@@ -10,7 +10,7 @@ import Amplify
 import AWSDataStorePlugin
 import AWSAPIPlugin
 
-//@main
+@main
 struct IntegrationAppApp: App {
     
     func configureAmplify() {
@@ -34,7 +34,7 @@ struct IntegrationAppApp: App {
     
     var body: some Scene {
         WindowGroup {
-            SheetCreatEvent()
+            ScreenEvents()
         }
     }
 }

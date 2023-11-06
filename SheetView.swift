@@ -19,7 +19,7 @@ struct SheetView: View {
                     TextFieldComponent(text: $title, placeholder: "Digite o nome do evento...")
     
                 }
-                Section(header: TitleComponent(title:"Data do evento").bold().foregroundColor(.black)) {
+                Section(header: TitleComponent(title:"Prazo Final").bold().foregroundColor(.black)) {
                     DatePickerComponent(selectedDate: $selectedDate)
                 }
                 Section(header: TitleComponent(title: "ícone").bold().foregroundColor(.black)) {

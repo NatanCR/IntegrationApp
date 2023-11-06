@@ -1,3 +1,10 @@
+//
+//  TitleComponent.swift
+//  IntegrationApp
+//
+//  Created by Guilherme Borges on 06/11/23.
+//
+
 import SwiftUI
 
 struct TitleComponent: View {

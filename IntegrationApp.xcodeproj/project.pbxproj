@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		052486CB2AF96D66004E1692 /* TextFieldComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052486CA2AF96D66004E1692 /* TextFieldComponent.swift */; };
 		052486CD2AF96D8E004E1692 /* DatePickerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052486CC2AF96D8E004E1692 /* DatePickerComponent.swift */; };
-		052486CF2AF96DEE004E1692 /* SheetCreatEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052486CE2AF96DEE004E1692 /* SheetCreatEvent.swift */; };
+		052486CF2AF96DEE004E1692 /* ScreenEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052486CE2AF96DEE004E1692 /* ScreenEvents.swift */; };
 		052486D12AF96E1F004E1692 /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052486D02AF96E1F004E1692 /* SheetView.swift */; };
 		052486D32AF96E41004E1692 /* TitleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052486D22AF96E41004E1692 /* TitleComponent.swift */; };
 		052486D52AF96FDE004E1692 /* SheetComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052486D42AF96FDE004E1692 /* SheetComponent.swift */; };
@@ -71,7 +71,7 @@
 /* Begin PBXFileReference section */
 		052486CA2AF96D66004E1692 /* TextFieldComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldComponent.swift; sourceTree = "<group>"; };
 		052486CC2AF96D8E004E1692 /* DatePickerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerComponent.swift; sourceTree = "<group>"; };
-		052486CE2AF96DEE004E1692 /* SheetCreatEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetCreatEvent.swift; sourceTree = "<group>"; };
+		052486CE2AF96DEE004E1692 /* ScreenEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenEvents.swift; sourceTree = "<group>"; };
 		052486D02AF96E1F004E1692 /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
 		052486D22AF96E41004E1692 /* TitleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleComponent.swift; sourceTree = "<group>"; };
 		052486D42AF96FDE004E1692 /* SheetComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetComponent.swift; sourceTree = "<group>"; };
@@ -165,7 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				052486D02AF96E1F004E1692 /* SheetView.swift */,
-				052486CE2AF96DEE004E1692 /* SheetCreatEvent.swift */,
+				052486CE2AF96DEE004E1692 /* ScreenEvents.swift */,
 				052486C92AF96D26004E1692 /* Components */,
 				D13CB5D02AED6C3C00CFEE02 /* IntegrationApp */,
 				D13CB5E12AED6C3D00CFEE02 /* IntegrationAppTests */,
@@ -420,7 +420,7 @@
 				AE22028FCA392B006AB85339 /* Quiz+Schema.swift in Sources */,
 				6C334954EAA4ECE89A84A521 /* Quiz.swift in Sources */,
 				C6F64448180A479592BCB58E /* QuizAnswer+Schema.swift in Sources */,
-				052486CF2AF96DEE004E1692 /* SheetCreatEvent.swift in Sources */,
+				052486CF2AF96DEE004E1692 /* ScreenEvents.swift in Sources */,
 				46083CDE48D9F101B894A95C /* QuizAnswer.swift in Sources */,
 				3F34CF98D77F85C2EB04139B /* QuizCategory.swift in Sources */,
 				B38D21D3AB836C8B69D005E4 /* Status.swift in Sources */,
