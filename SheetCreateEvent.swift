@@ -15,21 +15,22 @@ struct SheetCreateEvent: View {
                 Section(header: TitleComponent(title: "Prazo Final").bold().foregroundColor(.black)) {
                     HStack {
                         DatePickerComponent(selectedDate: $selectedDate)
-                        Spacer(minLength:220) 
+                        Spacer(minLength:220)
                     }
                     
                 }
-                Section(header: TitleComponent(title: "ícones").bold().foregroundColor(.black)) {
+                Section(header: TitleComponent(title: "ícone").bold().foregroundColor(.black)) {
                     HStack(spacing:10) {
                         ForEach(icons, id: \.self) { iconName in
                             IconComponent(imageName: "img1")
                         }
                         AddIconComponent(addIconAction: {
-                            // Aqui você pode adicionar a lógica para adicionar mais ícones
+                
                             icons.append("newIcon")
                         })
                     }
                 }
+                .listRowBackground(Color.clear)
             }
             .navigationTitle("Criar Evento")
             .navigationBarItems(
