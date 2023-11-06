@@ -38,6 +38,7 @@
 		D13CB6032AED6F2000CFEE02 /* Amplify in Frameworks */ = {isa = PBXBuildFile; productRef = D13CB6022AED6F2000CFEE02 /* Amplify */; };
 		D16252F12AED71E40077D469 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16252F02AED71E40077D469 /* Formatters.swift */; };
 		D19D77682AF962F500FDFD5B /* DataManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19D77672AF962F500FDFD5B /* DataManagement.swift */; };
+		D1ABB2232AF978BA00F94CA2 /* AppObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1ABB2222AF978BA00F94CA2 /* AppObjects.swift */; };
 		DF4B0B48D1D83B6BF69D1786 /* Finance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2F6DEDA85AAED111D342D /* Finance.swift */; };
 		E9FCBBF4CC0A4300A119B9F5 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FC3EE45065C6E086CA1E35D /* awsconfiguration.json */; };
 		F263A42006C083F72D7935D3 /* Member+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E3DE02A009FA9A1A169C71 /* Member+Schema.swift */; };
@@ -94,6 +95,7 @@
 		D13CB5EE2AED6C3E00CFEE02 /* IntegrationAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D16252F02AED71E40077D469 /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
 		D19D77672AF962F500FDFD5B /* DataManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagement.swift; sourceTree = "<group>"; };
+		D1ABB2222AF978BA00F94CA2 /* AppObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppObjects.swift; sourceTree = "<group>"; };
 		D4F2F6DEDA85AAED111D342D /* Finance.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Finance.swift; path = amplify/generated/models/Finance.swift; sourceTree = "<group>"; };
 		D65769038C39234D4546F23D /* AllEvents.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = AllEvents.swift; path = amplify/generated/models/AllEvents.swift; sourceTree = "<group>"; };
 		DCC1B7803B491C739B7F9A26 /* Event.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Event.swift; path = amplify/generated/models/Event.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				D19D77672AF962F500FDFD5B /* DataManagement.swift */,
+				D1ABB2222AF978BA00F94CA2 /* AppObjects.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 				D16252F12AED71E40077D469 /* Formatters.swift in Sources */,
 				B1FE0A275CD7EB6334B4C0BF /* AmplifyModels.swift in Sources */,
 				7F5E0EC7A3EF3C98E7769949 /* Event+Schema.swift in Sources */,
+				D1ABB2232AF978BA00F94CA2 /* AppObjects.swift in Sources */,
 				99BDFACFE7F9D9C8D69089B9 /* Event.swift in Sources */,
 				2BF7E8017247BC8BF6813DCC /* AllEvents+Schema.swift in Sources */,
 				FA210D5BE2635F5ABB6AEFB7 /* AllEvents.swift in Sources */,

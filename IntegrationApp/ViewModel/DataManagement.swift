@@ -11,20 +11,43 @@ import Amplify
 class DataManagement {
     public static var shared = DataManagement()
     
+    func saveTableID(tableID: String) {
+        UserDefaults.standard.set(tableID, forKey: "tableID")
+    }
+    
+    func getTableID() -> String {
+        return UserDefaults.standard.string(forKey: "tableID") ?? ""
+    }
+    
+    /**Função para criar um item do nosso modelo na tabela do dynamo (ainda sem nenhum evento dentro)**/
     func createEventTable() async {
         do {
             let newTable = AllEvents()
-            let savedTable = try await Amplify.DataStore.save(newTable)
-        } catch {
+            saveTableID(tableID: newTable.id)
             
+            let savedTable = try await Amplify.DataStore.save(newTable)
+            
+            print("Saved event table: \(savedTable.id)")
+        } catch {
+            print("Could not save event to DataStore: \(error)")
         }
     }
     
     func createNewEvent(eventName: String) async {
         do {
             let newEvent = Event(eventName: eventName, eventDate: Formatters.shared.currentDateToString())
-        } catch {
             
+            var eventsData = try await Amplify.DataStore.query(AllEvents.self, byId: AppObjects.shared.tableID)
+            eventsData?.currentEvent = newEvent
+            
+            if let savedEventsData = eventsData {
+                try await Amplify.DataStore.save(savedEventsData)
+                print("Saved event: \(savedEventsData.currentEvent?.eventName)")
+            } else {
+                print("Could not save the instance of AllEvents")
+            }
+        } catch {
+            print("Could not query DataStore: \(error)")
         }
     }
 }
