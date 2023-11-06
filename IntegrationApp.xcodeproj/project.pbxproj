@@ -15,6 +15,10 @@
 		3F34CF98D77F85C2EB04139B /* QuizCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53985C1525E255896158E27A /* QuizCategory.swift */; };
 		4395AFAE273AE9D84C80C1F6 /* Wallet+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D0B39DD9DAE004DF18460C /* Wallet+Schema.swift */; };
 		46083CDE48D9F101B894A95C /* QuizAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142C164908F44AAC24145E4A /* QuizAnswer.swift */; };
+		4DC01B592AF963F600970B79 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC01B582AF963F600970B79 /* Header.swift */; };
+		4DC01B5B2AF97A0400970B79 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC01B5A2AF97A0400970B79 /* AddButton.swift */; };
+		4DC01B5D2AF97D8600970B79 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC01B5C2AF97D8600970B79 /* HomeView.swift */; };
+		4DC01B5F2AF9866900970B79 /* MemberButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC01B5E2AF9866900970B79 /* MemberButton.swift */; };
 		6C334954EAA4ECE89A84A521 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97D2F6793A3AFA7454C6170 /* Quiz.swift */; };
 		7F5E0EC7A3EF3C98E7769949 /* Event+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C7A734010C2E6A10042C4D /* Event+Schema.swift */; };
 		913C085E5332031C4BE778EA /* AnswerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3BBA140DDFA3E08A99B89E /* AnswerType.swift */; };
@@ -70,6 +74,10 @@
 		49E3DE02A009FA9A1A169C71 /* Member+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "Member+Schema.swift"; path = "amplify/generated/models/Member+Schema.swift"; sourceTree = "<group>"; };
 		4A61863889CDDFAE51C03773 /* AllEvents+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "AllEvents+Schema.swift"; path = "amplify/generated/models/AllEvents+Schema.swift"; sourceTree = "<group>"; };
 		4D0BDD28320DDE7053AE7256 /* Finance+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "Finance+Schema.swift"; path = "amplify/generated/models/Finance+Schema.swift"; sourceTree = "<group>"; };
+		4DC01B582AF963F600970B79 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		4DC01B5A2AF97A0400970B79 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
+		4DC01B5C2AF97D8600970B79 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		4DC01B5E2AF9866900970B79 /* MemberButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberButton.swift; sourceTree = "<group>"; };
 		53985C1525E255896158E27A /* QuizCategory.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = QuizCategory.swift; path = amplify/generated/models/QuizCategory.swift; sourceTree = "<group>"; };
 		56C7A734010C2E6A10042C4D /* Event+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "Event+Schema.swift"; path = "amplify/generated/models/Event+Schema.swift"; sourceTree = "<group>"; };
 		59A78B58B7CD66895A17FE22 /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
@@ -166,6 +174,10 @@
 				D16252EF2AED71BB0077D469 /* Modifiers */,
 				D13CB5D12AED6C3C00CFEE02 /* IntegrationAppApp.swift */,
 				D13CB5D32AED6C3C00CFEE02 /* ContentView.swift */,
+				4DC01B582AF963F600970B79 /* Header.swift */,
+				4DC01B5A2AF97A0400970B79 /* AddButton.swift */,
+				4DC01B5C2AF97D8600970B79 /* HomeView.swift */,
+				4DC01B5E2AF9866900970B79 /* MemberButton.swift */,
 				D13CB5D52AED6C3D00CFEE02 /* Assets.xcassets */,
 				D13CB5D72AED6C3D00CFEE02 /* Preview Content */,
 			);
@@ -376,6 +388,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D13CB5D42AED6C3C00CFEE02 /* ContentView.swift in Sources */,
+				4DC01B5D2AF97D8600970B79 /* HomeView.swift in Sources */,
+				4DC01B5F2AF9866900970B79 /* MemberButton.swift in Sources */,
 				D13CB5D22AED6C3C00CFEE02 /* IntegrationAppApp.swift in Sources */,
 				D16252F12AED71E40077D469 /* Formatters.swift in Sources */,
 				B1FE0A275CD7EB6334B4C0BF /* AmplifyModels.swift in Sources */,
@@ -389,12 +403,14 @@
 				0779996E03AB90C7596C0775 /* FinanceAnswer+Schema.swift in Sources */,
 				F4F7C36D0E5DDBF04431E46E /* FinanceAnswer.swift in Sources */,
 				F263A42006C083F72D7935D3 /* Member+Schema.swift in Sources */,
+				4DC01B592AF963F600970B79 /* Header.swift in Sources */,
 				072FC0A9DFD3B9AA5A9C0334 /* Member.swift in Sources */,
 				AE22028FCA392B006AB85339 /* Quiz+Schema.swift in Sources */,
 				6C334954EAA4ECE89A84A521 /* Quiz.swift in Sources */,
 				C6F64448180A479592BCB58E /* QuizAnswer+Schema.swift in Sources */,
 				46083CDE48D9F101B894A95C /* QuizAnswer.swift in Sources */,
 				3F34CF98D77F85C2EB04139B /* QuizCategory.swift in Sources */,
+				4DC01B5B2AF97A0400970B79 /* AddButton.swift in Sources */,
 				B38D21D3AB836C8B69D005E4 /* Status.swift in Sources */,
 				4395AFAE273AE9D84C80C1F6 /* Wallet+Schema.swift in Sources */,
 				BF2AE0C91D2DB16F34A11DD4 /* Wallet.swift in Sources */,
