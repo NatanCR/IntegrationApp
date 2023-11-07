@@ -12,14 +12,7 @@ struct SheetCreateEvent: View {
     @Binding var selectedDate: Date
     @Binding var isSheetPresented: Bool
     @State private var icons: [String] = ["icon1", "icon2", "icon3"]
-
-   // número de colunas de LazyVGrid
-    let gridColumns = [
-        GridItem(.flexible()),
-        GridItem(.flexible()),
-        GridItem(.flexible()),
-        GridItem(.flexible())
-    ]
+    
 
     var body: some View {
         NavigationView {
@@ -34,7 +27,7 @@ struct SheetCreateEvent: View {
                     }
                 }
                 Section(header: Text("Ícone").bold().foregroundColor(.black)) {
-                    LazyVGrid(columns: gridColumns, spacing: 10) {
+                    LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 4), spacing: 10) {
                         ForEach(icons, id: \.self) { iconName in
                             IconComponent(imageName: "img1")
                         }
@@ -44,6 +37,7 @@ struct SheetCreateEvent: View {
                     }
                 }
                 .listRowBackground(Color.clear)
+
             }
             .navigationBarTitle("Criar Evento", displayMode: .inline)
             .navigationBarItems(
