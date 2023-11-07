@@ -19,6 +19,7 @@
 		4DC01B5B2AF97A0400970B79 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC01B5A2AF97A0400970B79 /* AddButton.swift */; };
 		4DC01B5D2AF97D8600970B79 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC01B5C2AF97D8600970B79 /* HomeView.swift */; };
 		4DC01B5F2AF9866900970B79 /* MemberButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC01B5E2AF9866900970B79 /* MemberButton.swift */; };
+		4DC01B612AFAAAAC00970B79 /* MembersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC01B602AFAAAAC00970B79 /* MembersView.swift */; };
 		6C334954EAA4ECE89A84A521 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97D2F6793A3AFA7454C6170 /* Quiz.swift */; };
 		7F5E0EC7A3EF3C98E7769949 /* Event+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C7A734010C2E6A10042C4D /* Event+Schema.swift */; };
 		913C085E5332031C4BE778EA /* AnswerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3BBA140DDFA3E08A99B89E /* AnswerType.swift */; };
@@ -78,6 +79,7 @@
 		4DC01B5A2AF97A0400970B79 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
 		4DC01B5C2AF97D8600970B79 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4DC01B5E2AF9866900970B79 /* MemberButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberButton.swift; sourceTree = "<group>"; };
+		4DC01B602AFAAAAC00970B79 /* MembersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersView.swift; sourceTree = "<group>"; };
 		53985C1525E255896158E27A /* QuizCategory.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = QuizCategory.swift; path = amplify/generated/models/QuizCategory.swift; sourceTree = "<group>"; };
 		56C7A734010C2E6A10042C4D /* Event+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "Event+Schema.swift"; path = "amplify/generated/models/Event+Schema.swift"; sourceTree = "<group>"; };
 		59A78B58B7CD66895A17FE22 /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				4DC01B582AF963F600970B79 /* Header.swift */,
 				4DC01B5A2AF97A0400970B79 /* AddButton.swift */,
 				4DC01B5C2AF97D8600970B79 /* HomeView.swift */,
+				4DC01B602AFAAAAC00970B79 /* MembersView.swift */,
 				4DC01B5E2AF9866900970B79 /* MemberButton.swift */,
 				D13CB5D52AED6C3D00CFEE02 /* Assets.xcassets */,
 				D13CB5D72AED6C3D00CFEE02 /* Preview Content */,
@@ -407,6 +410,7 @@
 				072FC0A9DFD3B9AA5A9C0334 /* Member.swift in Sources */,
 				AE22028FCA392B006AB85339 /* Quiz+Schema.swift in Sources */,
 				6C334954EAA4ECE89A84A521 /* Quiz.swift in Sources */,
+				4DC01B612AFAAAAC00970B79 /* MembersView.swift in Sources */,
 				C6F64448180A479592BCB58E /* QuizAnswer+Schema.swift in Sources */,
 				46083CDE48D9F101B894A95C /* QuizAnswer.swift in Sources */,
 				3F34CF98D77F85C2EB04139B /* QuizCategory.swift in Sources */,

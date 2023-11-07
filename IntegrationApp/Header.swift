@@ -13,7 +13,7 @@ struct Header: View {
             VStack {
                 Rectangle()
                     .fill(Color.blueMedium)
-                    .frame(width: .infinity, height: 150)
+                    .frame(width: 400, height: 150)
                 Spacer()
             }
         }

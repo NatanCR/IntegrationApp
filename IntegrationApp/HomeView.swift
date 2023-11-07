@@ -8,31 +8,38 @@
 import SwiftUI
 
 struct HomeView: View {
-    //var event: [Event]
+    //var event: [AllEvents]
     
     var body: some View {
-        ZStack {
-            Color.blueBg
-                .ignoresSafeArea()
-            VStack {
-                Header()
-                MemberButton()
+        NavigationStack {
+            ZStack {
+                Color.blueBg
+                VStack {
+                    Header()
                 
-                Text("Nenhum evento criado...")
-        //        if event.isEmpty {
-        //            Text("Nenhum evento criado...")
-        //        } else {
-        //            VStack {
-        //
-        //            }
-        //        }
-                
-                AddButton()
+                    Text("Nenhum evento criado...")
+                        .foregroundColor(Color.blueText)
+//                    if event.isEmpty {
+//                                Text("Nenhum evento criado...")
+//                            } else {
+//                                VStack {
+//                    
+//                                }
+//                            }
+                    
+                    AddButton(view: AnyView(MembersView()))
+                        .position(CGPoint(x: 350.0, y: 350.0))
+                }
+                .navigationTitle("Integration App")
+                .toolbar {
+                    MemberButton(view: AnyView(MembersView()))
+                }
             }
-            .navigationTitle("Integration")
+            .ignoresSafeArea()
         }
     }
 }
+
 
 #Preview {
     HomeView()

@@ -18,6 +18,7 @@ public struct AllEvents: Model {
       createdAt: nil,
       updatedAt: nil)
   }
+    
   internal init(id: String = UUID().uuidString,
       currentEvent: Event? = nil,
       previousEvent: [Event?]? = nil,

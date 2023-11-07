@@ -11,16 +11,17 @@ import Amplify
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-                .task {
-//                    await createEvent()
-//                    await getAllEvents()
-//                    await updateEvent()
-//                    await deleteEvent()
-                }
+            HomeView()
+//            Image(systemName: "globe")
+//                .imageScale(.large)
+//                .foregroundStyle(.tint)
+//            Text("Hello, world!")
+//                .task {
+////                    await createEvent()
+////                    await getAllEvents()
+////                    await updateEvent()
+////                    await deleteEvent()
+//                }
         }
         .padding()
     }
