@@ -17,7 +17,6 @@ class DataManagement {
     }
     
     func getTableID() -> String? {
-        return UserDefaults.standard.string(forKey: "tableID") ?? ""
         if let tableId = UserDefaults.standard.string(forKey: "tableID") {
             print("Got the table id: \(tableId)")
             return tableId
@@ -113,16 +112,14 @@ class DataManagement {
     }
     
     //MARK: - SETTING DATA
-    /**Função para colocar o evento atual na lista de eventos passados**/
-    func setNewPreviousEvent() async {
+    /**Função para colocar o evento atual na lista de eventos passados e passar valor nulo ao evento atual**/
+    func setNewPreviousEvent(currentEvent: Event) async {
         do {
-            //trata o recebimento dos dados do evento atual
-            guard let currentEvent = await getCurrentEvent() else { print("Could not get the current event"); return }
             //trata o recebimento dos dados da tabela do banco
             guard var tableData = await getDynamoTable() else { print("Could not get the dynamo table"); return }
             //adiciona o evento atual na lista de passados
             tableData.previousEvent?.append(currentEvent)
-            //evento atual passa a ser nulo 
+            //evento atual passa a ser nulo
             tableData.currentEvent = nil
             //salva a nova tabela de dados
             try await Amplify.DataStore.save(tableData)
@@ -130,28 +127,45 @@ class DataManagement {
             print("Could not query DataStore: \(error)")
         }
     }
+    
+    //MARK: - UPDATING DATA
+    /**Função para atualizar o nome do evento atual no banco e no objeto local.**/
+    func updateEvent(event newEventValue: Event) async {
+        do {
+            //carrega a tabela
+            if var allEvents = await getDynamoTable() {
+                //atualiza o valor do evento atual da tabela
+                allEvents.currentEvent = newEventValue
+                //salva a tabela com o novo evento
+                try await Amplify.DataStore.save(allEvents)
+            } else {
+                print("Could not update the event: \(newEventValue.eventName)")
+            }
+        } catch {
+            print("Could not query DataStore: \(error)")
+        }
+    }
+    
+    //MARK: - DELETING DATA
+    /**Função para colocar o evento atual como nulo**/
+    func deleteCurrentEvent() async {
+        do {
+            //trata o recebimento da tabela
+            if var table = await getDynamoTable() {
+                print("Deleting event: \(table.currentEvent?.eventName)")
+                //evento atual da tabela recebe valor nulo
+                table.currentEvent = nil
+                //salva a tabela com o evento atual nulo
+                try await Amplify.DataStore.save(table)
+            } else {
+                print("Could not get the dybamo table")
+            }
+        } catch {
+            print("Could not query DataStore: \(error)")
+        }
+    }
 }
 
-//    //MARK: - Consulatar eventos
-//    func getAllEvents() async {
-//        do {
-//            let events = try await Amplify.DataStore.query(Event.self)
-//            for event in events {
-//                print("==== Event ====")
-//                print("Name: \(event.eventName)")
-//                if let eventDate = event.eventDate {
-//                    print("Event Date: \(eventDate)")
-//                }
-//                if let members = event.eventMembers {
-//                    for i in members {
-//                        print("Event members: \(i?.name ?? "Zé ninguém")")
-//                    }
-//                }
-//            }
-//        } catch {
-//            print("Could not query DataStore: \(error)")
-//        }
-//    }
 //
 //    //MARK: - Atualizar evento
 //    func updateEvent() async {
