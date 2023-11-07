@@ -11,7 +11,7 @@ struct AddIconComponent: View {
     var addIconAction: () -> Void
     
     var body: some View {
-        Image(systemName: "plus.circle")
+        Image("imgplus")
             .font(.largeTitle)
             .foregroundColor(.blue)
             .onTapGesture {
