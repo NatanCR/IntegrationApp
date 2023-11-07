@@ -24,10 +24,10 @@ struct SheetCreateEvent: View {
     var body: some View {
         NavigationView {
             Form {
-                Section(header: Text("Título").bold().foregroundColor(.black)) {
+                Section(header: Text("Título").bold().foregroundColor(.black).position(x:5)) {
                     TextField("Digite o nome do evento...", text: $title)
                 }
-                Section(header: Text("Prazo Final").bold().foregroundColor(.black)) {
+                Section(header: Text("Prazo Final").bold().foregroundColor(.black).position(x:25)) {
                     HStack {
                         DatePickerComponent(selectedDate: $selectedDate)
                         Spacer(minLength: 220)
@@ -55,5 +55,6 @@ struct SheetCreateEvent: View {
                 }
             )
         }
+        
     }
 }
