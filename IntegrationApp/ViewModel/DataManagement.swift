@@ -95,18 +95,13 @@ class DataManagement {
     
     /**Função para pegar a estrutura do evento atual*/
     func getCurrentEvent() async -> Event? {
-        do {
-            //trata o recebimento dos dados para saber se esta vazio
-            if let currentEvent = await getDynamoTable()?.currentEvent {
-                print("Got the current event: \(currentEvent.eventName)")
-                //retorna o evento atual
-                return currentEvent
-            } else {
-                print("Could not get the current event in instance of AllEvents")
-                return nil
-            }
-        } catch {
-            print("Could not query DataStore: \(error)")
+        //trata o recebimento dos dados para saber se esta vazio
+        if let currentEvent = await getDynamoTable()?.currentEvent {
+            print("Got the current event: \(currentEvent.eventName)")
+            //retorna o evento atual
+            return currentEvent
+        } else {
+            print("Could not get the current event in instance of AllEvents")
             return nil
         }
     }
