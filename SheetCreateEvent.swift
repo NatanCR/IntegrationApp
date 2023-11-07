@@ -18,7 +18,7 @@ struct SheetCreateEvent: View {
         NavigationView {
             Form {
                 Section(header: Text("Título").bold().foregroundColor(.black).position(x:5)) {
-                    TextField("Digite o nome do evento...", text: $title)
+                    TextFieldComponent(text: $title, placeholder: "Digite o nome do evento...")
                 }
                 Section(header: Text("Prazo Final").bold().foregroundColor(.black).position(x:25)) {
                     HStack {
