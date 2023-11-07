@@ -16,8 +16,24 @@ class DataManagement {
         UserDefaults.standard.set(tableID, forKey: "tableID")
     }
     
-    func getTableID() -> String {
+    func getTableID() -> String? {
         return UserDefaults.standard.string(forKey: "tableID") ?? ""
+        if let tableId = UserDefaults.standard.string(forKey: "tableID") {
+            print("Got the table id: \(tableId)")
+            return tableId
+        } else {
+            print("Could not get the table id")
+            return nil
+        }
+    }
+    
+    //MARK: - CREATING USER
+    func saveLocalUser(user: Member) {
+        UserDefaults.standard.set(user, forKey: "user")
+    }
+    
+    func getLocalUser() -> Member {
+        return UserDefaults.standard.object(forKey: "user") as! Member
     }
     
     //MARK: - CREATING DATA
@@ -60,8 +76,10 @@ class DataManagement {
     /**Função para pegar a tabela de AllEvents do dynamo**/
     func getDynamoTable() async -> AllEvents? {
         do {
+            
+            guard let tableId = AppObjects.shared.tableID else { print("Could not get the id"); return nil}
             //requisita a tabela do banco e faz o tratamento se veio vazia
-            if let allEvents = try await Amplify.DataStore.query(AllEvents.self, byId: AppObjects.shared.tableID) {
+            if let allEvents = try await Amplify.DataStore.query(AllEvents.self, byId: tableId) {
                 print("Got allEvents table: \(allEvents.id)")
                 //retorna a tabela de dados
                 return allEvents
@@ -114,19 +132,6 @@ class DataManagement {
     }
 }
 
-
-//    //MARK: - Criar evento
-//    func createEvent() async {
-//        do {
-//            let event = Event(eventName: "Primeiro Integration", eventDate: Formatters.shared.currentDateToString(), eventMembers: [EventMember(name: "Natanzera"), EventMember(name: "Barbaresca")])
-//
-//            let savedEvent = try await Amplify.DataStore.save(event)
-//            print("Saved event: \(savedEvent.eventName)")
-//        } catch {
-//            print("Could not save event to DataStore: \(error)")
-//        }
-//    }
-//
 //    //MARK: - Consulatar eventos
 //    func getAllEvents() async {
 //        do {
