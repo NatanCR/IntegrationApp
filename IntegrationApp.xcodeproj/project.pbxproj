@@ -147,22 +147,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6B5900482AF9654A00152BBF /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				6B59004B2AF9656600152BBF /* EventView.swift */,
-				6B59004D2AF9657A00152BBF /* SegControlComponent.swift */,
-				6B5900512AF97D7B00152BBF /* ScrollViewComponent.swift */,
-				6B59004F2AF9720000152BBF /* CreateButtonComponent.swift */,
-				6B59005D2AFABC0F00152BBF /* RectangleBoxComponent.swift */,
-				6B59005B2AFAA73100152BBF /* SegmentedControllView.swift */,
-				6B5900532AFA8A4900152BBF /* TaskSubview.swift */,
-				6B5900552AFA8A5400152BBF /* FinanceSubview.swift */,
-				6B5900592AFA8AC300152BBF /* QuizzesSubview.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		94D3C1243636597087EC6D20 /* AmplifyConfig */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,7 +181,15 @@
 		D13CB5D02AED6C3C00CFEE02 /* IntegrationApp */ = {
 			isa = PBXGroup;
 			children = (
-				6B5900482AF9654A00152BBF /* Views */,
+				6B59004B2AF9656600152BBF /* EventView.swift */,
+				6B59004D2AF9657A00152BBF /* SegControlComponent.swift */,
+				6B5900512AF97D7B00152BBF /* ScrollViewComponent.swift */,
+				6B59004F2AF9720000152BBF /* CreateButtonComponent.swift */,
+				6B59005D2AFABC0F00152BBF /* RectangleBoxComponent.swift */,
+				6B59005B2AFAA73100152BBF /* SegmentedControllView.swift */,
+				6B5900532AFA8A4900152BBF /* TaskSubview.swift */,
+				6B5900552AFA8A5400152BBF /* FinanceSubview.swift */,
+				6B5900592AFA8AC300152BBF /* QuizzesSubview.swift */,
 				D16252EF2AED71BB0077D469 /* Modifiers */,
 				D13CB5D12AED6C3C00CFEE02 /* IntegrationAppApp.swift */,
 				D13CB5D32AED6C3C00CFEE02 /* ContentView.swift */,
