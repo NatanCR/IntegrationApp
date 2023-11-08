@@ -170,9 +170,6 @@
 		D13CB5C52AED6C3C00CFEE02 = {
 			isa = PBXGroup;
 			children = (
-				052486D02AF96E1F004E1692 /* SheetCreateEvent.swift */,
-				052486CE2AF96DEE004E1692 /* ScreenEvents.swift */,
-				052486C92AF96D26004E1692 /* Components */,
 				D13CB5D02AED6C3C00CFEE02 /* IntegrationApp */,
 				D13CB5E12AED6C3D00CFEE02 /* IntegrationAppTests */,
 				D13CB5EB2AED6C3E00CFEE02 /* IntegrationAppUITests */,
@@ -195,9 +192,12 @@
 		D13CB5D02AED6C3C00CFEE02 /* IntegrationApp */ = {
 			isa = PBXGroup;
 			children = (
+				052486C92AF96D26004E1692 /* Components */,
 				D16252EF2AED71BB0077D469 /* Modifiers */,
 				D13CB5D12AED6C3C00CFEE02 /* IntegrationAppApp.swift */,
 				D13CB5D32AED6C3C00CFEE02 /* ContentView.swift */,
+				052486D02AF96E1F004E1692 /* SheetCreateEvent.swift */,
+				052486CE2AF96DEE004E1692 /* ScreenEvents.swift */,
 				D13CB5D52AED6C3D00CFEE02 /* Assets.xcassets */,
 				D13CB5D72AED6C3D00CFEE02 /* Preview Content */,
 			);
