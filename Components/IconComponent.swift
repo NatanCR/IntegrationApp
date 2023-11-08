@@ -8,14 +8,24 @@
 import SwiftUI
 
 struct IconComponent: View {
-    var imageName: String
+    var iconName: String
     
     var body: some View {
-        Image(imageName)
-            .font(.largeTitle)
+            Button(action: {
+                
+            }, label: {
+                Image(systemName: iconName)
+                    .foregroundStyle(Color.white)
+            })
+            .frame(width: 60, height: 60)
+            .background(
+                RoundedRectangle(cornerRadius: 15, style: .continuous)
+                    .fill(Color("AzulPrimario"))
+                    
+            )
     }
 }
 
 #Preview {
-    IconComponent(imageName: "")
+    IconComponent(iconName: "")
 }

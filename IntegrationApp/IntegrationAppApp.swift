@@ -34,7 +34,22 @@ struct IntegrationAppApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ScreenEvents()
+            GeometryReader { geo in
+                ScreenEvents()
+                    .environment(\.screenSize, geo.size)
+            }
         }
+    }
+}
+
+
+private struct ScreenSizeKey : EnvironmentKey {
+    static let defaultValue: CGSize = .zero
+}
+
+extension EnvironmentValues {
+    var screenSize: CGSize {
+        get { self[ScreenSizeKey.self] }
+        set { self[ScreenSizeKey.self] = newValue }
     }
 }
