@@ -23,6 +23,15 @@
 		3F34CF98D77F85C2EB04139B /* QuizCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53985C1525E255896158E27A /* QuizCategory.swift */; };
 		4395AFAE273AE9D84C80C1F6 /* Wallet+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D0B39DD9DAE004DF18460C /* Wallet+Schema.swift */; };
 		46083CDE48D9F101B894A95C /* QuizAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142C164908F44AAC24145E4A /* QuizAnswer.swift */; };
+		6B59004C2AF9656600152BBF /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B59004B2AF9656600152BBF /* EventView.swift */; };
+		6B59004E2AF9657A00152BBF /* SegControlComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B59004D2AF9657A00152BBF /* SegControlComponent.swift */; };
+		6B5900502AF9720000152BBF /* CreateButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B59004F2AF9720000152BBF /* CreateButtonComponent.swift */; };
+		6B5900522AF97D7B00152BBF /* ScrollViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5900512AF97D7B00152BBF /* ScrollViewComponent.swift */; };
+		6B5900542AFA8A4900152BBF /* TaskSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5900532AFA8A4900152BBF /* TaskSubview.swift */; };
+		6B5900562AFA8A5400152BBF /* FinanceSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5900552AFA8A5400152BBF /* FinanceSubview.swift */; };
+		6B59005A2AFA8AC300152BBF /* QuizzesSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5900592AFA8AC300152BBF /* QuizzesSubview.swift */; };
+		6B59005C2AFAA73100152BBF /* SegmentedControllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B59005B2AFAA73100152BBF /* SegmentedControllView.swift */; };
+		6B59005E2AFABC0F00152BBF /* RectangleBoxComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B59005D2AFABC0F00152BBF /* RectangleBoxComponent.swift */; };
 		6C334954EAA4ECE89A84A521 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97D2F6793A3AFA7454C6170 /* Quiz.swift */; };
 		7F5E0EC7A3EF3C98E7769949 /* Event+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C7A734010C2E6A10042C4D /* Event+Schema.swift */; };
 		913C085E5332031C4BE778EA /* AnswerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3BBA140DDFA3E08A99B89E /* AnswerType.swift */; };
@@ -93,6 +102,15 @@
 		59A78B58B7CD66895A17FE22 /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
 		59D0B39DD9DAE004DF18460C /* Wallet+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "Wallet+Schema.swift"; path = "amplify/generated/models/Wallet+Schema.swift"; sourceTree = "<group>"; };
 		682CC9CE2C02FAD37C0625AE /* Status.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Status.swift; path = amplify/generated/models/Status.swift; sourceTree = "<group>"; };
+		6B59004B2AF9656600152BBF /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
+		6B59004D2AF9657A00152BBF /* SegControlComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegControlComponent.swift; sourceTree = "<group>"; };
+		6B59004F2AF9720000152BBF /* CreateButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateButtonComponent.swift; sourceTree = "<group>"; };
+		6B5900512AF97D7B00152BBF /* ScrollViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewComponent.swift; sourceTree = "<group>"; };
+		6B5900532AFA8A4900152BBF /* TaskSubview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskSubview.swift; sourceTree = "<group>"; };
+		6B5900552AFA8A5400152BBF /* FinanceSubview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceSubview.swift; sourceTree = "<group>"; };
+		6B5900592AFA8AC300152BBF /* QuizzesSubview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzesSubview.swift; sourceTree = "<group>"; };
+		6B59005B2AFAA73100152BBF /* SegmentedControllView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControllView.swift; sourceTree = "<group>"; };
+		6B59005D2AFABC0F00152BBF /* RectangleBoxComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleBoxComponent.swift; sourceTree = "<group>"; };
 		6E738BF08672277F4CAFC70E /* FinanceAnswer.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = FinanceAnswer.swift; path = amplify/generated/models/FinanceAnswer.swift; sourceTree = "<group>"; };
 		7FC3EE45065C6E086CA1E35D /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		93EDE9ABCC6912BA606DC10C /* QuizAnswer+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "QuizAnswer+Schema.swift"; path = "amplify/generated/models/QuizAnswer+Schema.swift"; sourceTree = "<group>"; };
@@ -191,6 +209,15 @@
 				052486D42AF96FDE004E1692 /* SheetComponent.swift */,
 				052486D62AF97E52004E1692 /* IconComponent.swift */,
 				052486D82AF97F46004E1692 /* AddIconComponent.swift */,
+				6B59004B2AF9656600152BBF /* EventView.swift */,
+				6B59004D2AF9657A00152BBF /* SegControlComponent.swift */,
+				6B5900512AF97D7B00152BBF /* ScrollViewComponent.swift */,
+				6B59004F2AF9720000152BBF /* CreateButtonComponent.swift */,
+				6B59005D2AFABC0F00152BBF /* RectangleBoxComponent.swift */,
+				6B59005B2AFAA73100152BBF /* SegmentedControllView.swift */,
+				6B5900532AFA8A4900152BBF /* TaskSubview.swift */,
+				6B5900552AFA8A5400152BBF /* FinanceSubview.swift */,
+				6B5900592AFA8AC300152BBF /* QuizzesSubview.swift */,
 				D16252EF2AED71BB0077D469 /* Modifiers */,
 				D13CB5D12AED6C3C00CFEE02 /* IntegrationAppApp.swift */,
 				D13CB5D32AED6C3C00CFEE02 /* ContentView.swift */,
@@ -405,7 +432,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B5900562AFA8A5400152BBF /* FinanceSubview.swift in Sources */,
 				D13CB5D42AED6C3C00CFEE02 /* ContentView.swift in Sources */,
+				6B59005C2AFAA73100152BBF /* SegmentedControllView.swift in Sources */,
 				D13CB5D22AED6C3C00CFEE02 /* IntegrationAppApp.swift in Sources */,
 				D16252F12AED71E40077D469 /* Formatters.swift in Sources */,
 				B1FE0A275CD7EB6334B4C0BF /* AmplifyModels.swift in Sources */,
@@ -413,16 +442,21 @@
 				D1ABB2232AF978BA00F94CA2 /* AppObjects.swift in Sources */,
 				99BDFACFE7F9D9C8D69089B9 /* Event.swift in Sources */,
 				2BF7E8017247BC8BF6813DCC /* AllEvents+Schema.swift in Sources */,
+				6B5900522AF97D7B00152BBF /* ScrollViewComponent.swift in Sources */,
+				6B5900542AFA8A4900152BBF /* TaskSubview.swift in Sources */,
 				FA210D5BE2635F5ABB6AEFB7 /* AllEvents.swift in Sources */,
 				052486D52AF96FDE004E1692 /* SheetComponent.swift in Sources */,
 				913C085E5332031C4BE778EA /* AnswerType.swift in Sources */,
 				052486D72AF97E52004E1692 /* IconComponent.swift in Sources */,
+				6B5900502AF9720000152BBF /* CreateButtonComponent.swift in Sources */,
 				FDE34C175D45DFE5597A0D41 /* Finance+Schema.swift in Sources */,
 				DF4B0B48D1D83B6BF69D1786 /* Finance.swift in Sources */,
+				6B59005A2AFA8AC300152BBF /* QuizzesSubview.swift in Sources */,
 				0779996E03AB90C7596C0775 /* FinanceAnswer+Schema.swift in Sources */,
 				F4F7C36D0E5DDBF04431E46E /* FinanceAnswer.swift in Sources */,
 				F263A42006C083F72D7935D3 /* Member+Schema.swift in Sources */,
 				072FC0A9DFD3B9AA5A9C0334 /* Member.swift in Sources */,
+				6B59004C2AF9656600152BBF /* EventView.swift in Sources */,
 				AE22028FCA392B006AB85339 /* Quiz+Schema.swift in Sources */,
 				D19D77682AF962F500FDFD5B /* DataManagement.swift in Sources */,
 				6C334954EAA4ECE89A84A521 /* Quiz.swift in Sources */,
@@ -437,6 +471,8 @@
 				BF2AE0C91D2DB16F34A11DD4 /* Wallet.swift in Sources */,
 				052486D32AF96E41004E1692 /* TitleComponent.swift in Sources */,
 				9D626597C91B04AAF3A28DED /* EventTask+Schema.swift in Sources */,
+				6B59004E2AF9657A00152BBF /* SegControlComponent.swift in Sources */,
+				6B59005E2AFABC0F00152BBF /* RectangleBoxComponent.swift in Sources */,
 				1010AEBF58686A0BBBC15FAE /* EventTask.swift in Sources */,
 				052486CB2AF96D66004E1692 /* TextFieldComponent.swift in Sources */,
 				052486D92AF97F46004E1692 /* AddIconComponent.swift in Sources */,
