@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ScreenEvents: View {
+struct CreateEventButton: View {
     @State private var isSheetPresented = false
     @State private var title = ""
     @State private var selectedDate = Date()

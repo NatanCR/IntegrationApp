@@ -42,9 +42,6 @@ struct SheetCreateEvent: View {
                         ForEach(icons, id: \.self) { iconName in
                             IconComponent(iconName: iconName)
                         }
-//                        AddIconComponent(addIconAction: {
-//                            icons.append("newIcon")
-//                        })
                     }
                 }
                 .listRowBackground(Color.clear)
