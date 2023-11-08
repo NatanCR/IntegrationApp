@@ -167,7 +167,8 @@
 		D13CB5D02AED6C3C00CFEE02 /* IntegrationApp */ = {
 			isa = PBXGroup;
 			children = (
-				D19D77662AF961D400FDFD5B /* ViewModel */,
+				D19D77672AF962F500FDFD5B /* DataManagement.swift */,
+				D1ABB2222AF978BA00F94CA2 /* AppObjects.swift */,
 				D16252EF2AED71BB0077D469 /* Modifiers */,
 				D13CB5D12AED6C3C00CFEE02 /* IntegrationAppApp.swift */,
 				D13CB5D32AED6C3C00CFEE02 /* ContentView.swift */,
@@ -208,15 +209,6 @@
 				D16252F02AED71E40077D469 /* Formatters.swift */,
 			);
 			path = Modifiers;
-			sourceTree = "<group>";
-		};
-		D19D77662AF961D400FDFD5B /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				D19D77672AF962F500FDFD5B /* DataManagement.swift */,
-				D1ABB2222AF978BA00F94CA2 /* AppObjects.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		EE8E8F35B8B6DB90075D0A46 /* AmplifyModels */ = {
