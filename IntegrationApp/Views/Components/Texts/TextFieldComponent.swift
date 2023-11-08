@@ -16,7 +16,7 @@ struct TextFieldComponent: View {
         TextField(placeholder, text: $text)
             .padding(.horizontal, 8)
             .frame(width: screenSize.width * 0.9, height: screenSize.height * 0.07)
-            .background(Color("AzulPrimario"))
+            .background(Color.primaryBlue)
             .cornerRadius(15)
     }
 }

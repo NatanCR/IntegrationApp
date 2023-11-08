@@ -27,7 +27,7 @@ struct SheetCreateEvent: View {
                     
                     ZStack(alignment: .leading) {
                         RoundedRectangle(cornerRadius: 15)
-                            .fill(Color("AzulPrimario"))
+                            .fill(Color.primaryBlue)
                             .frame(width: screenSize.width * 0.9, height: screenSize.height * 0.07)
                         HStack {
                             DatePickerComponent(selectedDate: $selectedDate)
@@ -49,7 +49,7 @@ struct SheetCreateEvent: View {
             }
             .scrollContentBackground(.hidden)
             .navigationBarTitle("Criar Evento", displayMode: .inline)
-            .toolbarBackground(Color("AzulPrimario"), for: .navigationBar)
+            .toolbarBackground(Color.primaryBlue, for: .navigationBar)
             .navigationBarItems(
                 leading: Button("Cancelar") {
                     isSheetPresented = false

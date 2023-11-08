@@ -35,7 +35,7 @@ struct IntegrationAppApp: App {
     var body: some Scene {
         WindowGroup {
             GeometryReader { geo in
-                CreateEventButton()
+                EventView()
                     .environment(\.screenSize, geo.size)
             }
         }

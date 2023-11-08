@@ -20,7 +20,7 @@ struct IconComponent: View {
             .frame(width: 60, height: 60)
             .background(
                 RoundedRectangle(cornerRadius: 15, style: .continuous)
-                    .fill(Color("AzulPrimario"))
+                    .fill(Color.primaryBlue)
                     
             )
     }

@@ -21,7 +21,7 @@ struct RectangleBoxComponent: View {
                 
                 Rectangle()
                     .fill(
-                        Color(.blueBoxes))
+                        Color(.primaryBlue))
                     .frame(width: 350, height: 154)
                     .clipShape(RoundedRectangle(cornerRadius: 15))
                 HStack(spacing: 250) {
