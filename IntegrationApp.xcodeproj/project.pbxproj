@@ -145,19 +145,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		052486C92AF96D26004E1692 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				052486CA2AF96D66004E1692 /* TextFieldComponent.swift */,
-				052486CC2AF96D8E004E1692 /* DatePickerComponent.swift */,
-				052486D22AF96E41004E1692 /* TitleComponent.swift */,
-				052486D42AF96FDE004E1692 /* SheetComponent.swift */,
-				052486D62AF97E52004E1692 /* IconComponent.swift */,
-				052486D82AF97F46004E1692 /* AddIconComponent.swift */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
 		94D3C1243636597087EC6D20 /* AmplifyConfig */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,7 +179,12 @@
 		D13CB5D02AED6C3C00CFEE02 /* IntegrationApp */ = {
 			isa = PBXGroup;
 			children = (
-				052486C92AF96D26004E1692 /* Components */,
+				052486CA2AF96D66004E1692 /* TextFieldComponent.swift */,
+				052486CC2AF96D8E004E1692 /* DatePickerComponent.swift */,
+				052486D22AF96E41004E1692 /* TitleComponent.swift */,
+				052486D42AF96FDE004E1692 /* SheetComponent.swift */,
+				052486D62AF97E52004E1692 /* IconComponent.swift */,
+				052486D82AF97F46004E1692 /* AddIconComponent.swift */,
 				D16252EF2AED71BB0077D469 /* Modifiers */,
 				D13CB5D12AED6C3C00CFEE02 /* IntegrationAppApp.swift */,
 				D13CB5D32AED6C3C00CFEE02 /* ContentView.swift */,
