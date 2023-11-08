@@ -8,9 +8,14 @@
 import SwiftUI
 
 struct SegControlComponent: View {
+    @State var initialProperty = "Tarefa"
+    @State private var eventsProperty = ["Tarefa", "Enquetes", "Financeiro"]
+    
+    var cornerRadius: CGFloat = 15
     var task = EventTask()
     var finance = Finance()
     var quiz = Quiz()
+    
     
     init(task: EventTask = EventTask(), finance: Finance = Finance(), quiz: Quiz = Quiz()) {
         self.task = task
@@ -18,21 +23,40 @@ struct SegControlComponent: View {
         self.quiz = quiz
     }
     
-    @State var initialProperty = "Tarefa"
-    var eventsProperty = ["Tarefa", "Enquetes", "Financeiro"]
-    
+    init() {
+        if let selectedSegmentColor = UIColor(named: "SegmentedControlSelected") {
+            UISegmentedControl.appearance().selectedSegmentTintColor = selectedSegmentColor
+        }
+    }
     
     var body: some View {
-            ZStack {
-                Color(.systemBlue)
+        ZStack {
+            VStack {
+                SegmentControlView(segments: eventsProperty,
+                                   selected: $initialProperty,
+                                   titleNormalColor: .white,
+                                   titleSelectedColor: .white,
+                                   selectedColor: .segmentedControlSelected, 
+                                   defaultColor: .segmentedControlNotSelected,
+                                   animation: Animation.default) { property in
+                    Text(property)
+                        .font(.system(size: 16, weight: .semibold, design: .rounded))
+                        .padding(.horizontal)
+                        .padding(.vertical, 8)
+                } background: {
+                    RoundedRectangle(cornerRadius: cornerRadius, style: .circular)
+                }
+                .padding(.leading, 20)
+                .padding(.trailing, 20)
+                .frame(height: 55)
+                .padding(.top, 20)
+            
+                ScrollViewComponent(selection: initialProperty)
+            }
+        }
+        .ignoresSafeArea()
+        .padding(.top, 110)
         
-                Picker("Propriedades do Evento", selection: $initialProperty) {
-                    ForEach(eventsProperty, id: \.self) { prop in
-                        Text(prop)
-                    }
-                }.pickerStyle(.segmented)
-        }.ignoresSafeArea()
-            .frame(width: 358, height: 55)
     }
 }
 

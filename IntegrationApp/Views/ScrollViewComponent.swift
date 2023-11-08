@@ -8,20 +8,28 @@
 import SwiftUI
 
 struct ScrollViewComponent: View {
+    var selection: String
+    
     var body: some View {
         ScrollView {
             VStack(spacing: 30) {
                 //Enquete criada
-                ForEach(0..<15) {
-                    Text("Enquete \($0)")
-                        .frame(width: 350, height: 154)
-                        .background(Color("QuizBlue"))
+                
+                switch selection {
+                case "Tarefa":
+                    TaskSubview()
+                case "Enquetes":
+                    QuizzesSubview()
+                case "Financeiro":
+                    FinanceSubview()
+                default:
+                    TaskSubview()
                 }
-            }
-        }.ignoresSafeArea()
+                
+            }.frame(height: 800)
+                .ignoresSafeArea()
+                
+        }
     }
 }
 
-#Preview {
-    ScrollViewComponent()
-}

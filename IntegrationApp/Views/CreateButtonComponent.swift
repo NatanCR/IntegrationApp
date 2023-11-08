@@ -12,6 +12,7 @@ struct CreateButtonComponent: View {
         ZStack {
             Button {
                 print("Adicionar ainda")
+                
             } label: {
                 Image(systemName: "plus")
                     .foregroundStyle(.white)
@@ -25,7 +26,7 @@ struct CreateButtonComponent: View {
             }
             .frame(width: 50, height: 50)
         }
-            .frame(width: 50, height: 50)
+        .frame(width: 300, height: 700, alignment: .bottomTrailing)
     }
 }
 

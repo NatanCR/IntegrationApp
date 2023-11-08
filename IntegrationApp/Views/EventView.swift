@@ -7,33 +7,25 @@
 
 import SwiftUI
 
+
 struct EventView: View {
+    var cornerRadius: CGFloat = 10
+    
     var body: some View {
-        ZStack {
-            Color(.brown)
-            
-            //Event Title - navigate
-            HStack {
-                Text("Event").padding(.bottom, 700)
-            }
-            //Segmented Control
-            ZStack(alignment: .top) {
-                Color(.purple)
-                VStack {
-                    //View from segmented control- Scroll View
-                    SegControlComponent()
-                    ScrollViewComponent()
+        NavigationStack {
+            ZStack {
+                //Event Title - navigate
+                HStack {
+                    Text("Event")
+                }.frame(width: 200, height: 730, alignment: .top)
+                ZStack() {
+                    VStack {
+                        SegControlComponent()
+                    }
+                    CreateButtonComponent()
                 }
-                CreateButtonComponent()
-                    .padding(.top, 620)
-                    .padding(.leading, 250)
             }.ignoresSafeArea()
-            .padding(.top, 100)
-            .frame(width: 100)
-            
-            //favorite button
-            
-        }.ignoresSafeArea()
+        }
     }
 }
 
