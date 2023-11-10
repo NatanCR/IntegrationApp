@@ -50,7 +50,7 @@ struct RectangleBoxComponent: View {
                     .padding(.trailing, 150)
                 
                
-                ColaborateComponent().padding(.top, 110)
+                ColaborateComponent(title:"").padding(.top, 110)
             }
         }
     }
@@ -75,7 +75,7 @@ struct CheckBoxConfirmation: View {
 }
     //button to colaborate/cancel colaboration
 struct ColaborateComponent: View {
-    
+    let title: String
     var body: some View {
         ZStack {
     
@@ -90,10 +90,12 @@ struct ColaborateComponent: View {
 //                        .frame(width: 350, height:20)
 //                        .padding(.bottom, 25)
                     Rectangle()
+                    
                         .fill(
                             Color(.segmentedControlSelected))
                         .frame(width: 350, height: 44)
                         .clipShape(RoundedRectangle(cornerRadius: 15))
+                    Text(title)
                 }
             })
         }

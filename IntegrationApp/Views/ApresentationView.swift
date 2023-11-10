@@ -11,19 +11,21 @@ struct ApresentationView: View {
     var body: some View {
         HStack {
             Spacer()
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: -2) {
                 Spacer()
-                TitleComponent(title: "BEM-VINDO!")
+                TitleComponent(title: "Bem-Vindo!")
                     .font(.title)
                     .foregroundColor(.segmentedControlSelected)
                     .padding(5)
                 Text(" \"Nome do APP\" é um aplicativo direcionado \n aos alunos da Apple Developer Academy | \n Senac!")
                     .foregroundColor(.segmentedControlSelected)
                 Spacer()
-                ColaborateComponent()
+                ColaborateComponent(title: "Próximo")
+                    .foregroundColor(.white)
             }
             Spacer()
         }
+        .background(Color.apresentationView)
     }
 }
 
