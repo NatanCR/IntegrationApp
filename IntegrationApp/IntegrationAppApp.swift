@@ -29,13 +29,13 @@ struct IntegrationAppApp: App {
     }
     
     init() {
-           configureAmplify()
+//           configureAmplify()
        }
     
     var body: some Scene {
         WindowGroup {
             GeometryReader { geo in
-                EventView()
+                ApresentationView()
                     .environment(\.screenSize, geo.size)
             }
         }
