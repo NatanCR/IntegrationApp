@@ -36,7 +36,7 @@ struct IntegrationAppApp: App {
         
         WindowGroup {
             GeometryReader { geo in
-                IdentityView(title: .constant(""))
+                JoiningGroupView(title: .constant(""))
                     .environment(\.screenSize, geo.size)
             }
         }
