@@ -31,11 +31,12 @@ struct IntegrationAppApp: App {
     init() {
 //           configureAmplify()
        }
-    
+
     var body: some Scene {
+        
         WindowGroup {
             GeometryReader { geo in
-                ApresentationView()
+                IdentityView(title: .constant(""))
                     .environment(\.screenSize, geo.size)
             }
         }
