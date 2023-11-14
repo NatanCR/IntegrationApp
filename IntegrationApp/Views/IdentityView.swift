@@ -27,8 +27,10 @@ struct IdentityView: View {
 
                 
                 Spacer()
-                ColaborateComponent(title: "Próximo")
-                    .foregroundColor(.white)
+//                NavigationLink(destination: AboutApresentationView(), label: {
+//                        ColaborateComponent(title: "Próximo")
+//                            .foregroundColor(.white)
+//                    })
             }
             Spacer()
         }

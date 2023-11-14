@@ -27,8 +27,10 @@ struct JoiningGroupView: View {
 
                 
                 Spacer()
-                ColaborateComponent(title: "Próximo")
-                    .foregroundColor(.white)
+//                NavigationLink(destination:JoiningGroupView(title: $title) , label: {
+//                        ColaborateComponent(title: "Próximo")
+//                            .foregroundColor(.white)
+//                    })
             }
             Spacer()
         }

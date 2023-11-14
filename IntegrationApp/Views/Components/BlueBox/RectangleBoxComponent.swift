@@ -38,7 +38,7 @@ struct RectangleBoxComponent: View {
                 HStack(spacing: 195) {
                     Text("Chegandor")
                     Text("data ")
-
+                    
                 }.padding(.bottom, 10)
                 VStack {
                     //esse text irá receber o nome das pessoas do banco
@@ -49,7 +49,7 @@ struct RectangleBoxComponent: View {
                     .padding(.leading, 20)
                     .padding(.trailing, 150)
                 
-               
+                
                 ColaborateComponent(title:"").padding(.top, 110)
             }
         }
@@ -58,7 +58,7 @@ struct RectangleBoxComponent: View {
 //checkbox
 struct CheckBoxConfirmation: View {
     @State var changeStateCheckBox = false
-  
+    
     
     var body: some View {
         Button(action: {
@@ -73,39 +73,31 @@ struct CheckBoxConfirmation: View {
         })
     }
 }
-    //button to colaborate/cancel colaboration
+//button to colaborate/cancel colaboration
 struct ColaborateComponent: View {
     let title: String
     var body: some View {
-        ZStack {
-    
-            Button(action: {
-                
-            }, label: {
+        NavigationLink(
+            destination: AboutApresentationView(),
+            label: {
                 ZStack {
-//                    Rectangle()
-//                        .fill(
-//                            Color(.segmentedControlSelected)
-//                        )
-//                        .frame(width: 350, height:20)
-//                        .padding(.bottom, 25)
                     Rectangle()
-                    
                         .fill(
                             Color(.segmentedControlSelected))
                         .frame(width: 350, height: 44)
                         .clipShape(RoundedRectangle(cornerRadius: 15))
                     Text(title)
+                        .foregroundColor(.white)
                 }
             })
-        }
     }
 }
+
 
 struct RoundedCorners: View {
     
     var body: some View {
-       Text("dps faço isso")
+        Text("dps faço isso")
     }
 }
 
