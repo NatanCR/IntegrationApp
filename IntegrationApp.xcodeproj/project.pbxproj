@@ -13,7 +13,7 @@
 		052486D12AF96E1F004E1692 /* SheetCreateEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052486D02AF96E1F004E1692 /* SheetCreateEvent.swift */; };
 		052486D32AF96E41004E1692 /* TitleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052486D22AF96E41004E1692 /* TitleComponent.swift */; };
 		052486D72AF97E52004E1692 /* IconComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052486D62AF97E52004E1692 /* IconComponent.swift */; };
-		056F86C42B0291E700CF5334 /* AboutApresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056F86C32B0291E700CF5334 /* AboutApresentationView.swift */; };
+		056F86C42B0291E700CF5334 /* AccessApresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056F86C32B0291E700CF5334 /* AccessApresentationView.swift */; };
 		056F86C62B029C4800CF5334 /* IdentityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056F86C52B029C4700CF5334 /* IdentityView.swift */; };
 		056F86C82B02BF1E00CF5334 /* JoiningGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056F86C72B02BF1E00CF5334 /* JoiningGroupView.swift */; };
 		05DC71E42AFEC1F800943357 /* ApresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DC71E32AFEC1F800943357 /* ApresentationView.swift */; };
@@ -90,7 +90,7 @@
 		052486D02AF96E1F004E1692 /* SheetCreateEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetCreateEvent.swift; sourceTree = "<group>"; };
 		052486D22AF96E41004E1692 /* TitleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleComponent.swift; sourceTree = "<group>"; };
 		052486D62AF97E52004E1692 /* IconComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconComponent.swift; sourceTree = "<group>"; };
-		056F86C32B0291E700CF5334 /* AboutApresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutApresentationView.swift; sourceTree = "<group>"; };
+		056F86C32B0291E700CF5334 /* AccessApresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessApresentationView.swift; sourceTree = "<group>"; };
 		056F86C52B029C4700CF5334 /* IdentityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityView.swift; sourceTree = "<group>"; };
 		056F86C72B02BF1E00CF5334 /* JoiningGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoiningGroupView.swift; sourceTree = "<group>"; };
 		05DC71E32AFEC1F800943357 /* ApresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApresentationView.swift; sourceTree = "<group>"; };
@@ -265,7 +265,7 @@
 				D1B6EBF12AFC21650079B309 /* SheetsViews */,
 				6B59004B2AF9656600152BBF /* EventView.swift */,
 				05DC71E32AFEC1F800943357 /* ApresentationView.swift */,
-				056F86C32B0291E700CF5334 /* AboutApresentationView.swift */,
+				056F86C32B0291E700CF5334 /* AccessApresentationView.swift */,
 				056F86C52B029C4700CF5334 /* IdentityView.swift */,
 				056F86C72B02BF1E00CF5334 /* JoiningGroupView.swift */,
 				D1B6EBF02AFC20C70079B309 /* Components */,
@@ -518,7 +518,7 @@
 				D13CB5D22AED6C3C00CFEE02 /* IntegrationAppApp.swift in Sources */,
 				D16252F12AED71E40077D469 /* Formatters.swift in Sources */,
 				B1FE0A275CD7EB6334B4C0BF /* AmplifyModels.swift in Sources */,
-				056F86C42B0291E700CF5334 /* AboutApresentationView.swift in Sources */,
+				056F86C42B0291E700CF5334 /* AccessApresentationView.swift in Sources */,
 				7F5E0EC7A3EF3C98E7769949 /* Event+Schema.swift in Sources */,
 				D1ABB2232AF978BA00F94CA2 /* AppObjects.swift in Sources */,
 				99BDFACFE7F9D9C8D69089B9 /* Event.swift in Sources */,
