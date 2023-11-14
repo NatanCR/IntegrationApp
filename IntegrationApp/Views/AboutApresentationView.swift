@@ -20,10 +20,8 @@ struct AboutApresentationView: View {
                 Text(" Como objetivo, buscamos auxiliar os\n alunos a organizar pequenos eventos em\n grupo, através de enquetes e\n compartilhamento simultâneo!")
                     .foregroundColor(.segmentedControlSelected)
                 Spacer()
-//                NavigationLink(destination: AboutApresentationView(), label: {
-//                        ColaborateComponent(title: "Próximo")
-//                            .foregroundColor(.white)
-//                    })
+                ColaborateComponent(title: "Próximo")
+                    .foregroundColor(.white)
             }
             Spacer()
         }
