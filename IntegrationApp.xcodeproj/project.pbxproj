@@ -13,8 +13,6 @@
 		052486D12AF96E1F004E1692 /* SheetCreateEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052486D02AF96E1F004E1692 /* SheetCreateEvent.swift */; };
 		052486D32AF96E41004E1692 /* TitleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052486D22AF96E41004E1692 /* TitleComponent.swift */; };
 		052486D72AF97E52004E1692 /* IconComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052486D62AF97E52004E1692 /* IconComponent.swift */; };
-		052688672B0687810076F503 /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052688662B0687810076F503 /* SurveyView.swift */; };
-		052688692B068E740076F503 /* SurveyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052688682B068E740076F503 /* SurveyComponent.swift */; };
 		056F86C42B0291E700CF5334 /* AccessApresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056F86C32B0291E700CF5334 /* AccessApresentationView.swift */; };
 		056F86C62B029C4800CF5334 /* IdentityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056F86C52B029C4700CF5334 /* IdentityView.swift */; };
 		056F86C82B02BF1E00CF5334 /* JoiningGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056F86C72B02BF1E00CF5334 /* JoiningGroupView.swift */; };
@@ -92,8 +90,6 @@
 		052486D02AF96E1F004E1692 /* SheetCreateEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetCreateEvent.swift; sourceTree = "<group>"; };
 		052486D22AF96E41004E1692 /* TitleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleComponent.swift; sourceTree = "<group>"; };
 		052486D62AF97E52004E1692 /* IconComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconComponent.swift; sourceTree = "<group>"; };
-		052688662B0687810076F503 /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
-		052688682B068E740076F503 /* SurveyComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyComponent.swift; sourceTree = "<group>"; };
 		056F86C32B0291E700CF5334 /* AccessApresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessApresentationView.swift; sourceTree = "<group>"; };
 		056F86C52B029C4700CF5334 /* IdentityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityView.swift; sourceTree = "<group>"; };
 		056F86C72B02BF1E00CF5334 /* JoiningGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoiningGroupView.swift; sourceTree = "<group>"; };
@@ -272,8 +268,6 @@
 				056F86C32B0291E700CF5334 /* AccessApresentationView.swift */,
 				056F86C52B029C4700CF5334 /* IdentityView.swift */,
 				056F86C72B02BF1E00CF5334 /* JoiningGroupView.swift */,
-				052688662B0687810076F503 /* SurveyView.swift */,
-				052688682B068E740076F503 /* SurveyComponent.swift */,
 				D1B6EBF02AFC20C70079B309 /* Components */,
 			);
 			path = Views;
@@ -517,7 +511,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B5900562AFA8A5400152BBF /* FinanceSubview.swift in Sources */,
-				052688692B068E740076F503 /* SurveyComponent.swift in Sources */,
 				056F86C62B029C4800CF5334 /* IdentityView.swift in Sources */,
 				D13CB5D42AED6C3C00CFEE02 /* ContentView.swift in Sources */,
 				6B59005C2AFAA73100152BBF /* SegmentedControllView.swift in Sources */,
@@ -557,7 +550,6 @@
 				4395AFAE273AE9D84C80C1F6 /* Wallet+Schema.swift in Sources */,
 				052486D12AF96E1F004E1692 /* SheetCreateEvent.swift in Sources */,
 				BF2AE0C91D2DB16F34A11DD4 /* Wallet.swift in Sources */,
-				052688672B0687810076F503 /* SurveyView.swift in Sources */,
 				052486D32AF96E41004E1692 /* TitleComponent.swift in Sources */,
 				9D626597C91B04AAF3A28DED /* EventTask+Schema.swift in Sources */,
 				6B59004E2AF9657A00152BBF /* SegControlComponent.swift in Sources */,

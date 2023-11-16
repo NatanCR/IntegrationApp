@@ -36,13 +36,7 @@ struct IntegrationAppApp: App {
         
         WindowGroup {
             GeometryReader { geo in
-                        let minhaPesquisa = Poll(question: "Qual é a sua cor favorita?", options: [
-                            PollOption(id: 1, name: "Vermelho", votes: 0),
-                            PollOption(id: 2, name: "Azul", votes: 0),
-                            PollOption(id: 3, name: "Verde", votes: 0)
-                        ])
-
-                SurveyView(poll: minhaPesquisa)
+                       EventView()
                     .environment(\.screenSize, geo.size)
             }
         }
