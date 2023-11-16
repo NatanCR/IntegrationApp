@@ -29,7 +29,7 @@ struct IntegrationAppApp: App {
     }
     
     init() {
-           configureAmplify()
+//           configureAmplify()
        }
     
     var body: some Scene {
