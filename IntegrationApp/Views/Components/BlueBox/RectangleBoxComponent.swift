@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct RectangleBoxComponent: View {
-    //    @State var title: String
+//        @State var title: String
     //    @State var icon: String
     //    @State var date: Int
     //
@@ -50,7 +50,9 @@ struct RectangleBoxComponent: View {
                     .padding(.trailing, 150)
                 
                
-                ColaborateComponent(title:"").padding(.top, 110)
+                ColaborateComponent(title:"", action: {
+                    print("VOU COLABORAR NESSA PORR")
+                }).padding(.top, 110)
             }
         }
     }
@@ -76,31 +78,22 @@ struct CheckBoxConfirmation: View {
     //button to colaborate/cancel colaboration
 struct ColaborateComponent: View {
     let title: String
+    let action: () -> Void
+
     var body: some View {
-        ZStack {
-    
-            Button(action: {
-                
-            }, label: {
-                ZStack {
-//                    Rectangle()
-//                        .fill(
-//                            Color(.segmentedControlSelected)
-//                        )
-//                        .frame(width: 350, height:20)
-//                        .padding(.bottom, 25)
-                    Rectangle()
-                    
-                        .fill(
-                            Color(.segmentedControlSelected))
-                        .frame(width: 350, height: 44)
-                        .clipShape(RoundedRectangle(cornerRadius: 15))
-                    Text(title)
-                }
-            })
-        }
+        Button(action: action, label: {
+            ZStack {
+                Rectangle()
+                    .fill(Color(.segmentedControlSelected))
+                    .frame(width: 350, height: 44)
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                Text(title)
+            }
+        })    
     }
 }
+
+
 
 struct RoundedCorners: View {
     

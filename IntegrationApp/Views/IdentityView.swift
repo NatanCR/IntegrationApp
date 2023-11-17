@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct IdentityView: View {
+    @Binding var tutorialState: TutorialState
     @Binding var title: String
     @Environment (\.screenSize) var screenSize
     
@@ -25,10 +26,11 @@ struct IdentityView: View {
                 TextFieldComponent(text: $title, placeholder: "Digite seu nome/apelido...")
                     .frame(width: screenSize.width * 0.9, height: screenSize.height * 0.12)
 
-                
                 Spacer()
-                ColaborateComponent(title: "Próximo")
-                    .foregroundColor(.white)
+                     ColaborateComponent(title: "Próximo", action: {
+                         tutorialState = .joiningGroup
+            })
+            .foregroundColor(.white)
             }
             Spacer()
         }

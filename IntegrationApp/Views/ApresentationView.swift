@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ApresentationView: View {
+    @Binding var tutorialState: TutorialState
+    
     var body: some View {
         HStack {
             Spacer()
@@ -20,8 +22,10 @@ struct ApresentationView: View {
                 Text(" \"Nome do APP\" é um aplicativo direcionado \n aos alunos da Apple Developer Academy | \n Senac!")
                     .foregroundColor(.segmentedControlSelected)
                 Spacer()
-                ColaborateComponent(title: "Próximo")
-                    .foregroundColor(.white)
+                ColaborateComponent(title: "Próximo", action: {
+                    tutorialState = .acessApresentation
+                })
+                .foregroundColor(.white)
             }
             Spacer()
         }

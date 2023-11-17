@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct JoiningGroupView: View {
+    @Binding var tutorialState: TutorialState
     @Binding var title: String
     @Environment (\.screenSize) var screenSize
     
@@ -27,8 +28,10 @@ struct JoiningGroupView: View {
 
                 
                 Spacer()
-                ColaborateComponent(title: "Próximo")
-                    .foregroundColor(.white)
+//                ColaborateComponent(title: "Próximo", destination: .none, action: {
+//                    print("nada")
+//                })
+//                    .foregroundColor(.white)
             }
             Spacer()
         }

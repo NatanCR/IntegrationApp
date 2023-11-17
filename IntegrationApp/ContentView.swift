@@ -6,21 +6,28 @@
 //
 
 import SwiftUI
-import Amplify
 
 struct ContentView: View {
-    
+    @State private var tutorialState: TutorialState = .introduction
+    @State private var title = ""
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-                .task {
-                    await DataManagement.shared.createNewEvent(eventName: "Primeiro Integration")
-                }
+        ZStack {
+            if tutorialState == .introduction {
+                ApresentationView(tutorialState: $tutorialState)
+               
+            } else if tutorialState == .acessApresentation {
+                AcessApresentationView(tutorialState: $tutorialState, email: title, password: title)
+                //LoginView(tutorialState: $tutorialState)
+            } else if tutorialState == .identity {
+                IdentityView(tutorialState: $tutorialState, title: $title)
+               // AdditionalInfoView(tutorialState: $tutorialState)
+            } else if tutorialState == .joiningGroup {
+//                JoiningGroupView(tutorialState: <#T##TutorialState#>, title: <#T##String#>, screenSize: <#T##arg#>)
+               //CompletionView()
+            } else {
+                Text("Erro")
+            }
         }
-        .padding()
     }
 }
 
