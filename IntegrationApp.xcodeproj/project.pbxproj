@@ -15,6 +15,7 @@
 		052486D72AF97E52004E1692 /* IconComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052486D62AF97E52004E1692 /* IconComponent.swift */; };
 		0526886B2B06B3020076F503 /* SurveyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0526886A2B06B3020076F503 /* SurveyComponent.swift */; };
 		0526886D2B06B33F0076F503 /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0526886C2B06B33F0076F503 /* SurveyView.swift */; };
+		0526886F2B07E7A80076F503 /* ProgressBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0526886E2B07E7A80076F503 /* ProgressBarComponent.swift */; };
 		072FC0A9DFD3B9AA5A9C0334 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0818A478FD105E18FE49CAC2 /* Member.swift */; };
 		0779996E03AB90C7596C0775 /* FinanceAnswer+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2BC0F55FA211F727EE20ED /* FinanceAnswer+Schema.swift */; };
 		07DB8945B9F9A64CC22CFDAC /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 59A78B58B7CD66895A17FE22 /* amplifyconfiguration.json */; };
@@ -90,6 +91,7 @@
 		052486D62AF97E52004E1692 /* IconComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconComponent.swift; sourceTree = "<group>"; };
 		0526886A2B06B3020076F503 /* SurveyComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyComponent.swift; sourceTree = "<group>"; };
 		0526886C2B06B33F0076F503 /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
+		0526886E2B07E7A80076F503 /* ProgressBarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarComponent.swift; sourceTree = "<group>"; };
 		0818A478FD105E18FE49CAC2 /* Member.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Member.swift; path = amplify/generated/models/Member.swift; sourceTree = "<group>"; };
 		0A3BBA140DDFA3E08A99B89E /* AnswerType.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = AnswerType.swift; path = amplify/generated/models/AnswerType.swift; sourceTree = "<group>"; };
 		1378B91BAD2131ED9B444B6B /* Quiz+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "Quiz+Schema.swift"; path = "amplify/generated/models/Quiz+Schema.swift"; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 				D1B6EBF32AFC22640079B309 /* SegmentedView */,
 				D1B6EBF22AFC22540079B309 /* Texts */,
 				052486CC2AF96D8E004E1692 /* DatePickerComponent.swift */,
+				0526886E2B07E7A80076F503 /* ProgressBarComponent.swift */,
 				0526886A2B06B3020076F503 /* SurveyComponent.swift */,
 			);
 			path = Components;
@@ -533,6 +536,7 @@
 				D19D77682AF962F500FDFD5B /* DataManagement.swift in Sources */,
 				6C334954EAA4ECE89A84A521 /* Quiz.swift in Sources */,
 				C6F64448180A479592BCB58E /* QuizAnswer+Schema.swift in Sources */,
+				0526886F2B07E7A80076F503 /* ProgressBarComponent.swift in Sources */,
 				052486CF2AF96DEE004E1692 /* CreateEventButton.swift in Sources */,
 				46083CDE48D9F101B894A95C /* QuizAnswer.swift in Sources */,
 				0526886B2B06B3020076F503 /* SurveyComponent.swift in Sources */,
