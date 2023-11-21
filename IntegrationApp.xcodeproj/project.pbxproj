@@ -27,6 +27,8 @@
 		6B59005C2AFAA73100152BBF /* SegmentedControllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B59005B2AFAA73100152BBF /* SegmentedControllView.swift */; };
 		6B59005E2AFABC0F00152BBF /* RectangleBoxComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B59005D2AFABC0F00152BBF /* RectangleBoxComponent.swift */; };
 		6B8476162B080371008A3CA2 /* AppStartState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8476152B080371008A3CA2 /* AppStartState.swift */; };
+		6B8476182B081DC9008A3CA2 /* AuthenticateNewUserVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8476172B081DC9008A3CA2 /* AuthenticateNewUserVM.swift */; };
+		6B84761A2B0BB4F7008A3CA2 /* HTTPResquestsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8476192B0BB4F7008A3CA2 /* HTTPResquestsVM.swift */; };
 		D13CB5D22AED6C3C00CFEE02 /* IntegrationAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13CB5D12AED6C3C00CFEE02 /* IntegrationAppApp.swift */; };
 		D13CB5D42AED6C3C00CFEE02 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13CB5D32AED6C3C00CFEE02 /* ContentView.swift */; };
 		D13CB5D62AED6C3D00CFEE02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D13CB5D52AED6C3D00CFEE02 /* Assets.xcassets */; };
@@ -75,6 +77,8 @@
 		6B59005B2AFAA73100152BBF /* SegmentedControllView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControllView.swift; sourceTree = "<group>"; };
 		6B59005D2AFABC0F00152BBF /* RectangleBoxComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleBoxComponent.swift; sourceTree = "<group>"; };
 		6B8476152B080371008A3CA2 /* AppStartState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStartState.swift; sourceTree = "<group>"; };
+		6B8476172B081DC9008A3CA2 /* AuthenticateNewUserVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateNewUserVM.swift; sourceTree = "<group>"; };
+		6B8476192B0BB4F7008A3CA2 /* HTTPResquestsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResquestsVM.swift; sourceTree = "<group>"; };
 		D13CB5CE2AED6C3C00CFEE02 /* IntegrationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntegrationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D13CB5D12AED6C3C00CFEE02 /* IntegrationAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationAppApp.swift; sourceTree = "<group>"; };
 		D13CB5D32AED6C3C00CFEE02 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -192,6 +196,8 @@
 		D1B6EBEE2AFC20B30079B309 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				6B8476172B081DC9008A3CA2 /* AuthenticateNewUserVM.swift */,
+				6B8476192B0BB4F7008A3CA2 /* HTTPResquestsVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -413,6 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B5900562AFA8A5400152BBF /* FinanceSubview.swift in Sources */,
+				6B8476182B081DC9008A3CA2 /* AuthenticateNewUserVM.swift in Sources */,
 				056F86C62B029C4800CF5334 /* IdentityView.swift in Sources */,
 				D13CB5D42AED6C3C00CFEE02 /* ContentView.swift in Sources */,
 				6B59005C2AFAA73100152BBF /* SegmentedControllView.swift in Sources */,
@@ -435,6 +442,7 @@
 				6B59004E2AF9657A00152BBF /* SegControlComponent.swift in Sources */,
 				6B59005E2AFABC0F00152BBF /* RectangleBoxComponent.swift in Sources */,
 				052486CB2AF96D66004E1692 /* TextFieldComponent.swift in Sources */,
+				6B84761A2B0BB4F7008A3CA2 /* HTTPResquestsVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

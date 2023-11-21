@@ -21,7 +21,6 @@ struct IntegrationAppApp: App {
     }
 }
 
-
 private struct ScreenSizeKey : EnvironmentKey {
     static let defaultValue: CGSize = .zero
 }

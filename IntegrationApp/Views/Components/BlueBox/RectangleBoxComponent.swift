@@ -79,6 +79,8 @@ struct CheckBoxConfirmation: View {
 struct ColaborateComponent: View {
     let title: String
     let action: () -> Void
+   // @Binding var isValid: Bool
+
 
     var body: some View {
         Button(action: action, label: {

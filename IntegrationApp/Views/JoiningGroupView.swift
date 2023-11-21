@@ -28,10 +28,11 @@ struct JoiningGroupView: View {
 
                 
                 Spacer()
-//                ColaborateComponent(title: "Próximo", destination: .none, action: {
-//                    print("nada")
-//                })
-//                    .foregroundColor(.white)
+                ColaborateComponent(title: "Próximo") {
+                    tutorialState = .event
+                
+                }
+                    .foregroundColor(.white)
             }
             Spacer()
         }

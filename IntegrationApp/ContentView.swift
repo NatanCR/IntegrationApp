@@ -16,14 +16,13 @@ struct ContentView: View {
                 ApresentationView(tutorialState: $tutorialState)
                
             } else if tutorialState == .acessApresentation {
-                AcessApresentationView(tutorialState: $tutorialState, email: title, password: title)
-                //LoginView(tutorialState: $tutorialState)
+                AcessApresentationView(tutorialState: $tutorialState)
             } else if tutorialState == .identity {
                 IdentityView(tutorialState: $tutorialState, title: $title)
-               // AdditionalInfoView(tutorialState: $tutorialState)
             } else if tutorialState == .joiningGroup {
-//                JoiningGroupView(tutorialState: <#T##TutorialState#>, title: <#T##String#>, screenSize: <#T##arg#>)
-               //CompletionView()
+                JoiningGroupView(tutorialState: $tutorialState, title: $title)
+            } else if tutorialState == .event {
+                EventView()
             } else {
                 Text("Erro")
             }

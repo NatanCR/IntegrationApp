@@ -23,6 +23,7 @@ struct IdentityView: View {
                     .padding(5)
                 Text(" Para facilitar o contato entre os usuários,\n insira a baixo seu nome/apelido:")
                     .foregroundColor(.segmentedControlSelected)
+                //aqui no text virá de uma observable class para colocar esse nome no firebase
                 TextFieldComponent(text: $title, placeholder: "Digite seu nome/apelido...")
                     .frame(width: screenSize.width * 0.9, height: screenSize.height * 0.12)
 

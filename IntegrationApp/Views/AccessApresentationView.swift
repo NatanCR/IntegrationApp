@@ -9,8 +9,9 @@ import SwiftUI
 
 struct AcessApresentationView: View {
     @Binding var tutorialState: TutorialState
-    @State var email: String
-    @State var password: String
+    @StateObject private var authNewUser = AuthenticateNewUserVM()
+//    @State var email: String
+//    @State var password: String
     @Environment (\.screenSize) var screenSize
     
     var body: some View {
@@ -30,15 +31,17 @@ struct AcessApresentationView: View {
                     TitleComponent(title: " E-mail").foregroundColor(.segmentedControlSelected)
                 }
                 
-                TextFieldComponent(text: $email, placeholder: "nome@snsp.idserve.net")
+                TextFieldComponent(text: $authNewUser.email, placeholder: "nome@snsp.idserve.net")
                     .frame(width: screenSize.width * 0.9, height: screenSize.height * 0.1)
                 TitleComponent(title: " Senha").foregroundColor(.segmentedControlSelected)
-                TextFieldComponent(text: $password, placeholder: "********")
+                TextFieldComponent(text: $authNewUser.password, placeholder: "********")
                     .frame(width: screenSize.width * 0.9, height: screenSize.height * 0.1)
                 
                 Spacer()
                 ColaborateComponent(title: "Próximo", action: {
-                    tutorialState = .identity
+                    authNewUser.registerUser()
+                    self.tutorialState = .identity
+                  //  authNewUser.nextButtonTapped()
                 })
                 .foregroundColor(.white)
                 Spacer()
