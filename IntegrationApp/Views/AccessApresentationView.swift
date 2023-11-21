@@ -10,8 +10,8 @@ import SwiftUI
 struct AcessApresentationView: View {
     @Binding var tutorialState: TutorialState
     @StateObject private var authNewUser = AuthenticateNewUserVM()
-//    @State var email: String
-//    @State var password: String
+    //    @State var email: String
+    //    @State var password: String
     @Environment (\.screenSize) var screenSize
     
     var body: some View {
@@ -41,15 +41,16 @@ struct AcessApresentationView: View {
                 ColaborateComponent(title: "Próximo", action: {
                     authNewUser.registerUser()
                     self.tutorialState = .identity
-                  //  authNewUser.nextButtonTapped()
+                    //  authNewUser.nextButtonTapped()
                 })
                 .foregroundColor(.white)
-                Spacer()
             }
-            .background(Color.apresentationView)
+            Spacer()
         }
+        .background(Color.apresentationView)
     }
 }
+
 
 
 //#Preview {
