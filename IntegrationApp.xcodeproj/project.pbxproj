@@ -50,10 +50,6 @@
 		D13CB5E32AED6C3D00CFEE02 /* IntegrationAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13CB5E22AED6C3D00CFEE02 /* IntegrationAppTests.swift */; };
 		D13CB5ED2AED6C3E00CFEE02 /* IntegrationAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13CB5EC2AED6C3E00CFEE02 /* IntegrationAppUITests.swift */; };
 		D13CB5EF2AED6C3E00CFEE02 /* IntegrationAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13CB5EE2AED6C3E00CFEE02 /* IntegrationAppUITestsLaunchTests.swift */; };
-		D13CB5FD2AED6F2000CFEE02 /* AWSAPIPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = D13CB5FC2AED6F2000CFEE02 /* AWSAPIPlugin */; };
-		D13CB5FF2AED6F2000CFEE02 /* AWSCognitoAuthPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = D13CB5FE2AED6F2000CFEE02 /* AWSCognitoAuthPlugin */; };
-		D13CB6012AED6F2000CFEE02 /* AWSDataStorePlugin in Frameworks */ = {isa = PBXBuildFile; productRef = D13CB6002AED6F2000CFEE02 /* AWSDataStorePlugin */; };
-		D13CB6032AED6F2000CFEE02 /* Amplify in Frameworks */ = {isa = PBXBuildFile; productRef = D13CB6022AED6F2000CFEE02 /* Amplify */; };
 		D16252F12AED71E40077D469 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16252F02AED71E40077D469 /* Formatters.swift */; };
 		D19D77682AF962F500FDFD5B /* DataManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19D77672AF962F500FDFD5B /* DataManagement.swift */; };
 		D1ABB2232AF978BA00F94CA2 /* AppObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1ABB2222AF978BA00F94CA2 /* AppObjects.swift */; };
@@ -145,10 +141,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D13CB6012AED6F2000CFEE02 /* AWSDataStorePlugin in Frameworks */,
-				D13CB6032AED6F2000CFEE02 /* Amplify in Frameworks */,
-				D13CB5FD2AED6F2000CFEE02 /* AWSAPIPlugin in Frameworks */,
-				D13CB5FF2AED6F2000CFEE02 /* AWSCognitoAuthPlugin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,10 +375,6 @@
 			);
 			name = IntegrationApp;
 			packageProductDependencies = (
-				D13CB5FC2AED6F2000CFEE02 /* AWSAPIPlugin */,
-				D13CB5FE2AED6F2000CFEE02 /* AWSCognitoAuthPlugin */,
-				D13CB6002AED6F2000CFEE02 /* AWSDataStorePlugin */,
-				D13CB6022AED6F2000CFEE02 /* Amplify */,
 			);
 			productName = IntegrationApp;
 			productReference = D13CB5CE2AED6C3C00CFEE02 /* IntegrationApp.app */;
@@ -461,7 +449,6 @@
 			);
 			mainGroup = D13CB5C52AED6C3C00CFEE02;
 			packageReferences = (
-				D13CB5FB2AED6F2000CFEE02 /* XCRemoteSwiftPackageReference "amplify-swift" */,
 			);
 			productRefGroup = D13CB5CF2AED6C3C00CFEE02 /* Products */;
 			projectDirPath = "";
@@ -895,40 +882,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		D13CB5FB2AED6F2000CFEE02 /* XCRemoteSwiftPackageReference "amplify-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/aws-amplify/amplify-swift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.21.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		D13CB5FC2AED6F2000CFEE02 /* AWSAPIPlugin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D13CB5FB2AED6F2000CFEE02 /* XCRemoteSwiftPackageReference "amplify-swift" */;
-			productName = AWSAPIPlugin;
-		};
-		D13CB5FE2AED6F2000CFEE02 /* AWSCognitoAuthPlugin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D13CB5FB2AED6F2000CFEE02 /* XCRemoteSwiftPackageReference "amplify-swift" */;
-			productName = AWSCognitoAuthPlugin;
-		};
-		D13CB6002AED6F2000CFEE02 /* AWSDataStorePlugin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D13CB5FB2AED6F2000CFEE02 /* XCRemoteSwiftPackageReference "amplify-swift" */;
-			productName = AWSDataStorePlugin;
-		};
-		D13CB6022AED6F2000CFEE02 /* Amplify */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D13CB5FB2AED6F2000CFEE02 /* XCRemoteSwiftPackageReference "amplify-swift" */;
-			productName = Amplify;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D13CB5C62AED6C3C00CFEE02 /* Project object */;
 }
