@@ -1,36 +1,39 @@
 import SwiftUI
 
-struct CreateEventButton: View {
-   @State private var isSheetPresented = false
-   @State private var isEventViewPresented = false
-   @State private var tutorialState: TutorialState = .introduction
-   @State private var title = ""
-   @State private var selectedDate = Date()
+struct CreateEventButton<T: View>: View {
+    @State private var isSheetPresented = false
+    @State private var isEventViewPresented = false
+    @State private var tutorialState: TutorialState = .introduction
+    @Environment (\.screenSize) var screenSize
+    let view: T
+    
 
    var body: some View {
        Button(action: {
            isSheetPresented.toggle()
        }) {
            Circle()
-               .foregroundColor(Color.orange)
-               .frame(width: 45, height: 50)
+               .foregroundColor(Color.plusButton)
+               .frame(width: screenSize.width * 0.12, height: screenSize.height * 0.12)
                .overlay(
-                  Text("+")
-                      .font(.system(size: 35, weight: .thin))
+                  Image(systemName: "plus")
+                    .font(.system(size: 25, weight: .regular))
                       .foregroundColor(.white)
-                      .position(x: 22.5, y: 22.5)
                )
        }
        .sheet(isPresented: $isSheetPresented, content: {
-           SheetCreateEvent(closeAndDisplayEventView: {
-               self.isSheetPresented = false
-               DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                   self.isEventViewPresented = true
-               }
-           }, tutorialState: $tutorialState, title: $title, selectedDate: $selectedDate, isSheetPresented: $isSheetPresented)
+           self.view
+//           SheetCreateEvent(closeAndDisplayEventView: {
+//               self.isSheetPresented = false
+//               
+////               DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+////                   self.isEventViewPresented = true
+////               }
+//               
+//           })
        })
-       .fullScreenCover(isPresented: $isEventViewPresented) {
-           EventView(tutorialState: $tutorialState)
-       }
+//       .fullScreenCover(isPresented: $isEventViewPresented) {
+//           EventView(tutorialState: $tutorialState)
+//       }
    }
 }

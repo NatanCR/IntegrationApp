@@ -18,6 +18,7 @@ struct TextFieldComponent: View {
             .frame(width: screenSize.width * 0.9, height: screenSize.height * 0.07)
             .background(Color.primaryBlue)
             .cornerRadius(15)
+            .foregroundColor(Color("TextFieldColor"))
     }
 }
 

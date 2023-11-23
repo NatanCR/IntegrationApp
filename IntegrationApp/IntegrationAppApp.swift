@@ -9,12 +9,15 @@ import SwiftUI
 
 @main
 struct IntegrationAppApp: App {
-@State var title = "Próximo"
+    @State var title = "Próximo"
+    @State var tutorialState: TutorialState = .event
+    
     var body: some Scene {
         
         WindowGroup {
             GeometryReader { geo in
-                ContentView()
+                HomeView()
+//                EventView(tutorialState: $tutorialState)
                     .environment(\.screenSize, geo.size)
             }
         }
