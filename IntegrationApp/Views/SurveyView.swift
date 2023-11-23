@@ -6,21 +6,13 @@
 //
 
 import SwiftUI
-
-// Definição da estrutura para representar uma opção de enquete
-struct PollOption: Identifiable {
-    let id: Int
-    var name: String
-    var votes: Int
-}
-
 // Definição da classe para representar uma enquete observável
 class Poll: ObservableObject {
     @Published var question: String
-    @Published var options: [PollOption]
+    @Published var options: [SurveyOption]
 
     // Inicialização da enquete com uma pergunta e uma lista de opções
-    init(question: String, options: [PollOption]) {
+    init(question: String, options: [SurveyOption]) {
         self.question = question
         self.options = options
     }
@@ -34,68 +26,41 @@ class Poll: ObservableObject {
 }
 
 // Definição da view para exibir uma enquete
+
 struct SurveyView: View {
-    @ObservedObject var poll: Poll
     @State private var showingResults = false
     @State private var newOption = ""
-    @State private var votingCompleted = false
+    @State private var options: [SurveyOption] = [
+        SurveyOption(id: 1, name: "Vermelho", votes: 0),
+        SurveyOption(id: 2, name: "Azul", votes: 0),
+        SurveyOption(id: 3, name: "Verde", votes: 0)
+    ]
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            // Exibição da pergunta da enquete
-            Text(poll.question)
-                .font(.headline)
+            SurveyComponent(
+                question: "Qual é a sua cor favorita?",
+                options: $options
+            )
 
-            // Loop através das opções da enquete
-            ForEach(poll.options) { option in
-                HStack {
-                    // Exibição de uma bolinha preenchida se houver votos na opção
-                    Circle()
-                        .fill(option.votes > 0 ? Color.blue : Color.gray)
-                        .frame(width: 10, height: 10)
-                        .padding(.trailing, 5)
-                    
-                    // Botão para votar em uma opção
-                    Button(action: {
-                        // Verifica se a votação ainda não foi concluída
-                        if !votingCompleted {
-                            // Registra o voto na opção selecionada e marca a votação como concluída
-                            poll.vote(optionId: option.id)
-                            votingCompleted = true
-                        }
-                    }) {
-                        // Exibição do nome da opção e a quantidade de votos
-                        HStack {
-                            Text(option.name)
-                            Spacer()
-                            Text("\(option.votes)")
-                        }
-                    }
-                    .buttonStyle(PlainButtonStyle())
-                    .disabled(votingCompleted) // Desabilita o botão se a votação já foi concluída
-                }
-                .padding(.vertical, 5)
-            }
-
-            // Campo de texto para adicionar uma nova opção à enquete
-            TextField("Touch to add", text: $newOption, onCommit: {
-                // Adiciona uma nova opção se o campo de texto não estiver vazio
+            TextField("Adicione uma nova opção", text: $newOption, onCommit: {
                 if !newOption.isEmpty {
-                    let newId = poll.options.count + 1
-                    let newOption = PollOption(id: newId, name: self.newOption, votes: 0)
-                    poll.options.append(newOption)
-                    self.newOption = ""
+                    let newId = options.count + 1
+                    options.append(SurveyOption(id: newId, name: newOption, votes: 0))
+                    newOption = ""
                 }
             })
             .textFieldStyle(RoundedBorderTextFieldStyle())
             .padding()
 
-            // Botão para exibir os resultados da enquete em uma folha (sheet)
             Button("Show Results") {
                 showingResults.toggle()
             }
             .sheet(isPresented: $showingResults) {
-                SurveyComponent(options: poll.options)
+                SurveyComponent(
+                    question: "Qual é a sua cor favorita?",
+                    options: $options
+                )
             }
         }
         .padding()
@@ -103,6 +68,4 @@ struct SurveyView: View {
 }
 
 
-//#Preview {
-//    SurveyView(poll: <#Poll#>)
-//}
+
