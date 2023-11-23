@@ -11,6 +11,8 @@ import SwiftUI
 struct SurveyComponent: View {
     var question: String
     @Binding var options: [SurveyOption]
+    var isVotingEnabled: Bool
+    @State private var selectedOptionId: Int?
 
     @Environment(\.screenSize) var screenSize
 
@@ -20,19 +22,26 @@ struct SurveyComponent: View {
                 .font(.headline)
 
             ForEach(options.indices, id: \.self) { index in
-                Button(action: {
-                    self.options[index].votes += 1
-                }) {
-                    HStack {
-                        Text(self.options[index].name)
-                        Spacer()
-                        Text("\(self.options[index].votes)")
-                    }
+                HStack {
+                    // Bolinha que muda de cor ao votar
+                    Circle()
+                        .stroke(Color.gray, lineWidth: 1)
+                        .background(Circle().fill(selectedOptionId == options[index].id ? Color.blue : Color.clear))
+                        .frame(width: 20, height: 20)
+                        .onTapGesture {
+                            if isVotingEnabled && selectedOptionId == nil {
+                                selectedOptionId = options[index].id
+                                options[index].votes += 1
+                            }
+                        }
 
-                    ProgressBarComponent(value: Double(self.options[index].votes) / Double(totalVotes()))
-                        .frame(height: 5)
+                    Text(options[index].name)
+                    Spacer()
+                    Text("\(options[index].votes)")
                 }
-                .buttonStyle(PlainButtonStyle())
+
+                ProgressBarComponent(value: Double(options[index].votes) / Double(totalVotes()))
+                    .frame(height: 5)
             }
         }
         .padding()

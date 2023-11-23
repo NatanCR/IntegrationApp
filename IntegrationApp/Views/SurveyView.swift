@@ -40,10 +40,11 @@ struct SurveyView: View {
         VStack(alignment: .leading, spacing: 10) {
             SurveyComponent(
                 question: "Qual é a sua cor favorita?",
-                options: $options
+                options: $options,
+                isVotingEnabled: true
             )
 
-            TextField("Adicione uma nova opção", text: $newOption, onCommit: {
+            TextField("Toque para adicionar", text: $newOption, onCommit: {
                 if !newOption.isEmpty {
                     let newId = options.count + 1
                     options.append(SurveyOption(id: newId, name: newOption, votes: 0))
@@ -59,7 +60,8 @@ struct SurveyView: View {
             .sheet(isPresented: $showingResults) {
                 SurveyComponent(
                     question: "Qual é a sua cor favorita?",
-                    options: $options
+                    options: $options,
+                    isVotingEnabled: false
                 )
             }
         }
