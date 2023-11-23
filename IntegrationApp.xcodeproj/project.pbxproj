@@ -16,14 +16,6 @@
 		0526886B2B06B3020076F503 /* SurveyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0526886A2B06B3020076F503 /* SurveyComponent.swift */; };
 		0526886D2B06B33F0076F503 /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0526886C2B06B33F0076F503 /* SurveyView.swift */; };
 		0526886F2B07E7A80076F503 /* ProgressBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0526886E2B07E7A80076F503 /* ProgressBarComponent.swift */; };
-		072FC0A9DFD3B9AA5A9C0334 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0818A478FD105E18FE49CAC2 /* Member.swift */; };
-		0779996E03AB90C7596C0775 /* FinanceAnswer+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2BC0F55FA211F727EE20ED /* FinanceAnswer+Schema.swift */; };
-		07DB8945B9F9A64CC22CFDAC /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 59A78B58B7CD66895A17FE22 /* amplifyconfiguration.json */; };
-		1010AEBF58686A0BBBC15FAE /* EventTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FA6E0E9DC6A9D7AC5A5C83 /* EventTask.swift */; };
-		2BF7E8017247BC8BF6813DCC /* AllEvents+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A61863889CDDFAE51C03773 /* AllEvents+Schema.swift */; };
-		3F34CF98D77F85C2EB04139B /* QuizCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53985C1525E255896158E27A /* QuizCategory.swift */; };
-		4395AFAE273AE9D84C80C1F6 /* Wallet+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D0B39DD9DAE004DF18460C /* Wallet+Schema.swift */; };
-		46083CDE48D9F101B894A95C /* QuizAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142C164908F44AAC24145E4A /* QuizAnswer.swift */; };
 		6B59004C2AF9656600152BBF /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B59004B2AF9656600152BBF /* EventView.swift */; };
 		6B59004E2AF9657A00152BBF /* SegControlComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B59004D2AF9657A00152BBF /* SegControlComponent.swift */; };
 		6B5900502AF9720000152BBF /* CreateButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B59004F2AF9720000152BBF /* CreateButtonComponent.swift */; };
@@ -33,16 +25,6 @@
 		6B59005A2AFA8AC300152BBF /* QuizzesSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5900592AFA8AC300152BBF /* QuizzesSubview.swift */; };
 		6B59005C2AFAA73100152BBF /* SegmentedControllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B59005B2AFAA73100152BBF /* SegmentedControllView.swift */; };
 		6B59005E2AFABC0F00152BBF /* RectangleBoxComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B59005D2AFABC0F00152BBF /* RectangleBoxComponent.swift */; };
-		6C334954EAA4ECE89A84A521 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97D2F6793A3AFA7454C6170 /* Quiz.swift */; };
-		7F5E0EC7A3EF3C98E7769949 /* Event+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C7A734010C2E6A10042C4D /* Event+Schema.swift */; };
-		913C085E5332031C4BE778EA /* AnswerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3BBA140DDFA3E08A99B89E /* AnswerType.swift */; };
-		99BDFACFE7F9D9C8D69089B9 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC1B7803B491C739B7F9A26 /* Event.swift */; };
-		9D626597C91B04AAF3A28DED /* EventTask+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9800C52AD99D2D6EF2E819 /* EventTask+Schema.swift */; };
-		AE22028FCA392B006AB85339 /* Quiz+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1378B91BAD2131ED9B444B6B /* Quiz+Schema.swift */; };
-		B1FE0A275CD7EB6334B4C0BF /* AmplifyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE3072566DBB99EFFDFEBB3 /* AmplifyModels.swift */; };
-		B38D21D3AB836C8B69D005E4 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682CC9CE2C02FAD37C0625AE /* Status.swift */; };
-		BF2AE0C91D2DB16F34A11DD4 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC54485086C00FF12342312 /* Wallet.swift */; };
-		C6F64448180A479592BCB58E /* QuizAnswer+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EDE9ABCC6912BA606DC10C /* QuizAnswer+Schema.swift */; };
 		D13CB5D22AED6C3C00CFEE02 /* IntegrationAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13CB5D12AED6C3C00CFEE02 /* IntegrationAppApp.swift */; };
 		D13CB5D42AED6C3C00CFEE02 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13CB5D32AED6C3C00CFEE02 /* ContentView.swift */; };
 		D13CB5D62AED6C3D00CFEE02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D13CB5D52AED6C3D00CFEE02 /* Assets.xcassets */; };
@@ -51,14 +33,6 @@
 		D13CB5ED2AED6C3E00CFEE02 /* IntegrationAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13CB5EC2AED6C3E00CFEE02 /* IntegrationAppUITests.swift */; };
 		D13CB5EF2AED6C3E00CFEE02 /* IntegrationAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13CB5EE2AED6C3E00CFEE02 /* IntegrationAppUITestsLaunchTests.swift */; };
 		D16252F12AED71E40077D469 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16252F02AED71E40077D469 /* Formatters.swift */; };
-		D19D77682AF962F500FDFD5B /* DataManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19D77672AF962F500FDFD5B /* DataManagement.swift */; };
-		D1ABB2232AF978BA00F94CA2 /* AppObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1ABB2222AF978BA00F94CA2 /* AppObjects.swift */; };
-		DF4B0B48D1D83B6BF69D1786 /* Finance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2F6DEDA85AAED111D342D /* Finance.swift */; };
-		E9FCBBF4CC0A4300A119B9F5 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FC3EE45065C6E086CA1E35D /* awsconfiguration.json */; };
-		F263A42006C083F72D7935D3 /* Member+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E3DE02A009FA9A1A169C71 /* Member+Schema.swift */; };
-		F4F7C36D0E5DDBF04431E46E /* FinanceAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E738BF08672277F4CAFC70E /* FinanceAnswer.swift */; };
-		FA210D5BE2635F5ABB6AEFB7 /* AllEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65769038C39234D4546F23D /* AllEvents.swift */; };
-		FDE34C175D45DFE5597A0D41 /* Finance+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0BDD28320DDE7053AE7256 /* Finance+Schema.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,18 +62,6 @@
 		0526886A2B06B3020076F503 /* SurveyComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyComponent.swift; sourceTree = "<group>"; };
 		0526886C2B06B33F0076F503 /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
 		0526886E2B07E7A80076F503 /* ProgressBarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarComponent.swift; sourceTree = "<group>"; };
-		0818A478FD105E18FE49CAC2 /* Member.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Member.swift; path = amplify/generated/models/Member.swift; sourceTree = "<group>"; };
-		0A3BBA140DDFA3E08A99B89E /* AnswerType.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = AnswerType.swift; path = amplify/generated/models/AnswerType.swift; sourceTree = "<group>"; };
-		1378B91BAD2131ED9B444B6B /* Quiz+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "Quiz+Schema.swift"; path = "amplify/generated/models/Quiz+Schema.swift"; sourceTree = "<group>"; };
-		142C164908F44AAC24145E4A /* QuizAnswer.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = QuizAnswer.swift; path = amplify/generated/models/QuizAnswer.swift; sourceTree = "<group>"; };
-		49E3DE02A009FA9A1A169C71 /* Member+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "Member+Schema.swift"; path = "amplify/generated/models/Member+Schema.swift"; sourceTree = "<group>"; };
-		4A61863889CDDFAE51C03773 /* AllEvents+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "AllEvents+Schema.swift"; path = "amplify/generated/models/AllEvents+Schema.swift"; sourceTree = "<group>"; };
-		4D0BDD28320DDE7053AE7256 /* Finance+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "Finance+Schema.swift"; path = "amplify/generated/models/Finance+Schema.swift"; sourceTree = "<group>"; };
-		53985C1525E255896158E27A /* QuizCategory.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = QuizCategory.swift; path = amplify/generated/models/QuizCategory.swift; sourceTree = "<group>"; };
-		56C7A734010C2E6A10042C4D /* Event+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "Event+Schema.swift"; path = "amplify/generated/models/Event+Schema.swift"; sourceTree = "<group>"; };
-		59A78B58B7CD66895A17FE22 /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
-		59D0B39DD9DAE004DF18460C /* Wallet+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "Wallet+Schema.swift"; path = "amplify/generated/models/Wallet+Schema.swift"; sourceTree = "<group>"; };
-		682CC9CE2C02FAD37C0625AE /* Status.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Status.swift; path = amplify/generated/models/Status.swift; sourceTree = "<group>"; };
 		6B59004B2AF9656600152BBF /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		6B59004D2AF9657A00152BBF /* SegControlComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegControlComponent.swift; sourceTree = "<group>"; };
 		6B59004F2AF9720000152BBF /* CreateButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateButtonComponent.swift; sourceTree = "<group>"; };
@@ -109,12 +71,6 @@
 		6B5900592AFA8AC300152BBF /* QuizzesSubview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzesSubview.swift; sourceTree = "<group>"; };
 		6B59005B2AFAA73100152BBF /* SegmentedControllView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControllView.swift; sourceTree = "<group>"; };
 		6B59005D2AFABC0F00152BBF /* RectangleBoxComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleBoxComponent.swift; sourceTree = "<group>"; };
-		6E738BF08672277F4CAFC70E /* FinanceAnswer.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = FinanceAnswer.swift; path = amplify/generated/models/FinanceAnswer.swift; sourceTree = "<group>"; };
-		7FC3EE45065C6E086CA1E35D /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
-		93EDE9ABCC6912BA606DC10C /* QuizAnswer+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "QuizAnswer+Schema.swift"; path = "amplify/generated/models/QuizAnswer+Schema.swift"; sourceTree = "<group>"; };
-		AE9800C52AD99D2D6EF2E819 /* EventTask+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "EventTask+Schema.swift"; path = "amplify/generated/models/EventTask+Schema.swift"; sourceTree = "<group>"; };
-		BEE3072566DBB99EFFDFEBB3 /* AmplifyModels.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = AmplifyModels.swift; path = amplify/generated/models/AmplifyModels.swift; sourceTree = "<group>"; };
-		CCC54485086C00FF12342312 /* Wallet.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Wallet.swift; path = amplify/generated/models/Wallet.swift; sourceTree = "<group>"; };
 		D13CB5CE2AED6C3C00CFEE02 /* IntegrationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntegrationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D13CB5D12AED6C3C00CFEE02 /* IntegrationAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationAppApp.swift; sourceTree = "<group>"; };
 		D13CB5D32AED6C3C00CFEE02 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -126,14 +82,6 @@
 		D13CB5EC2AED6C3E00CFEE02 /* IntegrationAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationAppUITests.swift; sourceTree = "<group>"; };
 		D13CB5EE2AED6C3E00CFEE02 /* IntegrationAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D16252F02AED71E40077D469 /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
-		D19D77672AF962F500FDFD5B /* DataManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagement.swift; sourceTree = "<group>"; };
-		D1ABB2222AF978BA00F94CA2 /* AppObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppObjects.swift; sourceTree = "<group>"; };
-		D4F2F6DEDA85AAED111D342D /* Finance.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Finance.swift; path = amplify/generated/models/Finance.swift; sourceTree = "<group>"; };
-		D65769038C39234D4546F23D /* AllEvents.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = AllEvents.swift; path = amplify/generated/models/AllEvents.swift; sourceTree = "<group>"; };
-		DCC1B7803B491C739B7F9A26 /* Event.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Event.swift; path = amplify/generated/models/Event.swift; sourceTree = "<group>"; };
-		E97D2F6793A3AFA7454C6170 /* Quiz.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Quiz.swift; path = amplify/generated/models/Quiz.swift; sourceTree = "<group>"; };
-		F2FA6E0E9DC6A9D7AC5A5C83 /* EventTask.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = EventTask.swift; path = amplify/generated/models/EventTask.swift; sourceTree = "<group>"; };
-		FE2BC0F55FA211F727EE20ED /* FinanceAnswer+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "FinanceAnswer+Schema.swift"; path = "amplify/generated/models/FinanceAnswer+Schema.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,15 +109,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		94D3C1243636597087EC6D20 /* AmplifyConfig */ = {
-			isa = PBXGroup;
-			children = (
-				7FC3EE45065C6E086CA1E35D /* awsconfiguration.json */,
-				59A78B58B7CD66895A17FE22 /* amplifyconfiguration.json */,
-			);
-			name = AmplifyConfig;
-			sourceTree = "<group>";
-		};
 		D13CB5C52AED6C3C00CFEE02 = {
 			isa = PBXGroup;
 			children = (
@@ -177,8 +116,6 @@
 				D13CB5E12AED6C3D00CFEE02 /* IntegrationAppTests */,
 				D13CB5EB2AED6C3E00CFEE02 /* IntegrationAppUITests */,
 				D13CB5CF2AED6C3C00CFEE02 /* Products */,
-				94D3C1243636597087EC6D20 /* AmplifyConfig */,
-				EE8E8F35B8B6DB90075D0A46 /* AmplifyModels */,
 			);
 			sourceTree = "<group>";
 		};
@@ -242,8 +179,6 @@
 		D1B6EBEE2AFC20B30079B309 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				D19D77672AF962F500FDFD5B /* DataManagement.swift */,
-				D1ABB2222AF978BA00F94CA2 /* AppObjects.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -327,35 +262,6 @@
 				6B5900532AFA8A4900152BBF /* TaskSubview.swift */,
 			);
 			path = SubViews;
-			sourceTree = "<group>";
-		};
-		EE8E8F35B8B6DB90075D0A46 /* AmplifyModels */ = {
-			isa = PBXGroup;
-			children = (
-				BEE3072566DBB99EFFDFEBB3 /* AmplifyModels.swift */,
-				56C7A734010C2E6A10042C4D /* Event+Schema.swift */,
-				DCC1B7803B491C739B7F9A26 /* Event.swift */,
-				4A61863889CDDFAE51C03773 /* AllEvents+Schema.swift */,
-				D65769038C39234D4546F23D /* AllEvents.swift */,
-				0A3BBA140DDFA3E08A99B89E /* AnswerType.swift */,
-				4D0BDD28320DDE7053AE7256 /* Finance+Schema.swift */,
-				D4F2F6DEDA85AAED111D342D /* Finance.swift */,
-				FE2BC0F55FA211F727EE20ED /* FinanceAnswer+Schema.swift */,
-				6E738BF08672277F4CAFC70E /* FinanceAnswer.swift */,
-				49E3DE02A009FA9A1A169C71 /* Member+Schema.swift */,
-				0818A478FD105E18FE49CAC2 /* Member.swift */,
-				1378B91BAD2131ED9B444B6B /* Quiz+Schema.swift */,
-				E97D2F6793A3AFA7454C6170 /* Quiz.swift */,
-				93EDE9ABCC6912BA606DC10C /* QuizAnswer+Schema.swift */,
-				142C164908F44AAC24145E4A /* QuizAnswer.swift */,
-				53985C1525E255896158E27A /* QuizCategory.swift */,
-				682CC9CE2C02FAD37C0625AE /* Status.swift */,
-				59D0B39DD9DAE004DF18460C /* Wallet+Schema.swift */,
-				CCC54485086C00FF12342312 /* Wallet.swift */,
-				AE9800C52AD99D2D6EF2E819 /* EventTask+Schema.swift */,
-				F2FA6E0E9DC6A9D7AC5A5C83 /* EventTask.swift */,
-			);
-			name = AmplifyModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -468,8 +374,6 @@
 			files = (
 				D13CB5D92AED6C3D00CFEE02 /* Preview Assets.xcassets in Resources */,
 				D13CB5D62AED6C3D00CFEE02 /* Assets.xcassets in Resources */,
-				E9FCBBF4CC0A4300A119B9F5 /* awsconfiguration.json in Resources */,
-				07DB8945B9F9A64CC22CFDAC /* amplifyconfiguration.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,45 +403,21 @@
 				6B59005C2AFAA73100152BBF /* SegmentedControllView.swift in Sources */,
 				D13CB5D22AED6C3C00CFEE02 /* IntegrationAppApp.swift in Sources */,
 				D16252F12AED71E40077D469 /* Formatters.swift in Sources */,
-				B1FE0A275CD7EB6334B4C0BF /* AmplifyModels.swift in Sources */,
-				7F5E0EC7A3EF3C98E7769949 /* Event+Schema.swift in Sources */,
-				D1ABB2232AF978BA00F94CA2 /* AppObjects.swift in Sources */,
-				99BDFACFE7F9D9C8D69089B9 /* Event.swift in Sources */,
-				2BF7E8017247BC8BF6813DCC /* AllEvents+Schema.swift in Sources */,
 				6B5900522AF97D7B00152BBF /* ScrollViewComponent.swift in Sources */,
 				6B5900542AFA8A4900152BBF /* TaskSubview.swift in Sources */,
-				FA210D5BE2635F5ABB6AEFB7 /* AllEvents.swift in Sources */,
-				913C085E5332031C4BE778EA /* AnswerType.swift in Sources */,
 				052486D72AF97E52004E1692 /* IconComponent.swift in Sources */,
 				6B5900502AF9720000152BBF /* CreateButtonComponent.swift in Sources */,
-				FDE34C175D45DFE5597A0D41 /* Finance+Schema.swift in Sources */,
-				DF4B0B48D1D83B6BF69D1786 /* Finance.swift in Sources */,
 				6B59005A2AFA8AC300152BBF /* QuizzesSubview.swift in Sources */,
-				0779996E03AB90C7596C0775 /* FinanceAnswer+Schema.swift in Sources */,
-				F4F7C36D0E5DDBF04431E46E /* FinanceAnswer.swift in Sources */,
-				F263A42006C083F72D7935D3 /* Member+Schema.swift in Sources */,
-				072FC0A9DFD3B9AA5A9C0334 /* Member.swift in Sources */,
 				6B59004C2AF9656600152BBF /* EventView.swift in Sources */,
 				0526886D2B06B33F0076F503 /* SurveyView.swift in Sources */,
-				AE22028FCA392B006AB85339 /* Quiz+Schema.swift in Sources */,
-				D19D77682AF962F500FDFD5B /* DataManagement.swift in Sources */,
-				6C334954EAA4ECE89A84A521 /* Quiz.swift in Sources */,
-				C6F64448180A479592BCB58E /* QuizAnswer+Schema.swift in Sources */,
 				0526886F2B07E7A80076F503 /* ProgressBarComponent.swift in Sources */,
 				052486CF2AF96DEE004E1692 /* CreateEventButton.swift in Sources */,
-				46083CDE48D9F101B894A95C /* QuizAnswer.swift in Sources */,
 				0526886B2B06B3020076F503 /* SurveyComponent.swift in Sources */,
-				3F34CF98D77F85C2EB04139B /* QuizCategory.swift in Sources */,
-				B38D21D3AB836C8B69D005E4 /* Status.swift in Sources */,
 				052486CD2AF96D8E004E1692 /* DatePickerComponent.swift in Sources */,
-				4395AFAE273AE9D84C80C1F6 /* Wallet+Schema.swift in Sources */,
 				052486D12AF96E1F004E1692 /* SheetCreateEvent.swift in Sources */,
-				BF2AE0C91D2DB16F34A11DD4 /* Wallet.swift in Sources */,
 				052486D32AF96E41004E1692 /* TitleComponent.swift in Sources */,
-				9D626597C91B04AAF3A28DED /* EventTask+Schema.swift in Sources */,
 				6B59004E2AF9657A00152BBF /* SegControlComponent.swift in Sources */,
 				6B59005E2AFABC0F00152BBF /* RectangleBoxComponent.swift in Sources */,
-				1010AEBF58686A0BBBC15FAE /* EventTask.swift in Sources */,
 				052486CB2AF96D66004E1692 /* TextFieldComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

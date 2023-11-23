@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Amplify
 
 struct ContentView: View {
     
@@ -16,9 +15,7 @@ struct ContentView: View {
                 .imageScale(.large)
                 .foregroundStyle(.tint)
             Text("Hello, world!")
-                .task {
-                    await DataManagement.shared.createNewEvent(eventName: "Primeiro Integration")
-                }
+                
         }
         .padding()
     }
