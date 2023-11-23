@@ -10,6 +10,7 @@ import SwiftUI
 
 struct EventView: View {
     var cornerRadius: CGFloat = 10
+    @Binding var tutorialState: TutorialState
     
     var body: some View {
         NavigationStack {
@@ -22,13 +23,13 @@ struct EventView: View {
                     VStack {
                         SegControlComponent()
                     }
-                    CreateButtonComponent()
+                    //CreateButtonComponent()
                 }
             }.ignoresSafeArea()
         }
     }
 }
 
-#Preview {
-    EventView()
-}
+//#Preview {
+//    EventView()
+//}

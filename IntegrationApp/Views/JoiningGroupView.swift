@@ -29,7 +29,7 @@ struct JoiningGroupView: View {
                 
                 Spacer()
                 ColaborateComponent(title: "Próximo") {
-                    tutorialState = .event
+                    tutorialState = .home
                 
                 }
                     .foregroundColor(.white)

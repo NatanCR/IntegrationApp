@@ -27,7 +27,7 @@ struct HomeView: View {
 //                                }
 //                            }
                     
-                    AddButton(view: AnyView(MembersView()))
+                    CreateEventButton()
                         .position(CGPoint(x: 350.0, y: 350.0))
                 }
                 .navigationTitle("Integration App")

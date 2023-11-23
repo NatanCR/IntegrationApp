@@ -13,6 +13,7 @@ enum TutorialState {
     case acessApresentation
     case identity
     case joiningGroup
+    case home
     case event
 }
 

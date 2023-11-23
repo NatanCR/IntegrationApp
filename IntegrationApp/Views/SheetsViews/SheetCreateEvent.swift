@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SheetCreateEvent: View {
+    var closeAndDisplayEventView: () -> Void
+    @Binding var tutorialState: TutorialState
     @Binding var title: String
     @Binding var selectedDate: Date
     @Binding var isSheetPresented: Bool
@@ -55,6 +57,7 @@ struct SheetCreateEvent: View {
                     isSheetPresented = false
                 },
                 trailing: Button("Criar") {
+                    closeAndDisplayEventView()
                     isSheetPresented = false
                 }
             )
