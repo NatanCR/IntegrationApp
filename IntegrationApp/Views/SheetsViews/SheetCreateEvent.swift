@@ -40,7 +40,6 @@ struct SheetCreateEvent: View {
                     }
                 }
                 .navigationBarTitle(sheetBarTitle, displayMode: .inline)
-                .toolbarBackground(Color.primaryBlue, for: .navigationBar)
                 .navigationBarItems(
                     leading: Button("Cancelar") {
                         dismiss()
@@ -49,7 +48,6 @@ struct SheetCreateEvent: View {
                         //chamar função de salvar novo evento
                         dismiss()
                     }.bold()
-                    
                 )
             }
             
