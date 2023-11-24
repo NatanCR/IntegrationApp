@@ -14,7 +14,7 @@ struct SheetCreateEvent: View {
     
     @State var inputTitle: String = ""
     @State var selectedDate = Date()
-    @State var inputTotalValue: Double
+    @State var inputTotalValue: Double = 0.0
     @State var valuePerMemberCalculated: Double = 0.0
     let placeholderText: String
     let sheetBarTitle: String
