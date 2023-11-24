@@ -8,10 +8,13 @@
 import SwiftUI
 @main
 struct IntegrationAppApp: App {
+    @State private var surveyTitle: String = ""
+    
     var body: some Scene {
+        
         WindowGroup {
             GeometryReader { geo in
-                SurveyView()
+                CreateSurveyView(title: $surveyTitle)
                 .environment(\.screenSize, geo.size)
             }
         }

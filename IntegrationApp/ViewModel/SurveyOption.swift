@@ -14,6 +14,3 @@ struct SurveyOption: Identifiable {
     var votes: Int
 }
 
-//#Preview {
-//    SurveyOption()
-//}
