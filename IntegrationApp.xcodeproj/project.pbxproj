@@ -47,6 +47,19 @@
 		D19757F32B0FD36D004C7954 /* GridIconComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19757F22B0FD36D004C7954 /* GridIconComponent.swift */; };
 		D19757F52B0FE393004C7954 /* SheetCreateFinance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19757F42B0FE393004C7954 /* SheetCreateFinance.swift */; };
 		D19757F72B110CE0004C7954 /* NumberFieldComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19757F62B110CE0004C7954 /* NumberFieldComponent.swift */; };
+		D19758162B1136E1004C7954 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19758152B1136E1004C7954 /* Login.swift */; };
+		D19758182B1136EF004C7954 /* AllEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19758172B1136EF004C7954 /* AllEvents.swift */; };
+		D197581A2B1136FE004C7954 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19758192B1136FE004C7954 /* Event.swift */; };
+		D197581C2B113709004C7954 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197581B2B113709004C7954 /* Wallet.swift */; };
+		D197581E2B113716004C7954 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197581D2B113716004C7954 /* Member.swift */; };
+		D19758202B113720004C7954 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197581F2B113720004C7954 /* Quiz.swift */; };
+		D19758222B11372E004C7954 /* Finance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19758212B11372E004C7954 /* Finance.swift */; };
+		D19758242B11373C004C7954 /* EventTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19758232B11373C004C7954 /* EventTask.swift */; };
+		D19758262B113749004C7954 /* FinanceAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19758252B113749004C7954 /* FinanceAnswer.swift */; };
+		D19758282B113756004C7954 /* QuizAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19758272B113756004C7954 /* QuizAnswer.swift */; };
+		D197582A2B113763004C7954 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19758292B113763004C7954 /* Status.swift */; };
+		D197582C2B113773004C7954 /* QuizCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197582B2B113773004C7954 /* QuizCategory.swift */; };
+		D197582E2B113784004C7954 /* AnswerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197582D2B113784004C7954 /* AnswerType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +119,19 @@
 		D19757F22B0FD36D004C7954 /* GridIconComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridIconComponent.swift; sourceTree = "<group>"; };
 		D19757F42B0FE393004C7954 /* SheetCreateFinance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetCreateFinance.swift; sourceTree = "<group>"; };
 		D19757F62B110CE0004C7954 /* NumberFieldComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFieldComponent.swift; sourceTree = "<group>"; };
+		D19758152B1136E1004C7954 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		D19758172B1136EF004C7954 /* AllEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllEvents.swift; sourceTree = "<group>"; };
+		D19758192B1136FE004C7954 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		D197581B2B113709004C7954 /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
+		D197581D2B113716004C7954 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		D197581F2B113720004C7954 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		D19758212B11372E004C7954 /* Finance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Finance.swift; sourceTree = "<group>"; };
+		D19758232B11373C004C7954 /* EventTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTask.swift; sourceTree = "<group>"; };
+		D19758252B113749004C7954 /* FinanceAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceAnswer.swift; sourceTree = "<group>"; };
+		D19758272B113756004C7954 /* QuizAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizAnswer.swift; sourceTree = "<group>"; };
+		D19758292B113763004C7954 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		D197582B2B113773004C7954 /* QuizCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCategory.swift; sourceTree = "<group>"; };
+		D197582D2B113784004C7954 /* AnswerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +190,7 @@
 		D13CB5D02AED6C3C00CFEE02 /* IntegrationApp */ = {
 			isa = PBXGroup;
 			children = (
+				D19758142B113680004C7954 /* Model */,
 				6B8476142B080358008A3CA2 /* ViewStates */,
 				D13CB5D12AED6C3C00CFEE02 /* IntegrationAppApp.swift */,
 				D13CB5D32AED6C3C00CFEE02 /* ContentView.swift */,
@@ -211,6 +238,26 @@
 				D16252F02AED71E40077D469 /* Formatters.swift */,
 			);
 			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		D19758142B113680004C7954 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D197581D2B113716004C7954 /* Member.swift */,
+				D197581F2B113720004C7954 /* Quiz.swift */,
+				D19758212B11372E004C7954 /* Finance.swift */,
+				D19758232B11373C004C7954 /* EventTask.swift */,
+				D19758252B113749004C7954 /* FinanceAnswer.swift */,
+				D19758272B113756004C7954 /* QuizAnswer.swift */,
+				D19758292B113763004C7954 /* Status.swift */,
+				D197582B2B113773004C7954 /* QuizCategory.swift */,
+				D197582D2B113784004C7954 /* AnswerType.swift */,
+				D19758152B1136E1004C7954 /* Login.swift */,
+				D19758172B1136EF004C7954 /* AllEvents.swift */,
+				D19758192B1136FE004C7954 /* Event.swift */,
+				D197581B2B113709004C7954 /* Wallet.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		D1B6EBEE2AFC20B30079B309 /* ViewModel */ = {
@@ -440,26 +487,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D197581C2B113709004C7954 /* Wallet.swift in Sources */,
 				6B5900562AFA8A5400152BBF /* FinanceSubview.swift in Sources */,
+				D19758262B113749004C7954 /* FinanceAnswer.swift in Sources */,
 				6B8476182B081DC9008A3CA2 /* AuthenticateNewUserVM.swift in Sources */,
 				056F86C62B029C4800CF5334 /* IdentityView.swift in Sources */,
+				D19758222B11372E004C7954 /* Finance.swift in Sources */,
 				D13CB5D42AED6C3C00CFEE02 /* ContentView.swift in Sources */,
 				6B59005C2AFAA73100152BBF /* SegmentedControllView.swift in Sources */,
 				056F86C82B02BF1E00CF5334 /* JoiningGroupView.swift in Sources */,
+				D197581A2B1136FE004C7954 /* Event.swift in Sources */,
 				D13CB5D22AED6C3C00CFEE02 /* IntegrationAppApp.swift in Sources */,
 				D16252F12AED71E40077D469 /* Formatters.swift in Sources */,
 				056F86C42B0291E700CF5334 /* AccessApresentationView.swift in Sources */,
+				D197582E2B113784004C7954 /* AnswerType.swift in Sources */,
 				6B5900522AF97D7B00152BBF /* ScrollViewComponent.swift in Sources */,
 				05DC71E42AFEC1F800943357 /* ApresentationView.swift in Sources */,
 				6B5900542AFA8A4900152BBF /* TaskSubview.swift in Sources */,
+				D197582C2B113773004C7954 /* QuizCategory.swift in Sources */,
 				052486D72AF97E52004E1692 /* IconComponent.swift in Sources */,
+				D197582A2B113763004C7954 /* Status.swift in Sources */,
 				6B8476162B080371008A3CA2 /* AppStartState.swift in Sources */,
 				6B59005A2AFA8AC300152BBF /* QuizzesSubview.swift in Sources */,
+				D19758242B11373C004C7954 /* EventTask.swift in Sources */,
+				D19758162B1136E1004C7954 /* Login.swift in Sources */,
 				6B59004C2AF9656600152BBF /* EventView.swift in Sources */,
 				052486CF2AF96DEE004E1692 /* CreateEventButton.swift in Sources */,
 				052486CD2AF96D8E004E1692 /* DatePickerComponent.swift in Sources */,
 				D19757F32B0FD36D004C7954 /* GridIconComponent.swift in Sources */,
 				052486D12AF96E1F004E1692 /* SheetCreateEvent.swift in Sources */,
+				D19758182B1136EF004C7954 /* AllEvents.swift in Sources */,
 				052486D32AF96E41004E1692 /* TitleComponent.swift in Sources */,
 				6B59004E2AF9657A00152BBF /* SegControlComponent.swift in Sources */,
 				6B59005E2AFABC0F00152BBF /* RectangleBoxComponent.swift in Sources */,
@@ -467,14 +524,17 @@
 				6B84761A2B0BB4F7008A3CA2 /* HTTPResquestsVM.swift in Sources */,
 				4DC01B5D2AF97D8600970B79 /* HomeView.swift in Sources */,
 				4DC01B5F2AF9866900970B79 /* MemberButton.swift in Sources */,
+				D19758282B113756004C7954 /* QuizAnswer.swift in Sources */,
 				99BDFACFE7F9D9C8D69089B9 /* (null) in Sources */,
 				0779996E03AB90C7596C0775 /* (null) in Sources */,
 				4DC01B592AF963F600970B79 /* Header.swift in Sources */,
 				D19757F52B0FE393004C7954 /* SheetCreateFinance.swift in Sources */,
+				D19758202B113720004C7954 /* Quiz.swift in Sources */,
 				D19757F72B110CE0004C7954 /* NumberFieldComponent.swift in Sources */,
 				6C334954EAA4ECE89A84A521 /* (null) in Sources */,
 				4DC01B612AFAAAAC00970B79 /* MembersView.swift in Sources */,
 				1010AEBF58686A0BBBC15FAE /* (null) in Sources */,
+				D197581E2B113716004C7954 /* Member.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
