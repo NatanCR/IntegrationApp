@@ -27,7 +27,7 @@ struct HomeView: View {
 //                                }
 //                            }
                     
-                    CreateEventButton(view: SheetCreateEvent(closeAndDisplayEventView: {}, placeholderText: "Digite o nome do evento...", sheetBarTitle: "Criar Evento", isFinanceSheetView: false))
+                    CreateEventButton(view: SheetCreateEvent(placeholderText: "Digite o nome do evento...", sheetBarTitle: "Criar Evento", isFinanceSheetView: false))
                         .position(CGPoint(x: screenSize.width * 0.90, y: screenSize.height * 0.45))
                 }
                 .navigationTitle("Integration App")
