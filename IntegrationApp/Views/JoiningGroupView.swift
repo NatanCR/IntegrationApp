@@ -23,7 +23,7 @@ struct JoiningGroupView: View {
                     .padding(5)
                 Text(" Agora, entre em contato com um ”Mentor” e \n insira o PIN a baixo:")
                     .foregroundColor(.segmentedControlSelected)
-                TextFieldComponent(text: $title, placeholder: "Digite o PIN da sala...")
+                TextFieldComponent(valueText: $title, placeholder: "Digite o PIN da sala...")
                     .frame(width: screenSize.width * 0.9, height: screenSize.height * 0.12)
 
                 

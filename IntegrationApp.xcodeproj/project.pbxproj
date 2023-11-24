@@ -45,6 +45,8 @@
 		D13CB5EF2AED6C3E00CFEE02 /* IntegrationAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13CB5EE2AED6C3E00CFEE02 /* IntegrationAppUITestsLaunchTests.swift */; };
 		D16252F12AED71E40077D469 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16252F02AED71E40077D469 /* Formatters.swift */; };
 		D19757F32B0FD36D004C7954 /* GridIconComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19757F22B0FD36D004C7954 /* GridIconComponent.swift */; };
+		D19757F52B0FE393004C7954 /* SheetCreateFinance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19757F42B0FE393004C7954 /* SheetCreateFinance.swift */; };
+		D19757F72B110CE0004C7954 /* NumberFieldComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19757F62B110CE0004C7954 /* NumberFieldComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +104,8 @@
 		D13CB5EE2AED6C3E00CFEE02 /* IntegrationAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D16252F02AED71E40077D469 /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
 		D19757F22B0FD36D004C7954 /* GridIconComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridIconComponent.swift; sourceTree = "<group>"; };
+		D19757F42B0FE393004C7954 /* SheetCreateFinance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetCreateFinance.swift; sourceTree = "<group>"; };
+		D19757F62B110CE0004C7954 /* NumberFieldComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFieldComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				052486D02AF96E1F004E1692 /* SheetCreateEvent.swift */,
+				D19757F42B0FE393004C7954 /* SheetCreateFinance.swift */,
 			);
 			path = SheetsViews;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 			children = (
 				052486CA2AF96D66004E1692 /* TextFieldComponent.swift */,
 				052486D22AF96E41004E1692 /* TitleComponent.swift */,
+				D19757F62B110CE0004C7954 /* NumberFieldComponent.swift */,
 			);
 			path = Texts;
 			sourceTree = "<group>";
@@ -466,6 +472,8 @@
 				99BDFACFE7F9D9C8D69089B9 /* (null) in Sources */,
 				0779996E03AB90C7596C0775 /* (null) in Sources */,
 				4DC01B592AF963F600970B79 /* Header.swift in Sources */,
+				D19757F52B0FE393004C7954 /* SheetCreateFinance.swift in Sources */,
+				D19757F72B110CE0004C7954 /* NumberFieldComponent.swift in Sources */,
 				6C334954EAA4ECE89A84A521 /* (null) in Sources */,
 				4DC01B612AFAAAAC00970B79 /* MembersView.swift in Sources */,
 				1010AEBF58686A0BBBC15FAE /* (null) in Sources */,

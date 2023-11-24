@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     //var event: [AllEvents]
-    
+    @Environment (\.screenSize) var screenSize
     var body: some View {
         NavigationStack {
             ZStack {
@@ -27,8 +27,8 @@ struct HomeView: View {
 //                                }
 //                            }
                     
-                    CreateEventButton(view: SheetCreateEvent(closeAndDisplayEventView: {}))
-                        .position(CGPoint(x: 350.0, y: 350.0))
+                    CreateEventButton(view: SheetCreateEvent(closeAndDisplayEventView: {}, placeholderText: "Digite o nome do evento...", sheetBarTitle: "Criar Evento", isFinanceSheetView: false))
+                        .position(CGPoint(x: screenSize.width * 0.90, y: screenSize.height * 0.45))
                 }
                 .navigationTitle("Integration App")
                 .toolbar {

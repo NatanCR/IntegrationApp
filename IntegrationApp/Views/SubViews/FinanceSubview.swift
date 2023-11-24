@@ -8,14 +8,12 @@
 import SwiftUI
 
 struct FinanceSubview: View {
+    @Environment (\.screenSize) var screenSize
     var body: some View {
-        ZStack {
-            Color(.systemYellow)
-            Text("Finance Subview")
+        VStack {
+            CreateEventButton(view: SheetCreateFinance())
+                .position(CGPoint(x: screenSize.width * 0.88, y: screenSize.height * 0.78))
         }
-        .padding(.leading, 20)
-        .padding(.trailing, 20)
-        .ignoresSafeArea()
     }
 }
 

@@ -8,39 +8,86 @@
 import SwiftUI
 
 struct SheetCreateEvent: View {
-    var closeAndDisplayEventView: () -> Void
-    @State var title: String = ""
-    @State var selectedDate = Date()
     @Environment(\.dismiss) var dismiss
     @Environment (\.screenSize) var screenSize
+    var closeAndDisplayEventView: () -> Void
     
-
+    @State var inputTitle: String = ""
+    @State var selectedDate = Date()
+    @State var inputTotalValue: Double
+    @State var valuePerMemberCalculated: Double = 0.0
+    let placeholderText: String
+    let sheetBarTitle: String
+    
+    var isFinanceSheetView: Bool
+    
     var body: some View {
-        NavigationView {
-            Form {
-                Section(header: Text("Título").bold().foregroundColor(.black)){
-                    TextFieldComponent(text: $title, placeholder: "Digite o nome do evento...")
-                }
+        NavigationStack {
+            VStack {
+                Color.primaryBlue
+                    .frame(height: 50)
+                    .ignoresSafeArea()
                 
-                Section(header: Text("Data do Evento").bold().foregroundColor(.black)) {
-                    DatePickerComponent(selectedDate: $selectedDate)
+                    VStack(alignment: .leading) {
+                        Section(header: Text("Título").bold().foregroundStyle(Color.black)){
+                            TextFieldComponent(valueText: $inputTitle, placeholder: placeholderText)
+                        }
+                        
+                        Section(header: Text("Data do Evento").bold().foregroundStyle(Color.black)) {
+                            DatePickerComponent(selectedDate: $selectedDate)
+                        }
+                        
+                        if isFinanceSheetView {
+                            Section {
+                                NumberFieldComponent(totalValue: $inputTotalValue)
+                                    .onChange(of: inputTotalValue) { newValue in
+                                        //chama a função para atualizar o valor por membro
+                                    }
+                            } header: {
+                                Text("Valor Total").bold().foregroundStyle(Color.black)
+                            }
+                            
+                            Section {
+                                VStack(alignment: .leading) {
+                                    if valuePerMemberCalculated == 0.0 {
+                                        Text("R$ 00,00")
+                                            .padding(.horizontal, 8)
+                                            .frame(width: screenSize.width * 0.9, height: screenSize.height * 0.07, alignment: .leading)
+                                            .background(Color.primaryBlue)
+                                            .cornerRadius(15)
+                                            .foregroundColor(Color("TextFieldColor"))
+                                    } else {
+                                        Text("\(valuePerMemberCalculated)")
+                                            .padding(.horizontal, 8)
+                                            .frame(width: screenSize.width * 0.9, height: screenSize.height * 0.07)
+                                            .background(Color.primaryBlue)
+                                            .cornerRadius(15)
+                                            .foregroundColor(Color("TextFieldColor"))
+                                    }
+                                    
+                                }
+                            } header: {
+                                Text("Valor por Membro").bold().foregroundStyle(Color.black)
+                            }
+                        }
+                    }
+                Spacer()
                 }
-                .listRowBackground(Color.clear)
-            }
-            .scrollContentBackground(.hidden)
-            .navigationBarTitle("Criar Evento", displayMode: .inline)
-            .toolbarBackground(Color.primaryBlue, for: .navigationBar)
             
-            .navigationBarItems(
-                leading: Button("Cancelar") {
-                    dismiss()
-                },
-                trailing: Button("Criar") {
-                    //chamar função de salvar novo evento
-                    dismiss()
-                }
-            )
-        }
-        
+//                .scrollContentBackground(.hidden)
+                .navigationBarTitle(sheetBarTitle, displayMode: .inline)
+                .toolbarBackground(Color.primaryBlue, for: .navigationBar)
+                .navigationBarItems(
+                    leading: Button("Cancelar") {
+                        dismiss()
+                    },
+                    trailing: Button("Criar") {
+                        //chamar função de salvar novo evento
+                        dismiss()
+                    }.bold()
+                    
+                )
+            }
+            
     }
 }
