@@ -467,8 +467,6 @@
 				6B84761A2B0BB4F7008A3CA2 /* HTTPResquestsVM.swift in Sources */,
 				4DC01B5D2AF97D8600970B79 /* HomeView.swift in Sources */,
 				4DC01B5F2AF9866900970B79 /* MemberButton.swift in Sources */,
-				D13CB5D22AED6C3C00CFEE02 /* IntegrationAppApp.swift in Sources */,
-				D16252F12AED71E40077D469 /* Formatters.swift in Sources */,
 				99BDFACFE7F9D9C8D69089B9 /* (null) in Sources */,
 				0779996E03AB90C7596C0775 /* (null) in Sources */,
 				4DC01B592AF963F600970B79 /* Header.swift in Sources */,
