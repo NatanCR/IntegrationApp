@@ -13,7 +13,7 @@ struct SheetCreateEvent: View {
     @Binding var isSheetPresented: Bool
     @State private var icons: [String] = ["volleyball.fill","balloon.2.fill","cup.and.saucer.fill","plus"]
     @Environment (\.screenSize) var screenSize
-    
+    @State private var newOption = ""
 
     var body: some View {
         NavigationView {

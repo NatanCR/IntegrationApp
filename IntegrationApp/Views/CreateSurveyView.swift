@@ -26,18 +26,10 @@ struct CreateSurveyView: View {
         
         VStack(alignment: .leading, spacing: 10) {
             SurveyComponent(
-                question: "Qual é a sua cor favorita?",
+//                question: "Qual é a sua cor favorita?",
                 options: $options,
                 isVotingEnabled: true
             )
-            
-            TextField("Toque para adicionar", text: $newOption, onCommit: {
-                if !newOption.isEmpty {
-                    let newId = options.count + 1
-                    options.append(SurveyOption(id: newId, name: newOption, votes: 0))
-                    newOption = ""
-                }
-            })
             .textFieldStyle(RoundedBorderTextFieldStyle())
             .padding()
             
@@ -48,15 +40,18 @@ struct CreateSurveyView: View {
                 NavigationStack {
                     ScrollView{
                     VStack(alignment: .leading) {
+                        
                         Section(header: TitleComponent(title: "Título")) {
                             TextFieldComponent(text: $title, placeholder: "Digite o nome da enquete...")
                                 .foregroundColor(Color("TextFieldColor"))
                         }.listRowBackground(Color.clear)
+                        
                         Section(header: TitleComponent(title: "Prazo Final")) {
                             TextFieldComponent(text: $title, placeholder: "Digite o nome da enquete...")
                                 .foregroundColor(Color("TextFieldColor"))
                         }.listRowBackground(Color.clear)
                     }
+                        
                     VStack(alignment: .leading, spacing: 15){
                         Section(header: TitleComponent(title: "Tipo de Enquete")){
                             Picker("Segmento", selection: $selectedSegment1) {
@@ -83,13 +78,20 @@ struct CreateSurveyView: View {
                         VStack(){
                             Section(header: TitleComponent(title: "Opções")){
                                 SurveyComponent(
-                                    question: "Qual é a sua cor favorita?",
+//                                    question: "Qual é a sua cor favorita?",
                                     options: $options,
                                     isVotingEnabled: false
                                     
                                 )
                 
-                                
+//                                TextField("Toque para adicionar", text: $newOption, onCommit: {
+//                                    if !newOption.isEmpty {
+//                                        let newId = options.count + 1
+//                                        
+//                                        options.append(SurveyOption(id: newId, name: newOption, votes: 0))
+//                                        newOption = ""
+//                                    }
+//                                })
                             }
                             
                         }

@@ -9,7 +9,8 @@ import SwiftUI
 
 // Componente reutilizável para exibir uma enquete
 struct SurveyComponent: View {
-    var question: String
+//    var question: String
+    @State private var newOption = ""
     @Binding var options: [SurveyOption]
     var isVotingEnabled: Bool
     @State private var selectedOptionId: Int?
@@ -18,8 +19,8 @@ struct SurveyComponent: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text(question)
-                .font(.headline)
+//            Text(question)
+//                .font(.headline)
 
             ForEach(options.indices, id: \.self) { index in
                 HStack {
@@ -39,10 +40,24 @@ struct SurveyComponent: View {
                     Spacer()
                     Text("\(options[index].votes)")
                 }
-
-                ProgressBarComponent(value: Double(options[index].votes) / Double(totalVotes()))
-                    .frame(height: 5)
+                Divider()
+//                ProgressBarComponent(value: Double(options[index].votes) / Double(totalVotes()))
+//                    .frame(height: 5)
+                
             }
+            TextField("Toque para adicionar", text: $newOption, onCommit: {
+                // Verifica se o texto não está vazio
+                if !newOption.isEmpty {
+                    // Cria um novo ID baseado na contagem de opções existentes
+                    let newId = options.count + 1
+
+                    // Adiciona a nova opção à lista de opções
+                    options.append(SurveyOption(id: newId, name: newOption, votes: 0))
+
+                    // Limpa o campo de texto
+                    newOption = ""
+                }
+            })
             
         }
         .padding()
@@ -51,6 +66,9 @@ struct SurveyComponent: View {
             RoundedRectangle(cornerRadius: 10)
                 .stroke(Color.black, lineWidth: 1)
         )
+        .background(Color.primaryBlue)
+        .cornerRadius(10)
+
     }
 
     func totalVotes() -> Int {
