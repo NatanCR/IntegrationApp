@@ -43,6 +43,7 @@ struct SurveyComponent: View {
                 ProgressBarComponent(value: Double(options[index].votes) / Double(totalVotes()))
                     .frame(height: 5)
             }
+            
         }
         .padding()
         .frame(width: screenSize.width * 0.9, height: screenSize.height * 0.5)

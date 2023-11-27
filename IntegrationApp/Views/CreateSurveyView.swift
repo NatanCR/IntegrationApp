@@ -16,9 +16,9 @@ struct CreateSurveyView: View {
     @State private var selectedSegment1 = 0
     @State private var selectedSegment2 = 0
     @State private var options: [SurveyOption] = [
-        SurveyOption(id: 1, name: "Vermelho", votes: 0),
-        SurveyOption(id: 2, name: "Azul", votes: 0),
-        SurveyOption(id: 3, name: "Verde", votes: 0)
+        SurveyOption(id: 1, name: "Vermelho", votes: 0)
+//        SurveyOption(id: 2, name: "Azul", votes: 0),
+//        SurveyOption(id: 3, name: "Verde", votes: 0)
     ]
     @Environment (\.screenSize) var screenSize
     
@@ -46,6 +46,7 @@ struct CreateSurveyView: View {
             }
             .sheet(isPresented: $showingResults) {
                 NavigationStack {
+                    ScrollView{
                     VStack(alignment: .leading) {
                         Section(header: TitleComponent(title: "Título")) {
                             TextFieldComponent(text: $title, placeholder: "Digite o nome da enquete...")
@@ -59,24 +60,37 @@ struct CreateSurveyView: View {
                     VStack(alignment: .leading, spacing: 15){
                         Section(header: TitleComponent(title: "Tipo de Enquete")){
                             Picker("Segmento", selection: $selectedSegment1) {
-                                Text("Opção 1").tag(0)
-                                Text("Opção 2").tag(1)
+                                Text("Atividades").tag(0)
+                                Text("Financeiro").tag(1)
                             }
                             .pickerStyle(SegmentedPickerStyle())
                             .frame(width: screenSize.width * 0.9)
                             
                             TitleComponent(title: "Tipo de Escolha")
-                            Picker("Segmento", selection: $selectedSegment2) {
-                                Text("Opção 1").tag(0)
-                                Text("Opção 2").tag(1)
+                            
+                            VStack(alignment: . leading){
+                                Picker("Segmento", selection: $selectedSegment2) {
+                                    Text("Única").tag(0)
+                                    Text("Múltipla").tag(1)
+                                }
+                                
+                                .pickerStyle(SegmentedPickerStyle())
+                                .frame(width: screenSize.width * 0.9)
                             }
-                            .pickerStyle(SegmentedPickerStyle())
-                            .frame(width: screenSize.width * 0.9)
                         }
                     }
                     
-                    VStack(alignment: .leading){
-                        Section(header: TitleComponent(title: "Opções")){
+                        VStack(){
+                            Section(header: TitleComponent(title: "Opções")){
+                                SurveyComponent(
+                                    question: "Qual é a sua cor favorita?",
+                                    options: $options,
+                                    isVotingEnabled: false
+                                    
+                                )
+                
+                                
+                            }
                             
                         }
                     }
