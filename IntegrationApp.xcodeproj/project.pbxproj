@@ -60,6 +60,8 @@
 		D197582A2B113763004C7954 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19758292B113763004C7954 /* Status.swift */; };
 		D197582C2B113773004C7954 /* QuizCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197582B2B113773004C7954 /* QuizCategory.swift */; };
 		D197582E2B113784004C7954 /* AnswerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197582D2B113784004C7954 /* AnswerType.swift */; };
+		D19758302B150714004C7954 /* FinanceBlueBoxComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197582F2B150714004C7954 /* FinanceBlueBoxComponent.swift */; };
+		D19758322B15100D004C7954 /* ActionBlueBoxButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19758312B15100D004C7954 /* ActionBlueBoxButtonComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +134,8 @@
 		D19758292B113763004C7954 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		D197582B2B113773004C7954 /* QuizCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCategory.swift; sourceTree = "<group>"; };
 		D197582D2B113784004C7954 /* AnswerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerType.swift; sourceTree = "<group>"; };
+		D197582F2B150714004C7954 /* FinanceBlueBoxComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceBlueBoxComponent.swift; sourceTree = "<group>"; };
+		D19758312B15100D004C7954 /* ActionBlueBoxButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionBlueBoxButtonComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -330,6 +334,8 @@
 			isa = PBXGroup;
 			children = (
 				6B59005D2AFABC0F00152BBF /* RectangleBoxComponent.swift */,
+				D197582F2B150714004C7954 /* FinanceBlueBoxComponent.swift */,
+				D19758312B15100D004C7954 /* ActionBlueBoxButtonComponent.swift */,
 			);
 			path = BlueBox;
 			sourceTree = "<group>";
@@ -528,8 +534,10 @@
 				99BDFACFE7F9D9C8D69089B9 /* (null) in Sources */,
 				0779996E03AB90C7596C0775 /* (null) in Sources */,
 				4DC01B592AF963F600970B79 /* Header.swift in Sources */,
+				D19758322B15100D004C7954 /* ActionBlueBoxButtonComponent.swift in Sources */,
 				D19757F52B0FE393004C7954 /* SheetCreateFinance.swift in Sources */,
 				D19758202B113720004C7954 /* Quiz.swift in Sources */,
+				D19758302B150714004C7954 /* FinanceBlueBoxComponent.swift in Sources */,
 				D19757F72B110CE0004C7954 /* NumberFieldComponent.swift in Sources */,
 				6C334954EAA4ECE89A84A521 /* (null) in Sources */,
 				4DC01B612AFAAAAC00970B79 /* MembersView.swift in Sources */,
