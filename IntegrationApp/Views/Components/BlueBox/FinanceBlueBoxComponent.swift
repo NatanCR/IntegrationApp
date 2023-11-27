@@ -11,8 +11,9 @@ struct FinanceBlueBoxComponent: View {
     let financeCardTitle: String
     let deadlineCard: String
     let memberValue: Double
-    var valuePayed: Double
+    @State var valuePayed: Double
     let totalValue: Double
+    @Environment (\.screenSize) var screenSize
     
     var body: some View {
         ZStack {
@@ -63,11 +64,11 @@ struct FinanceBlueBoxComponent: View {
                 .padding(.horizontal, 30)
                 
                 HStack {
-                    VStack(alignment: .leading) {
+                    VStack {
                         Text("Valor pago: \(valuePayed, specifier: "%.2f")")
                     }
                     Spacer()
-                    VStack(alignment: .trailing) {
+                    VStack {
                         Text("Valor total: R$ \(totalValue, specifier: "%.2f")")
                     }
                 }

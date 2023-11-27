@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FinanceSubview: View {
     @Environment (\.screenSize) var screenSize
+    
     var body: some View {
         VStack {
             CreateEventButton(view: SheetCreateFinance())
