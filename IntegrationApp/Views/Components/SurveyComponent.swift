@@ -20,7 +20,7 @@ struct SurveyComponent: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 10)
-                .stroke(Color.black, lineWidth: 1)
+                .stroke(Color.white, lineWidth: 1)
                 .frame(width: screenSize.width * 0.9)
                 .background(Color.primaryBlue)
             
