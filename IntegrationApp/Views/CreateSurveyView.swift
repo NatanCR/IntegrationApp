@@ -25,13 +25,13 @@ struct CreateSurveyView: View {
     var body: some View {
         
         VStack(alignment: .leading, spacing: 10) {
-            SurveyComponent(
-                //                question: "Qual é a sua cor favorita?",
-                options: $options,
-                isVotingEnabled: true
-            )
-            .textFieldStyle(RoundedBorderTextFieldStyle())
-            .padding()
+//            SurveyComponent(
+//                //                question: "Qual é a sua cor favorita?",
+//                options: $options,
+//                isVotingEnabled: true
+//            )
+//            .textFieldStyle(RoundedBorderTextFieldStyle())
+//            .padding()
             
             Button("Show Results") {
                 showingResults.toggle()
