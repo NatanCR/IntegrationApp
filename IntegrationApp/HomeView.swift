@@ -36,6 +36,9 @@ struct HomeView: View {
 //                objectVM.createAllEventsTable(allEvents: allEvents)
             }
             
+            .onReceive(objectVM.$allEvents, perform: { update in
+                print(update)
+            })
             .navigationTitle("Integration App")
             .toolbar {
                 MemberButton(view: AnyView(MembersView()))
