@@ -7,6 +7,14 @@
 
 import Foundation
 
+struct CurrentEvent: Codable {
+    let currentEvent: [Event]
+
+    enum CodingKeys: String, CodingKey {
+        case currentEvent = "CurrentEvent"
+    }
+}
+
 struct Event: Codable, Identifiable {
   let id: String
   var eventName: String?

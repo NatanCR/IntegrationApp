@@ -9,7 +9,7 @@ import Foundation
 
 class APIRequestVM: ObservableObject {
     @Published var allEvents: EventsTable?
-    @Published var currentEvent: Event?
+    @Published var currentEvent: CurrentEvent?
     
     func fetchAllEventsTableData() {
         // Substitua a URL abaixo pela URL da sua API
@@ -48,7 +48,7 @@ class APIRequestVM: ObservableObject {
         URLSession.shared.dataTask(with: url) { data, response, error in
             if let data = data {
                 do {
-                    let decodedData = try JSONDecoder().decode(Event.self, from: data)
+                    let decodedData = try JSONDecoder().decode(CurrentEvent.self, from: data)
                     DispatchQueue.main.async {
                         self.currentEvent = decodedData
                     }
@@ -59,7 +59,6 @@ class APIRequestVM: ObservableObject {
         }.resume()
     }
     
-    //funciona
     func updateEvent(eventData: Event) {
             guard let url = URL(string: "http://127.0.0.1:5000/update_current_event") else {
                 return
@@ -90,7 +89,6 @@ class APIRequestVM: ObservableObject {
             }.resume()
         }
     
-    //funciona
     func createAllEventsTable(allEvents: AllEvents) {
             guard let url = URL(string: "http://127.0.0.1:5000/create_all_events_table") else {
                 return

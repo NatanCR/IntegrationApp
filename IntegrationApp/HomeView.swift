@@ -26,17 +26,19 @@ struct HomeView: View {
                 }
             }
             .onAppear {
-                objectVM.fetchAllEventsTableData()
+//                objectVM.fetchAllEventsTableData()
+                objectVM.fetchCurrentEventData()
 
-                let newEvent = Event(eventName: "Integration Dezembro", eventDate: "27/09/2023", eventMembers: [Member(name: "Gui", financeMember: true)], quiz: [Quiz(title: "Votação salgado", category: .finance, answerType: .unique, answerOptions: [QuizAnswer(title: "Coca-Cola", votes: 9)], icon: "plus")], finance: Finance(title: "Compra salgados", deadline: "29/09/2023", totalValue: 230.00, valueMembers: 15), activeEvent: true, task: [EventTask(title: "Comprar salgado", deadline: "28/09/2023", collaborators: [Member(name: "Gui", financeMember: true)], status: .on, icon: "plus")], financeValidation: FinanceAnswer(title: "Vai participar hoje?", collaborators: [Member(name: "Gui", financeMember: true)]))
-                
-                let allEvents = AllEvents(id: "AllEvents", currentEvent: newEvent, previousEvent: [], wallet: Wallet(id: "Wallet", value: 0.0), users: [Login(id: "Natan", name: "Natan", email: "natancr@gmail.com", password: "12345")])
+//                let newEvent = Event(eventName: "Integration Dezembro", eventDate: "27/09/2023", eventMembers: [Member(name: "Gui", financeMember: true)], quiz: [Quiz(title: "Votação salgado", category: .finance, answerType: .unique, answerOptions: [QuizAnswer(title: "Coca-Cola", votes: 9)], icon: "plus")], finance: Finance(title: "Compra salgados", deadline: "29/09/2023", totalValue: 230.00, valueMembers: 15), activeEvent: true, task: [EventTask(title: "Comprar salgado", deadline: "28/09/2023", collaborators: [Member(name: "Gui", financeMember: true)], status: .on, icon: "plus")], financeValidation: FinanceAnswer(title: "Vai participar hoje?", collaborators: [Member(name: "Gui", financeMember: true)]))
+//                
+//                let allEvents = AllEvents(id: "AllEvents", currentEvent: newEvent, previousEvent: [], wallet: Wallet(id: "Wallet", value: 0.0), users: [Login(id: "Natan", name: "Natan", email: "natancr@gmail.com", password: "12345")])
                 
 //                objectVM.updateEvent(eventData: newEvent)
 //                objectVM.createAllEventsTable(allEvents: allEvents)
             }
             
-            .onReceive(objectVM.$allEvents, perform: { update in
+            .onReceive(objectVM.$currentEvent, perform: { update in
+                print("/////////////////")
                 print(update)
             })
             .navigationTitle("Integration App")
