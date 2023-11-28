@@ -7,26 +7,29 @@
 
 import Foundation
 
-enum APIResponseType {
-    case allEvents(AllEvents)
-    case currentEvent(Event)
-}
-
 class APIRequestVM: ObservableObject {
-    @Published var apiResponse: APIResponseType?
-
-    func fetchData<T: Codable>(from endpoint: String, responseType: T.Type) {
-        guard let url = URL(string: "https://api.example.com/\(endpoint)") else {
+    @Published var allEvents: EventsTable?
+    @Published var currentEvent: Event?
+    
+    func fetchAllEventsTableData() {
+        // Substitua a URL abaixo pela URL da sua API
+        guard let url = URL(string: "http://127.0.0.1:5000/get_all_events") else {
             return
         }
-
+        
         URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                print("Erro na solicitação: \(error)")
+                return
+            }
+            
             if let data = data {
+                print(String(data: data, encoding: .utf8) ?? "Dados não válidos")
+                print(self.allEvents)
                 do {
-                    let decodedData = try JSONDecoder().decode(responseType, from: data)
+                    let decodedData = try JSONDecoder().decode(EventsTable.self, from: data)
                     DispatchQueue.main.async {
-                        // Use o enum para mapear os diferentes tipos de modelos
-                        self.apiResponse = self.mapToAPIResponseType(decodedData)
+                        self.allEvents = decodedData
                     }
                 } catch {
                     print("Erro ao decodificar JSON: \(error)")
@@ -34,16 +37,87 @@ class APIRequestVM: ObservableObject {
             }
         }.resume()
     }
-
-    /**A função mapToAPIResponseType serve para mapear os dados decodificados de volta para o enum APIResponseType. Essa função recebe um objeto genérico T que deve ser Codable (ou seja, pode ser decodificado a partir de dados JSON), e ela tenta converter esse objeto para os tipos específicos que são esperados **/
-    private func mapToAPIResponseType<T: Codable>(_ data: T) -> APIResponseType? {
-        if let myData = data as? AllEvents {
-            return .allEvents(myData)
-        } else if let anotherData = data as? Event {
-            return .currentEvent(anotherData)
-        } else {
-            return nil
+    
+    
+    func fetchCurrentEventData() {
+        // Substitua a URL abaixo pela URL da sua API
+        guard let url = URL(string: "http://127.0.0.1:5000/get_current_event") else {
+            return
         }
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let data = data {
+                do {
+                    let decodedData = try JSONDecoder().decode(Event.self, from: data)
+                    DispatchQueue.main.async {
+                        self.currentEvent = decodedData
+                    }
+                } catch {
+                    print("Erro ao decodificar JSON: \(error)")
+                }
+            }
+        }.resume()
     }
     
+    //funciona
+    func updateEvent(eventData: Event) {
+            guard let url = URL(string: "http://127.0.0.1:5000/update_current_event") else {
+                return
+            }
+
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+            do {
+                let jsonData = try JSONEncoder().encode(eventData)
+                request.httpBody = jsonData
+            } catch {
+                print("Erro ao codificar dados para JSON: \(error)")
+                return
+            }
+
+            URLSession.shared.dataTask(with: request) { data, response, error in
+                if let error = error {
+                    print("Erro na solicitação: \(error)")
+                    return
+                }
+
+                if let data = data {
+                    // Processar a resposta, se necessário
+                    print("Resposta da API: \(String(data: data, encoding: .utf8) ?? "Dados não válidos")")
+                }
+            }.resume()
+        }
+    
+    //funciona
+    func createAllEventsTable(allEvents: AllEvents) {
+            guard let url = URL(string: "http://127.0.0.1:5000/create_all_events_table") else {
+                return
+            }
+
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+            do {
+                let jsonData = try JSONEncoder().encode(allEvents)
+                request.httpBody = jsonData
+            } catch {
+                print("Erro ao codificar dados para JSON: \(error)")
+                return
+            }
+
+            URLSession.shared.dataTask(with: request) { data, response, error in
+                if let error = error {
+                    print("Erro na solicitação: \(error)")
+                    return
+                }
+
+                if let data = data {
+                    // Processar a resposta, se necessário
+                    print("Resposta da API: \(String(data: data, encoding: .utf8) ?? "Dados não válidos")")
+                }
+            }.resume()
+        }
 }
