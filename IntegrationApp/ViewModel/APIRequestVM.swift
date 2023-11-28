@@ -11,7 +11,7 @@ class APIRequestVM: ObservableObject {
     @Published var allEvents: EventsTable?
     @Published var currentEvent: CurrentEvent?
     
-    //MARK: - GET
+    //MARK: - READ
     /**Função para pegar os dados completos da tabela no banco**/
     func fetchAllEventsTableData() {
         // Substitua a URL abaixo pela URL da sua API
@@ -62,7 +62,7 @@ class APIRequestVM: ObservableObject {
     }
     
     //MARK: - UPDATE
-    /**Função para enviar a atualizar diretamente os dados do evento atual**/
+    /**Função para  atualizar diretamente os dados do evento atual**/
     func updateEvent(eventData: Event) {
             guard let url = URL(string: "http://127.0.0.1:5000/update_current_event") else {
                 return
@@ -124,6 +124,7 @@ class APIRequestVM: ObservableObject {
         }.resume()
     }
     
+    /**Função para atualizar o valor da wallet**/
     func updateWalletValue(wallet: Wallet) {
         guard let url = URL(string: "http://127.0.0.1:5000/add_wallet_value") else {
             return
@@ -154,6 +155,7 @@ class APIRequestVM: ObservableObject {
         }.resume()
     }
     
+    /**Função para adicionar membro no evento**/
     func addEventMember(newMember: Member) {
         guard let url = URL(string: "http://127.0.0.1:5000/add_event_member") else {
             return
@@ -228,6 +230,37 @@ class APIRequestVM: ObservableObject {
 
         do {
             let jsonData = try JSONEncoder().encode(allEvents)
+            request.httpBody = jsonData
+        } catch {
+            print("Erro ao codificar dados para JSON: \(error)")
+            return
+        }
+
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if let error = error {
+                print("Erro na solicitação: \(error)")
+                return
+            }
+
+            if let data = data {
+                // Processar a resposta, se necessário
+                print("Resposta da API: \(String(data: data, encoding: .utf8) ?? "Dados não válidos")")
+            }
+        }.resume()
+    }
+    
+    /***/
+    func createQuiz(newQuiz: Quiz) {
+        guard let url = URL(string: "http://127.0.0.1:5000/create_quiz") else {
+            return
+        }
+
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        do {
+            let jsonData = try JSONEncoder().encode(newQuiz)
             request.httpBody = jsonData
         } catch {
             print("Erro ao codificar dados para JSON: \(error)")

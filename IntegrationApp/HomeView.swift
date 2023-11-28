@@ -29,18 +29,21 @@ struct HomeView: View {
 //                objectVM.fetchAllEventsTableData()
 //                objectVM.fetchCurrentEventData()
 
-                let newEvent = Event(eventName: "Integration Dezembro", eventDate: "27/09/2023", eventMembers: nil, quiz: nil, finance: nil, activeEvent: true, task: nil, financeValidation: FinanceAnswer(title: "Vai participar hoje?", collaborators: nil))
+                let newEvent = Event(eventName: "Integration Dezembro", eventDate: "27/09/2023", eventMembers: [], quiz: [], finance: nil, activeEvent: true, task: [], financeValidation: FinanceAnswer(title: "Vai participar hoje?", collaborators: []))
 //
                 let allEvents = AllEvents(id: "AllEvents", currentEvent: nil, previousEvent: [], wallet: Wallet(id: "Wallet", value: 0.0), users: [])
                 
                 let newUser = Login(id: "Natan", name: "Natan", email: "natancr@gmail.com", password: "12345")
+                
+                let newQuiz = Quiz(id: "Salgados", title: "Salgados", category: .finance, answerType: .multiple, answerOptions: [QuizAnswer(id: "Coxinha", title: "Coxinha", votes: 0), QuizAnswer(id: "Queijo", title: "Queijo", votes: 0)], icon: "plus")
                 
 //                objectVM.updateEvent(eventData: newEvent)
 //                objectVM.createAllEventsTable(allEvents: allEvents)
 //                objectVM.createUserTable()
 //                objectVM.addNewUserToUserTable(newUser: newUser)
 //                objectVM.updateWalletValue(wallet: Wallet(id: "Wallet", value: 2.0))
-                objectVM.addEventMember(newMember: Member(id: "Natan", name: "Natan", financeMember: true))
+//                objectVM.addEventMember(newMember: Member(id: "Joao", name: "Joao", financeMember: true))
+                objectVM.createQuiz(newQuiz: newQuiz)
             }
             
 //            .onReceive(objectVM.$currentEvent, perform: { update in
