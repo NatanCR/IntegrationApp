@@ -249,7 +249,7 @@ class APIRequestVM: ObservableObject {
         }.resume()
     }
     
-    /***/
+    /**Função para criar um novo quiz no evento**/
     func createQuiz(newQuiz: Quiz) {
         guard let url = URL(string: "http://127.0.0.1:5000/create_quiz") else {
             return
@@ -280,4 +280,33 @@ class APIRequestVM: ObservableObject {
         }.resume()
     }
     
+    func createTask(newTask: EventTask) {
+        guard let url = URL(string: "http://127.0.0.1:5000/create_task") else {
+            return
+        }
+
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        do {
+            let jsonData = try JSONEncoder().encode(newTask)
+            request.httpBody = jsonData
+        } catch {
+            print("Erro ao codificar dados para JSON: \(error)")
+            return
+        }
+
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if let error = error {
+                print("Erro na solicitação: \(error)")
+                return
+            }
+
+            if let data = data {
+                // Processar a resposta, se necessário
+                print("Resposta da API: \(String(data: data, encoding: .utf8) ?? "Dados não válidos")")
+            }
+        }.resume()
+    }
 }

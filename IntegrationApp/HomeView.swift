@@ -37,13 +37,16 @@ struct HomeView: View {
                 
                 let newQuiz = Quiz(id: "Salgados", title: "Salgados", category: .finance, answerType: .multiple, answerOptions: [QuizAnswer(id: "Coxinha", title: "Coxinha", votes: 0), QuizAnswer(id: "Queijo", title: "Queijo", votes: 0)], icon: "plus")
                 
+                let newTask = EventTask(id: "Comprar salgados", title: "Comprar Salgados", deadline: "26/09/2023", collaborators: [], status: .on, icon: "plus")
+                
 //                objectVM.updateEvent(eventData: newEvent)
 //                objectVM.createAllEventsTable(allEvents: allEvents)
 //                objectVM.createUserTable()
 //                objectVM.addNewUserToUserTable(newUser: newUser)
 //                objectVM.updateWalletValue(wallet: Wallet(id: "Wallet", value: 2.0))
 //                objectVM.addEventMember(newMember: Member(id: "Joao", name: "Joao", financeMember: true))
-                objectVM.createQuiz(newQuiz: newQuiz)
+//                objectVM.createQuiz(newQuiz: newQuiz)
+                objectVM.createTask(newTask: newTask)
             }
             
 //            .onReceive(objectVM.$currentEvent, perform: { update in
