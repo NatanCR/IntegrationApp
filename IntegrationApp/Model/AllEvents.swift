@@ -20,9 +20,9 @@ struct AllEvents: Codable, Identifiable {
     var currentEvent: Event?
     var previousEvent: [Event?]?
     var wallet: Wallet?
-    var users: [Login]
+    var users: [Login]?
     
-    init(id: String? = nil, currentEvent: Event? = nil, previousEvent: [Event?]? = nil, wallet: Wallet? = nil, users: [Login]) {
+    init(id: String? = nil, currentEvent: Event? = nil, previousEvent: [Event?]? = nil, wallet: Wallet? = nil, users: [Login]? = nil) {
         self.id = id
         self.currentEvent = currentEvent
         self.previousEvent = previousEvent
