@@ -36,6 +36,8 @@
 		6B84761A2B0BB4F7008A3CA2 /* HTTPResquestsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8476192B0BB4F7008A3CA2 /* HTTPResquestsVM.swift */; };
 		6C334954EAA4ECE89A84A521 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		99BDFACFE7F9D9C8D69089B9 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		D11D6D482B15291F00A3931C /* ObjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11D6D472B15291F00A3931C /* ObjectViewModel.swift */; };
+		D11D6D4A2B1529DE00A3931C /* APIRequestVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11D6D492B1529DE00A3931C /* APIRequestVM.swift */; };
 		D13CB5D22AED6C3C00CFEE02 /* IntegrationAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13CB5D12AED6C3C00CFEE02 /* IntegrationAppApp.swift */; };
 		D13CB5D42AED6C3C00CFEE02 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13CB5D32AED6C3C00CFEE02 /* ContentView.swift */; };
 		D13CB5D62AED6C3D00CFEE02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D13CB5D52AED6C3D00CFEE02 /* Assets.xcassets */; };
@@ -108,6 +110,8 @@
 		6B8476152B080371008A3CA2 /* AppStartState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStartState.swift; sourceTree = "<group>"; };
 		6B8476172B081DC9008A3CA2 /* AuthenticateNewUserVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateNewUserVM.swift; sourceTree = "<group>"; };
 		6B8476192B0BB4F7008A3CA2 /* HTTPResquestsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResquestsVM.swift; sourceTree = "<group>"; };
+		D11D6D472B15291F00A3931C /* ObjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectViewModel.swift; sourceTree = "<group>"; };
+		D11D6D492B1529DE00A3931C /* APIRequestVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestVM.swift; sourceTree = "<group>"; };
 		D13CB5CE2AED6C3C00CFEE02 /* IntegrationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntegrationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D13CB5D12AED6C3C00CFEE02 /* IntegrationAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationAppApp.swift; sourceTree = "<group>"; };
 		D13CB5D32AED6C3C00CFEE02 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -271,6 +275,8 @@
 			children = (
 				6B8476172B081DC9008A3CA2 /* AuthenticateNewUserVM.swift */,
 				6B8476192B0BB4F7008A3CA2 /* HTTPResquestsVM.swift */,
+				D11D6D472B15291F00A3931C /* ObjectViewModel.swift */,
+				D11D6D492B1529DE00A3931C /* APIRequestVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -519,6 +525,7 @@
 				D197582A2B113763004C7954 /* Status.swift in Sources */,
 				6B8476162B080371008A3CA2 /* AppStartState.swift in Sources */,
 				6B59005A2AFA8AC300152BBF /* QuizzesSubview.swift in Sources */,
+				D11D6D482B15291F00A3931C /* ObjectViewModel.swift in Sources */,
 				D19758242B11373C004C7954 /* EventTask.swift in Sources */,
 				D19758162B1136E1004C7954 /* Login.swift in Sources */,
 				6B59004C2AF9656600152BBF /* EventView.swift in Sources */,
@@ -534,6 +541,7 @@
 				6B84761A2B0BB4F7008A3CA2 /* HTTPResquestsVM.swift in Sources */,
 				4DC01B5D2AF97D8600970B79 /* HomeView.swift in Sources */,
 				4DC01B5F2AF9866900970B79 /* MemberButton.swift in Sources */,
+				D11D6D4A2B1529DE00A3931C /* APIRequestVM.swift in Sources */,
 				D19758282B113756004C7954 /* QuizAnswer.swift in Sources */,
 				99BDFACFE7F9D9C8D69089B9 /* (null) in Sources */,
 				0779996E03AB90C7596C0775 /* (null) in Sources */,
