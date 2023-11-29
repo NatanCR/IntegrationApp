@@ -60,7 +60,7 @@ struct HomeView: View {
 //                objectVM.createTask(newTask: newTask)
 //                objectVM.createFinance(newFinance: newFinance)
 //                objectVM.addTaskMember(newMember: newTaskMember)
-                objectVM.addQuizVote(quizForAdd: addVote)
+//                objectVM.addQuizVote(quizForAdd: addVote)
             }
             
 //            .onReceive(objectVM.$currentEvent, perform: { update in

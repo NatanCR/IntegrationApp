@@ -39,6 +39,9 @@
 		D11D6D4A2B1529DE00A3931C /* APIRequestVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11D6D492B1529DE00A3931C /* APIRequestVM.swift */; };
 		D11D6D4E2B17A6F000A3931C /* NewTaskMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11D6D4D2B17A6F000A3931C /* NewTaskMember.swift */; };
 		D11D6D502B17B39600A3931C /* AddQuizVote.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11D6D4F2B17B39600A3931C /* AddQuizVote.swift */; };
+		D11D6D522B17DB9200A3931C /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D11D6D512B17DB9200A3931C /* Poppins-Regular.ttf */; };
+		D11D6D532B17DB9200A3931C /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D11D6D512B17DB9200A3931C /* Poppins-Regular.ttf */; };
+		D11D6D542B17DB9200A3931C /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D11D6D512B17DB9200A3931C /* Poppins-Regular.ttf */; };
 		D13CB5D22AED6C3C00CFEE02 /* IntegrationAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13CB5D12AED6C3C00CFEE02 /* IntegrationAppApp.swift */; };
 		D13CB5D42AED6C3C00CFEE02 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13CB5D32AED6C3C00CFEE02 /* ContentView.swift */; };
 		D13CB5D62AED6C3D00CFEE02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D13CB5D52AED6C3D00CFEE02 /* Assets.xcassets */; };
@@ -114,6 +117,8 @@
 		D11D6D492B1529DE00A3931C /* APIRequestVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestVM.swift; sourceTree = "<group>"; };
 		D11D6D4D2B17A6F000A3931C /* NewTaskMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskMember.swift; sourceTree = "<group>"; };
 		D11D6D4F2B17B39600A3931C /* AddQuizVote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuizVote.swift; sourceTree = "<group>"; };
+		D11D6D512B17DB9200A3931C /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		D11D6D552B17DBAE00A3931C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D13CB5CE2AED6C3C00CFEE02 /* IntegrationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntegrationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D13CB5D12AED6C3C00CFEE02 /* IntegrationAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationAppApp.swift; sourceTree = "<group>"; };
 		D13CB5D32AED6C3C00CFEE02 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -179,6 +184,13 @@
 			path = ViewStates;
 			sourceTree = "<group>";
 		};
+		D11D6D562B17DC8600A3931C /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		D13CB5C52AED6C3C00CFEE02 = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +214,9 @@
 		D13CB5D02AED6C3C00CFEE02 /* IntegrationApp */ = {
 			isa = PBXGroup;
 			children = (
+				D11D6D562B17DC8600A3931C /* fonts */,
+				D11D6D512B17DB9200A3931C /* Poppins-Regular.ttf */,
+				D11D6D552B17DBAE00A3931C /* Info.plist */,
 				D13CB5D12AED6C3C00CFEE02 /* IntegrationAppApp.swift */,
 				D13CB5D32AED6C3C00CFEE02 /* ContentView.swift */,
 				D19758142B113680004C7954 /* Model */,
@@ -479,6 +494,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D11D6D522B17DB9200A3931C /* Poppins-Regular.ttf in Resources */,
 				D13CB5D92AED6C3D00CFEE02 /* Preview Assets.xcassets in Resources */,
 				D13CB5D62AED6C3D00CFEE02 /* Assets.xcassets in Resources */,
 			);
@@ -488,6 +504,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D11D6D532B17DB9200A3931C /* Poppins-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +512,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D11D6D542B17DB9200A3931C /* Poppins-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -726,6 +744,7 @@
 				DEVELOPMENT_TEAM = 3SWCGFCJF2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = IntegrationApp/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -762,6 +781,7 @@
 				DEVELOPMENT_TEAM = 3SWCGFCJF2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = IntegrationApp/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
