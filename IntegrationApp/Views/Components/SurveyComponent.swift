@@ -38,8 +38,6 @@ struct SurveyComponent: View {
                                 newOption = ""
                             }
                         })
-                        //                            .background(Color.primaryBlue)
-                        //                            .cornerRadius(10)
                     } else {
                         ForEach(options.indices, id: \.self) { index in
                             HStack {
@@ -47,7 +45,8 @@ struct SurveyComponent: View {
                                     .frame(width: screenSize.width * 0.04)
                                 // Bolinha que muda de cor ao votar
                                 Circle()
-                                    .stroke(Color.gray, lineWidth: 1)
+                                    .stroke(lineWidth: 1.3)
+                                    .foregroundStyle(Color.segmentedControlSelected)
                                     .background(Circle().fill(selectedOptionId == options[index].id ? Color.blue : Color.clear))
                                     .frame(width: screenSize.width * 0.06, height: screenSize.height * 0.05)
                                 
@@ -65,8 +64,6 @@ struct SurveyComponent: View {
                                 Spacer()
                                     .frame(width: screenSize.width * 0.04)
                             }
-                            //                            .background(Color.primaryBlue)
-                            //                            .cornerRadius(10)
                             Divider()
                                 .frame(width: screenSize.width * 0.9, height: screenSize.height * 0.001)
                                 .background(Color.white)
@@ -77,9 +74,13 @@ struct SurveyComponent: View {
                             if index == options.count - 1 {
                                 HStack{
                                     Spacer().frame(width: screenSize.width * 0.04)
+                                    
+                                    
                                     Circle()
                                         .strokeBorder(style: StrokeStyle(lineWidth: 2, dash: [5]))
-                                        .frame(width: 100, height: 100)
+                                        .foregroundStyle(Color.gray)
+                                        .frame(width: screenSize.width * 0.06, height: screenSize.height * 0.05)
+                                    
                                     TextField("Toque para adicionar", text: $newOption, onCommit: {
                                         if !newOption.isEmpty {
                                             let newId = options.count + 1

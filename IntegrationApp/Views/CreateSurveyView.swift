@@ -71,6 +71,9 @@ struct CreateSurveyView: View {
                                     }
                                     
                                     .pickerStyle(SegmentedPickerStyle())
+                                    .frame(width: screenSize.width * 0.95, height: 50)
+                                    .background(Color.segmentedControlSelected)                                        .foregroundColor(Color.white) // Cor do texto
+                                        .cornerRadius(10)
                                     .frame(width: screenSize.width * 0.9)
                                 }
                             }
