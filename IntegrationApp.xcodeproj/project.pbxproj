@@ -37,6 +37,8 @@
 		6C334954EAA4ECE89A84A521 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		99BDFACFE7F9D9C8D69089B9 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		D11D6D4A2B1529DE00A3931C /* APIRequestVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11D6D492B1529DE00A3931C /* APIRequestVM.swift */; };
+		D11D6D4E2B17A6F000A3931C /* NewTaskMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11D6D4D2B17A6F000A3931C /* NewTaskMember.swift */; };
+		D11D6D502B17B39600A3931C /* AddQuizVote.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11D6D4F2B17B39600A3931C /* AddQuizVote.swift */; };
 		D13CB5D22AED6C3C00CFEE02 /* IntegrationAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13CB5D12AED6C3C00CFEE02 /* IntegrationAppApp.swift */; };
 		D13CB5D42AED6C3C00CFEE02 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13CB5D32AED6C3C00CFEE02 /* ContentView.swift */; };
 		D13CB5D62AED6C3D00CFEE02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D13CB5D52AED6C3D00CFEE02 /* Assets.xcassets */; };
@@ -110,6 +112,8 @@
 		6B8476172B081DC9008A3CA2 /* AuthenticateNewUserVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateNewUserVM.swift; sourceTree = "<group>"; };
 		6B8476192B0BB4F7008A3CA2 /* HTTPResquestsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResquestsVM.swift; sourceTree = "<group>"; };
 		D11D6D492B1529DE00A3931C /* APIRequestVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestVM.swift; sourceTree = "<group>"; };
+		D11D6D4D2B17A6F000A3931C /* NewTaskMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskMember.swift; sourceTree = "<group>"; };
+		D11D6D4F2B17B39600A3931C /* AddQuizVote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuizVote.swift; sourceTree = "<group>"; };
 		D13CB5CE2AED6C3C00CFEE02 /* IntegrationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntegrationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D13CB5D12AED6C3C00CFEE02 /* IntegrationAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationAppApp.swift; sourceTree = "<group>"; };
 		D13CB5D32AED6C3C00CFEE02 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -264,6 +268,8 @@
 				D19758172B1136EF004C7954 /* AllEvents.swift */,
 				D19758192B1136FE004C7954 /* Event.swift */,
 				D197581B2B113709004C7954 /* Wallet.swift */,
+				D11D6D4D2B17A6F000A3931C /* NewTaskMember.swift */,
+				D11D6D4F2B17B39600A3931C /* AddQuizVote.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -527,6 +533,7 @@
 				6B59004C2AF9656600152BBF /* EventView.swift in Sources */,
 				052486CF2AF96DEE004E1692 /* CreateEventButton.swift in Sources */,
 				052486CD2AF96D8E004E1692 /* DatePickerComponent.swift in Sources */,
+				D11D6D502B17B39600A3931C /* AddQuizVote.swift in Sources */,
 				D19757F32B0FD36D004C7954 /* GridIconComponent.swift in Sources */,
 				052486D12AF96E1F004E1692 /* SheetCreateEvent.swift in Sources */,
 				D19758182B1136EF004C7954 /* AllEvents.swift in Sources */,
@@ -550,6 +557,7 @@
 				6C334954EAA4ECE89A84A521 /* (null) in Sources */,
 				4DC01B612AFAAAAC00970B79 /* MembersView.swift in Sources */,
 				1010AEBF58686A0BBBC15FAE /* (null) in Sources */,
+				D11D6D4E2B17A6F000A3931C /* NewTaskMember.swift in Sources */,
 				D197581E2B113716004C7954 /* Member.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

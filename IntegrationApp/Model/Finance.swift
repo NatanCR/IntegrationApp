@@ -12,13 +12,13 @@ struct Finance: Codable, Identifiable {
   var title: String?
   var deadline: String?
   var totalValue: Double?
-  var valueMembers: Int?
+  var valuePerMembers: Double?
     
-    init(id: String = UUID().uuidString, title: String? = nil, deadline: String? = nil, totalValue: Double? = nil, valueMembers: Int? = nil) {
+    init(id: String = UUID().uuidString, title: String? = nil, deadline: String? = nil, totalValue: Double? = nil, valuePerMembers: Double? = nil) {
         self.id = id
         self.title = title
         self.deadline = deadline
         self.totalValue = totalValue
-        self.valueMembers = valueMembers
+        self.valuePerMembers = valuePerMembers
     }
 }

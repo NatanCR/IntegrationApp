@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct QuizAnswer: Codable, Identifiable {
-  let id: String
+struct QuizAnswer: Codable {
+  let optionId: String
   var title: String?
   var votes: Int?
     
-    init(id: String = UUID().uuidString, title: String? = nil, votes: Int? = nil) {
-        self.id = id
+    init(optionId: String = UUID().uuidString, title: String? = nil, votes: Int? = nil) {
+        self.optionId = optionId
         self.title = title
         self.votes = votes
     }

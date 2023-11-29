@@ -186,6 +186,64 @@ class APIRequestVM: ObservableObject {
         }.resume()
     }
     
+    /**Função para adicionar um novo membro na task**/
+    func addTaskMember(newMember: NewTaskMember) {
+        let url = URL(string: "http://127.0.0.1:5000/add_member_to_task")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        do {
+            let jsonData = try JSONEncoder().encode(newMember)
+            print(String(data: jsonData, encoding: .utf8) ?? "Dados não válidos")
+            request.httpBody = jsonData
+        } catch {
+            print("Erro ao codificar dados para JSON: \(error)")
+            return
+        }
+        
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if let error = error {
+                print("Erro na solicitação: \(error)")
+                return
+            }
+            
+            if let data = data {
+                // Processar a resposta, se necessário
+                print("Resposta da API: \(String(data: data, encoding: .utf8) ?? "Dados não válidos")")
+            }
+        }.resume()
+    }
+    
+    /**Função para incrementar um voto na resposta do quiz**/
+    func addQuizVote(quizForAdd: AddQuizVote) {
+        let url = URL(string: "http://127.0.0.1:5000/increment_vote")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        do {
+            let jsonData = try JSONEncoder().encode(quizForAdd)
+            print(String(data: jsonData, encoding: .utf8) ?? "Dados não válidos")
+            request.httpBody = jsonData
+        } catch {
+            print("Erro ao codificar dados para JSON: \(error)")
+            return
+        }
+        
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if let error = error {
+                print("Erro na solicitação: \(error)")
+                return
+            }
+            
+            if let data = data {
+                // Processar a resposta, se necessário
+                print("Resposta da API: \(String(data: data, encoding: .utf8) ?? "Dados não válidos")")
+            }
+        }.resume()
+    }
+    
     //MARK: - CREATE
     /**Função para criar a tabela completa no banco**/
     func createAllEventsTable(allEvents: AllEvents) {
@@ -280,6 +338,7 @@ class APIRequestVM: ObservableObject {
         }.resume()
     }
     
+    /**Função para criar uma nova task no evento**/
     func createTask(newTask: EventTask) {
         guard let url = URL(string: "http://127.0.0.1:5000/create_task") else {
             return
@@ -291,6 +350,37 @@ class APIRequestVM: ObservableObject {
 
         do {
             let jsonData = try JSONEncoder().encode(newTask)
+            request.httpBody = jsonData
+        } catch {
+            print("Erro ao codificar dados para JSON: \(error)")
+            return
+        }
+
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if let error = error {
+                print("Erro na solicitação: \(error)")
+                return
+            }
+
+            if let data = data {
+                // Processar a resposta, se necessário
+                print("Resposta da API: \(String(data: data, encoding: .utf8) ?? "Dados não válidos")")
+            }
+        }.resume()
+    }
+    
+    /**Função para criar um resgistro financeiro no evento**/
+    func createFinance(newFinance: Finance) {
+        guard let url = URL(string: "http://127.0.0.1:5000/create_finance") else {
+            return
+        }
+
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        do {
+            let jsonData = try JSONEncoder().encode(newFinance)
             request.httpBody = jsonData
         } catch {
             print("Erro ao codificar dados para JSON: \(error)")
