@@ -60,6 +60,6 @@ struct SegControlComponent: View {
     }
 }
 
-#Preview {
-    SegControlComponent()
-}
+//#Preview {
+//    SegControlComponent()
+//}

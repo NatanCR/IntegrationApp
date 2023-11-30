@@ -20,7 +20,13 @@ struct CreateSurveyView: View {
         //        SurveyOption(id: 2, name: "Azul", votes: 0),
         //        SurveyOption(id: 3, name: "Verde", votes: 0)
     ]
+    @State var initialProperty1 = "Atividades"
+    @State var initialProperty2 = "Única"
+    @State private var eventsProperty1 = ["Atividades", "Financeiro"]
+    @State private var eventsProperty2 = ["Única", "Múltipla"]
+    var cornerRadius: CGFloat = 15
     @Environment (\.screenSize) var screenSize
+    
     
     var body: some View {
         
@@ -54,34 +60,71 @@ struct CreateSurveyView: View {
                         
                         VStack(alignment: .leading, spacing: 15) {
                             Section(header: TitleComponent(title: "Tipo de Enquete")) {
-                                Picker("Segmento", selection: $selectedSegment1) {
-                                    Text("Atividades")
-                                        .tag(0)
-                                        .foregroundColor(selectedSegment2 == 1 ? .white : .primary)
-                                    Text("Financeiro")
-                                        .tag(1)
-                                        .foregroundColor(selectedSegment2 == 1 ? .white : .primary)
+                                SegmentControlView(segments: eventsProperty1,
+                                                   selected: $initialProperty1,
+                                                   titleNormalColor: .white,
+                                                   titleSelectedColor: .white,
+                                                   selectedColor: .segmentedControlSelected,
+                                                   defaultColor: .segmentedSurvey,
+                                                   animation: Animation.default) { property in
+                                    Text(property)
+                                        .font(.system(size: 16, weight: .semibold, design: .rounded))
+                                        .padding(.horizontal)
+                                        .padding(.vertical, 8)
+                                } background: {
+                                    RoundedRectangle(cornerRadius: cornerRadius, style: .circular)
                                 }
-                                .pickerStyle(SegmentedPickerStyle())
-                                .frame(width: screenSize.width * 0.83)
-                                .padding()
-                                .background(Color.segmentedControlSelected.cornerRadius(18))
+                                .padding(.leading, 20)
+                                .padding(.trailing, 20)
+                                .frame(height: 55)
+                                .padding(.top, 20)
+//                                Picker("Segmento", selection: $selectedSegment1) {
+//                                    Text("Atividades")
+//                                        .tag(0)
+//                                    
+//                                    
+//                                    Text("Financeiro")
+//                                        .tag(1)
+//                                }
+//                                .pickerStyle(SegmentedPickerStyle())
+//                                .frame(width: screenSize.width * 0.83)
+//                                .padding()
+//                                .background(Color.segmentedControlSelected.cornerRadius(18))
                                 
                                 TitleComponent(title: "Tipo de Escolha")
                                 
                                 VStack(alignment: .leading) {
-                                    Picker("Segmento", selection: $selectedSegment2) {
-                                        Text("Única")
-                                            .tag(0)
-                                            .foregroundColor(selectedSegment1 == 1 ? .white : .primary)
-                                        Text("Múltipla")
-                                            .tag(1)
-                                            .foregroundColor(selectedSegment1 == 1 ? .white : .primary)
+                                    
+                                    SegmentControlView(segments: eventsProperty2,
+                                                       selected: $initialProperty2,
+                                                       titleNormalColor: .white,
+                                                       titleSelectedColor: .white,
+                                                       selectedColor: .segmentedControlSelected,
+                                                       defaultColor: .segmentedSurvey,
+                                                       animation: Animation.default) { property in
+                                        Text(property)
+                                            .font(.system(size: 16, weight: .semibold, design: .rounded))
+                                            .padding(.horizontal)
+                                            .padding(.vertical, 8)
+                                    } background: {
+                                        RoundedRectangle(cornerRadius: cornerRadius, style: .circular)
                                     }
-                                    .pickerStyle(SegmentedPickerStyle())
-                                    .frame(width: screenSize.width * 0.83)
-                                    .padding()
-                                    .background(Color.segmentedControlSelected.cornerRadius(18))
+                                    .padding(.leading, 20)
+                                    .padding(.trailing, 20)
+                                    .frame(height: 55)
+                                    .padding(.top, 20)
+//                                    Picker("Segmento", selection: $selectedSegment2) {
+//                                        Text("Única")
+//                                            .tag(0)
+//                                            .foregroundColor(selectedSegment1 == 1 ? .white : .primary)
+//                                        Text("Múltipla")
+//                                            .tag(1)
+//                                            .foregroundColor(selectedSegment1 == 1 ? .white : .primary)
+//                                    }
+//                                    .pickerStyle(SegmentedPickerStyle())
+//                                    .frame(width: screenSize.width * 0.83)
+//                                    .padding()
+//                                    .background(Color.segmentedControlSelected.cornerRadius(18))
                                 }
                             }
                         
