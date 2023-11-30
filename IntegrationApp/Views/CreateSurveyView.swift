@@ -16,7 +16,7 @@ struct CreateSurveyView: View {
     @State private var selectedSegment1 = 0
     @State private var selectedSegment2 = 0
     @State private var options: [SurveyOption] = [
-//        SurveyOption(id: 1, name: "Vermelho", votes: 0)
+        //        SurveyOption(id: 1, name: "Vermelho", votes: 0)
         //        SurveyOption(id: 2, name: "Azul", votes: 0),
         //        SurveyOption(id: 3, name: "Verde", votes: 0)
     ]
@@ -25,13 +25,13 @@ struct CreateSurveyView: View {
     var body: some View {
         
         VStack(alignment: .leading, spacing: 10) {
-//            SurveyComponent(
-//                //                question: "Qual é a sua cor favorita?",
-//                options: $options,
-//                isVotingEnabled: true
-//            )
-//            .textFieldStyle(RoundedBorderTextFieldStyle())
-//            .padding()
+            //            SurveyComponent(
+            //                //                question: "Qual é a sua cor favorita?",
+            //                options: $options,
+            //                isVotingEnabled: true
+            //            )
+            //            .textFieldStyle(RoundedBorderTextFieldStyle())
+            //            .padding()
             
             Button("Show Results") {
                 showingResults.toggle()
@@ -52,34 +52,42 @@ struct CreateSurveyView: View {
                             }.listRowBackground(Color.clear)
                         }
                         
-                        VStack(alignment: .leading, spacing: 15){
-                            
-                            Section(header: TitleComponent(title: "Tipo de Enquete")){
+                        VStack(alignment: .leading, spacing: 15) {
+                            Section(header: TitleComponent(title: "Tipo de Enquete")) {
                                 Picker("Segmento", selection: $selectedSegment1) {
-                                    Text("Atividades").tag(0)
-                                    Text("Financeiro").tag(1)
+                                    Text("Atividades")
+                                        .tag(0)
+                                        .foregroundColor(selectedSegment2 == 1 ? .white : .primary)
+                                    Text("Financeiro")
+                                        .tag(1)
+                                        .foregroundColor(selectedSegment2 == 1 ? .white : .primary)
                                 }
                                 .pickerStyle(SegmentedPickerStyle())
-                                .frame(width: screenSize.width * 0.9)
+                                .frame(width: screenSize.width * 0.83)
+                                .padding()
+                                .background(Color.segmentedControlSelected.cornerRadius(18))
                                 
                                 TitleComponent(title: "Tipo de Escolha")
                                 
-                                VStack(alignment: . leading){
+                                VStack(alignment: .leading) {
                                     Picker("Segmento", selection: $selectedSegment2) {
-                                        Text("Única").tag(0)
-                                        Text("Múltipla").tag(1)
+                                        Text("Única")
+                                            .tag(0)
+                                            .foregroundColor(selectedSegment1 == 1 ? .white : .primary)
+                                        Text("Múltipla")
+                                            .tag(1)
+                                            .foregroundColor(selectedSegment1 == 1 ? .white : .primary)
                                     }
-                                    
                                     .pickerStyle(SegmentedPickerStyle())
-                                    .frame(width: screenSize.width * 0.95, height: 50)
-                                    .background(Color.segmentedControlSelected)                                        .foregroundColor(Color.white) // Cor do texto
-                                        .cornerRadius(10)
-                                    .frame(width: screenSize.width * 0.9)
+                                    .frame(width: screenSize.width * 0.83)
+                                    .padding()
+                                    .background(Color.segmentedControlSelected.cornerRadius(18))
                                 }
                             }
+                        
                         }
                         
-                        VStack(){
+                        VStack(alignment: .leading, spacing: 15){
                             Section(header: TitleComponent(title: "Opções")){
                                 SurveyComponent(
                                     //                                    question: "Qual é a sua cor favorita?",

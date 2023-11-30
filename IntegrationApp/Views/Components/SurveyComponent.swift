@@ -37,7 +37,7 @@ struct SurveyComponent: View {
                                 options.append(SurveyOption(id: newId, name: newOption, votes: 0))
                                 newOption = ""
                             }
-                        })
+                        }).foregroundStyle(Color.textSurvey)
                     } else {
                         ForEach(options.indices, id: \.self) { index in
                             HStack {
@@ -77,8 +77,8 @@ struct SurveyComponent: View {
                                     
                                     
                                     Circle()
-                                        .strokeBorder(style: StrokeStyle(lineWidth: 2, dash: [5]))
-                                        .foregroundStyle(Color.gray)
+                                        .strokeBorder(style: StrokeStyle(lineWidth: 2, dash: [2]))
+                                        .foregroundStyle(Color.segmentedControlSelected)
                                         .frame(width: screenSize.width * 0.06, height: screenSize.height * 0.05)
                                     
                                     TextField("Toque para adicionar", text: $newOption, onCommit: {
@@ -89,6 +89,7 @@ struct SurveyComponent: View {
                                         }
                                         
                                     })
+                                    .foregroundStyle(Color.textSurvey)
                                 }
                             }
                         }.cornerRadius(10)
