@@ -50,6 +50,9 @@
 		D13CB5ED2AED6C3E00CFEE02 /* IntegrationAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13CB5EC2AED6C3E00CFEE02 /* IntegrationAppUITests.swift */; };
 		D13CB5EF2AED6C3E00CFEE02 /* IntegrationAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13CB5EE2AED6C3E00CFEE02 /* IntegrationAppUITestsLaunchTests.swift */; };
 		D16252F12AED71E40077D469 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16252F02AED71E40077D469 /* Formatters.swift */; };
+		D170B0172B18CE2000D4CB41 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D170B0162B18CE2000D4CB41 /* Poppins-SemiBold.ttf */; };
+		D170B0182B18CE2000D4CB41 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D170B0162B18CE2000D4CB41 /* Poppins-SemiBold.ttf */; };
+		D170B0192B18CE2000D4CB41 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D170B0162B18CE2000D4CB41 /* Poppins-SemiBold.ttf */; };
 		D19757F32B0FD36D004C7954 /* GridIconComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19757F22B0FD36D004C7954 /* GridIconComponent.swift */; };
 		D19757F52B0FE393004C7954 /* SheetCreateFinance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19757F42B0FE393004C7954 /* SheetCreateFinance.swift */; };
 		D19757F72B110CE0004C7954 /* NumberFieldComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19757F62B110CE0004C7954 /* NumberFieldComponent.swift */; };
@@ -130,6 +133,7 @@
 		D13CB5EC2AED6C3E00CFEE02 /* IntegrationAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationAppUITests.swift; sourceTree = "<group>"; };
 		D13CB5EE2AED6C3E00CFEE02 /* IntegrationAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D16252F02AED71E40077D469 /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
+		D170B0162B18CE2000D4CB41 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		D19757F22B0FD36D004C7954 /* GridIconComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridIconComponent.swift; sourceTree = "<group>"; };
 		D19757F42B0FE393004C7954 /* SheetCreateFinance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetCreateFinance.swift; sourceTree = "<group>"; };
 		D19757F62B110CE0004C7954 /* NumberFieldComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFieldComponent.swift; sourceTree = "<group>"; };
@@ -187,6 +191,8 @@
 		D11D6D562B17DC8600A3931C /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				D170B0162B18CE2000D4CB41 /* Poppins-SemiBold.ttf */,
+				D11D6D512B17DB9200A3931C /* Poppins-Regular.ttf */,
 			);
 			path = fonts;
 			sourceTree = "<group>";
@@ -215,7 +221,6 @@
 			isa = PBXGroup;
 			children = (
 				D11D6D562B17DC8600A3931C /* fonts */,
-				D11D6D512B17DB9200A3931C /* Poppins-Regular.ttf */,
 				D11D6D552B17DBAE00A3931C /* Info.plist */,
 				D13CB5D12AED6C3C00CFEE02 /* IntegrationAppApp.swift */,
 				D13CB5D32AED6C3C00CFEE02 /* ContentView.swift */,
@@ -495,6 +500,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D11D6D522B17DB9200A3931C /* Poppins-Regular.ttf in Resources */,
+				D170B0172B18CE2000D4CB41 /* Poppins-SemiBold.ttf in Resources */,
 				D13CB5D92AED6C3D00CFEE02 /* Preview Assets.xcassets in Resources */,
 				D13CB5D62AED6C3D00CFEE02 /* Assets.xcassets in Resources */,
 			);
@@ -505,6 +511,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D11D6D532B17DB9200A3931C /* Poppins-Regular.ttf in Resources */,
+				D170B0182B18CE2000D4CB41 /* Poppins-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,6 +520,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D11D6D542B17DB9200A3931C /* Poppins-Regular.ttf in Resources */,
+				D170B0192B18CE2000D4CB41 /* Poppins-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

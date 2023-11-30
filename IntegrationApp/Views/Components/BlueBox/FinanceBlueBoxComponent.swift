@@ -40,24 +40,16 @@ struct FinanceBlueBoxComponent: View {
                     //TODO: Colocar fonte e tamanho
                     VStack(alignment: .leading) {
                         Text(financeCardTitle)
-                            .font(.system(size: 18,
-                                          weight: .semibold,
-                                          design: .rounded))
+                            .font(.custom("Poppins-SemiBold", size: 15))
                         Text("Valor por Membro:")
-                            .font(.system(size: 13,
-                                          weight: .light,
-                                          design: .rounded))
+                            .font(.custom("Poppins-Regular", size: 12))
                     }
                     Spacer()
                     VStack(alignment: .trailing) {
                         Text("Validade: \(deadlineCard)")
-                            .font(.system(size: 15,
-                                          weight: .semibold,
-                                          design: .rounded))
+                            .font(.custom("Poppins-SemiBold", size: 12))
                         Text("R$ \(memberValue, specifier: "%.2f")")
-                            .font(.system(size: 13,
-                                          weight: .light,
-                                          design: .rounded))
+                            .font(.custom("Poppins-Regular", size: 12))
                     }
                 }
                 .padding(.bottom, 25)
@@ -66,10 +58,12 @@ struct FinanceBlueBoxComponent: View {
                 HStack {
                     VStack {
                         Text("Valor pago: \(valuePayed, specifier: "%.2f")")
+                            .font(.custom("Poppins-Regular", size: 12))
                     }
                     Spacer()
                     VStack {
                         Text("Valor total: R$ \(totalValue, specifier: "%.2f")")
+                            .font(.custom("Poppins-Regular", size: 12))
                     }
                 }
                 .padding(.horizontal, 30)

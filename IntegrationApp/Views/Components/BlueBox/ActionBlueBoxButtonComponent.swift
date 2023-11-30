@@ -22,7 +22,7 @@ struct ActionBlueBoxButtonComponent: View {
                     .overlay {
                         Text(buttonTitle)
                             .foregroundStyle(Color.white)
-                            .font(.system(size: 14, weight: .bold, design: .rounded))
+                            .font(.custom("Poppins-SemiBold", size: 15))
                     }
                 }
         })

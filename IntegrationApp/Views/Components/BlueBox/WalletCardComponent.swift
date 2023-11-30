@@ -19,7 +19,6 @@ struct WalletCardComponent: View {
             Text("R$ \(walletValue, specifier: "%.2f")")
                 .foregroundStyle(Color.white)
                 .font(.custom("Poppins-Regular", size: 14))
-//                .font(.system(size: 14, weight: .semibold, design: .rounded))
                 .padding()
             
         }
