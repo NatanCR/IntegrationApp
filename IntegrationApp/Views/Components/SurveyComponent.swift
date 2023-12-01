@@ -64,7 +64,7 @@ struct SurveyComponent: View {
                             Divider()
                                 .frame(width: screenSize.width * 0.9, height: screenSize.height * 0.001)
                                 .background(Color.white)
-                            // Comentário removido: ProgressBarComponent(value: Double(options[index].votes) / Double(totalVotes())).frame(height: 5)
+                            // ProgressBarComponent(value: Double(options[index].votes) / Double(totalVotes())).frame(height: 5)
                             
                             // Campo de texto para adicionar uma nova opção após a última opção existente
                             if index == options.count - 1 {
