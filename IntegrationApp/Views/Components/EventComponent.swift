@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct EventComponent: View {
-    var name
-    var date
-    var members
+//    var name
+//    var date
+//    var members
     
     var body: some View {
         ZStack(alignment: .leading) {

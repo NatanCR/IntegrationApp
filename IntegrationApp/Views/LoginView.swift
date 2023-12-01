@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AcessApresentationView: View {
+struct LoginView: View {
     @Binding var tutorialState: TutorialState
     @StateObject private var authNewUser = AuthenticateNewUserVM()
     @State var errorName = ""

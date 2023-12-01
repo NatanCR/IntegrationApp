@@ -19,10 +19,10 @@ struct HomeView: View {
                 VStack {
                     Header()
                     
-                     List(events, id: \.id) { event in
-                        EventComponent()
-                        //Text(event.currentEvent?.eventName ?? "")
-                    }
+//                     List(events, id: \.id) { event in
+//                        EventComponent()
+//                        //Text(event.currentEvent?.eventName ?? "")
+//                    }
 
                     Text("Nenhum evento criado...")
                         .foregroundColor(Color.blueText)

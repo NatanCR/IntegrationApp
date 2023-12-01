@@ -33,7 +33,7 @@ struct RegisterView: View {
                     
                     TitleComponent(title: " Nome").foregroundColor(.segmentedControlSelected)
                 }
-                TextFieldComponent(text: $authNewUser.name, placeholder: "Digite seu nome/apelido")
+                TextFieldComponent(valueText: $authNewUser.name, placeholder: "Digite seu nome/apelido")
                     .frame(width: screenSize.width * 0.9, height: screenSize.height * 0.1)
                 HStack {
                     TitleComponent(title: " E-mail")
@@ -48,7 +48,7 @@ struct RegisterView: View {
                     }
                 }
                 
-                TextFieldComponent(text: $authNewUser.email, placeholder: "nome@snsp.idserve.net")
+                TextFieldComponent(valueText: $authNewUser.email, placeholder: "nome@snsp.idserve.net")
                     .frame(width: screenSize.width * 0.9, height: screenSize.height * 0.1)
                     .onChange(of: authNewUser.email) { _ in
                    //     authNewUser.verifyEmail(email: authNewUser.email)

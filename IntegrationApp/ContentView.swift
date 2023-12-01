@@ -16,7 +16,7 @@ struct ContentView: View {
             if tutorialState == .introduction {
                 ApresentationView(tutorialState: $tutorialState)
             } else if tutorialState == .acess {
-                AcessApresentationView(tutorialState: $tutorialState)
+                LoginView(tutorialState: $tutorialState)
             } else if tutorialState == .register {
                 RegisterView(tutorialState: $tutorialState)
             } else if tutorialState == .joiningGroup {
