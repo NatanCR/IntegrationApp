@@ -15,11 +15,11 @@ struct MemberIconComponent: View {
         VStack {
             Image(.backCirculo) // Substitua "memberIcon" pelo nome real da sua imagem no conjunto de assets
                 .resizable()
-                .frame(width: 100, height: 100) // Ajuste o tamanho conforme necessário
+                .frame(width: 75, height: 75) // Ajuste o tamanho conforme necessário
                 .clipShape(Circle())
                 .overlay(
                     Text(memberIcon)
-                        .font(.system(size: 50))
+                        .font(.system(size: 40))
                         .foregroundColor(.white)
                         .padding(5)
                     , alignment: .center)
