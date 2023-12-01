@@ -6,16 +6,18 @@
 //
 
 import SwiftUI
-
 @main
 struct IntegrationAppApp: App {
-@State var title = "Próximo"
+    @State private var surveyTitle: String = ""
+    
     var body: some Scene {
         
         WindowGroup {
             GeometryReader { geo in
+            // CreateSurveyView(title: $surveyTitle)
                 ContentView()
                     .environment(\.screenSize, geo.size)
+                
             }
         }
     }

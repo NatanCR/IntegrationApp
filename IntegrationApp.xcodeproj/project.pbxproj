@@ -24,6 +24,10 @@
 		4DC01B5D2AF97D8600970B79 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC01B5C2AF97D8600970B79 /* HomeView.swift */; };
 		4DC01B5F2AF9866900970B79 /* MemberButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC01B5E2AF9866900970B79 /* MemberButton.swift */; };
 		4DC01B612AFAAAAC00970B79 /* MembersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC01B602AFAAAAC00970B79 /* MembersView.swift */; };
+		0526886B2B06B3020076F503 /* SurveyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0526886A2B06B3020076F503 /* SurveyComponent.swift */; };
+		0526886D2B06B33F0076F503 /* CreateSurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0526886C2B06B33F0076F503 /* CreateSurveyView.swift */; };
+		0526886F2B07E7A80076F503 /* ProgressBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0526886E2B07E7A80076F503 /* ProgressBarComponent.swift */; };
+		05B318D62B0FC9FC009B9C9A /* SurveyOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B318D52B0FC9FC009B9C9A /* SurveyOption.swift */; };
 		6B59004C2AF9656600152BBF /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B59004B2AF9656600152BBF /* EventView.swift */; };
 		6B59004E2AF9657A00152BBF /* SegControlComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B59004D2AF9657A00152BBF /* SegControlComponent.swift */; };
 		6B5900502AF9720000152BBF /* CreateButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B59004F2AF9720000152BBF /* CreateButtonComponent.swift */; };
@@ -81,6 +85,10 @@
 		4DC01B5C2AF97D8600970B79 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4DC01B5E2AF9866900970B79 /* MemberButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberButton.swift; sourceTree = "<group>"; };
 		4DC01B602AFAAAAC00970B79 /* MembersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersView.swift; sourceTree = "<group>"; };
+		0526886A2B06B3020076F503 /* SurveyComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyComponent.swift; sourceTree = "<group>"; };
+		0526886C2B06B33F0076F503 /* CreateSurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSurveyView.swift; sourceTree = "<group>"; };
+		0526886E2B07E7A80076F503 /* ProgressBarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarComponent.swift; sourceTree = "<group>"; };
+		05B318D52B0FC9FC009B9C9A /* SurveyOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyOption.swift; sourceTree = "<group>"; };
 		6B59004B2AF9656600152BBF /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		6B59004D2AF9657A00152BBF /* SegControlComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegControlComponent.swift; sourceTree = "<group>"; };
 		6B59004F2AF9720000152BBF /* CreateButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateButtonComponent.swift; sourceTree = "<group>"; };
@@ -217,6 +225,7 @@
 			children = (
 				6B8476172B081DC9008A3CA2 /* AuthenticateNewUserVM.swift */,
 				6B8476192B0BB4F7008A3CA2 /* HTTPResquestsVM.swift */,
+				05B318D52B0FC9FC009B9C9A /* SurveyOption.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -231,6 +240,7 @@
 				056F86C32B0291E700CF5334 /* AccessApresentationView.swift */,
 				056F86C52B029C4700CF5334 /* IdentityView.swift */,
 				056F86C72B02BF1E00CF5334 /* JoiningGroupView.swift */,
+				0526886C2B06B33F0076F503 /* CreateSurveyView.swift */,
 				D1B6EBF02AFC20C70079B309 /* Components */,
 			);
 			path = Views;
@@ -244,6 +254,8 @@
 				D1B6EBF32AFC22640079B309 /* SegmentedView */,
 				D1B6EBF22AFC22540079B309 /* Texts */,
 				052486CC2AF96D8E004E1692 /* DatePickerComponent.swift */,
+				0526886E2B07E7A80076F503 /* ProgressBarComponent.swift */,
+				0526886A2B06B3020076F503 /* SurveyComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -455,11 +467,18 @@
 				6B59005A2AFA8AC300152BBF /* QuizzesSubview.swift in Sources */,
 				6B59004C2AF9656600152BBF /* EventView.swift in Sources */,
 				052486CF2AF96DEE004E1692 /* CreateEventButton.swift in Sources */,
+				6B59005A2AFA8AC300152BBF /* QuizzesSubview.swift in Sources */,
+				6B59004C2AF9656600152BBF /* EventView.swift in Sources */,
+				0526886D2B06B33F0076F503 /* CreateSurveyView.swift in Sources */,
+				0526886F2B07E7A80076F503 /* ProgressBarComponent.swift in Sources */,
+				052486CF2AF96DEE004E1692 /* CreateEventButton.swift in Sources */,
+				0526886B2B06B3020076F503 /* SurveyComponent.swift in Sources */,
 				052486CD2AF96D8E004E1692 /* DatePickerComponent.swift in Sources */,
 				052486D12AF96E1F004E1692 /* SheetCreateEvent.swift in Sources */,
 				052486D32AF96E41004E1692 /* TitleComponent.swift in Sources */,
 				6B59004E2AF9657A00152BBF /* SegControlComponent.swift in Sources */,
 				6B59005E2AFABC0F00152BBF /* RectangleBoxComponent.swift in Sources */,
+				05B318D62B0FC9FC009B9C9A /* SurveyOption.swift in Sources */,
 				052486CB2AF96D66004E1692 /* TextFieldComponent.swift in Sources */,
 				6B84761A2B0BB4F7008A3CA2 /* HTTPResquestsVM.swift in Sources */,
 				4DC01B5D2AF97D8600970B79 /* HomeView.swift in Sources */,
@@ -637,7 +656,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"IntegrationApp/Preview Content\"";
-				DEVELOPMENT_TEAM = 3SWCGFCJF2;
+				DEVELOPMENT_TEAM = TNPTQGXSA4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
@@ -673,7 +692,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"IntegrationApp/Preview Content\"";
-				DEVELOPMENT_TEAM = 3SWCGFCJF2;
+				DEVELOPMENT_TEAM = TNPTQGXSA4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";

@@ -12,16 +12,6 @@ struct SegControlComponent: View {
     @State private var eventsProperty = ["Tarefa", "Enquetes", "Financeiro"]
     
     var cornerRadius: CGFloat = 15
-//    var task = EventTask()
-//    var finance = Finance()
-//    var quiz = Quiz()
-//    
-//    
-//    init(task: EventTask = EventTask(), finance: Finance = Finance(), quiz: Quiz = Quiz()) {
-//        self.task = task
-//        self.finance = finance
-//        self.quiz = quiz
-//    }
     
     init() {
         if let selectedSegmentColor = UIColor(named: "SegmentedControlSelected") {
@@ -60,6 +50,6 @@ struct SegControlComponent: View {
     }
 }
 
-#Preview {
-    SegControlComponent()
-}
+//#Preview {
+//    SegControlComponent()
+//}
