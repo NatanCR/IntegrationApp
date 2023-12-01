@@ -63,7 +63,7 @@ struct CreateSurveyView: View {
                                 // Controle de segmento para selecionar o tipo de enquete
                                 SegmentControlView(segments: eventsProperty1,
                                                    selected: $initialProperty1,
-                                                   titleNormalColor: .white,
+                                                    titleNormalColor: .white,
                                                    titleSelectedColor: .white,
                                                    selectedColor: .segmentedControlSelected,
                                                    defaultColor: .segmentedSurvey,
@@ -78,13 +78,10 @@ struct CreateSurveyView: View {
                                 .padding(.leading, 20)
                                 .padding(.trailing, 20)
                                 .frame(height: 55)
-                                .padding(.top, 20)
-                                
-                                
-                                TitleComponent(title: "Tipo de Escolha")
                                 
                                 // Controle de segmento para o tipo de escolha
-                                VStack(alignment: .leading) {
+                                VStack(alignment: .leading,  spacing: 15) {
+                              Section(header: TitleComponent(title: "Tipo de Escolha")) {
                                     SegmentControlView(segments: eventsProperty2,
                                                        selected: $initialProperty2,
                                                        titleNormalColor: .white,
@@ -102,10 +99,10 @@ struct CreateSurveyView: View {
                                     .padding(.leading, 20)
                                     .padding(.trailing, 20)
                                     .frame(height: 55)
-                                    .padding(.top, 20)
                                 }
                             }
                         }
+                    }
                         
                         // Chamando enquete
                         VStack(alignment: .leading, spacing: 15){
@@ -117,6 +114,7 @@ struct CreateSurveyView: View {
                             }
                         }
                     }
+                        
                     
                     
                     Spacer()
