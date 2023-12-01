@@ -23,7 +23,7 @@ struct ApresentationView: View {
                     .foregroundColor(.segmentedControlSelected)
                 Spacer()
                 ColaborateComponent(title: "Próximo", action: {
-                    tutorialState = .acessApresentation
+                    tutorialState = .acess
                 })
                 .foregroundColor(.white)
             }

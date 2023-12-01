@@ -15,11 +15,10 @@ struct ContentView: View {
         ZStack {
             if tutorialState == .introduction {
                 ApresentationView(tutorialState: $tutorialState)
-                
-            } else if tutorialState == .acessApresentation {
+            } else if tutorialState == .acess {
                 AcessApresentationView(tutorialState: $tutorialState)
-            } else if tutorialState == .identity {
-                IdentityView(tutorialState: $tutorialState, title: $title)
+            } else if tutorialState == .register {
+                RegisterView(tutorialState: $tutorialState)
             } else if tutorialState == .joiningGroup {
                 JoiningGroupView(tutorialState: $tutorialState, title: $title)
             } else if tutorialState == .home {

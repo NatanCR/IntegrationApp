@@ -10,8 +10,8 @@ import SwiftUI
 
 enum TutorialState {
     case introduction
-    case acessApresentation
-    case identity
+    case acess
+    case register
     case joiningGroup
     case home
     case event

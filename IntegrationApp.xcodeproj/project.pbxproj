@@ -38,7 +38,8 @@
 		6B59005E2AFABC0F00152BBF /* RectangleBoxComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B59005D2AFABC0F00152BBF /* RectangleBoxComponent.swift */; };
 		6B8476162B080371008A3CA2 /* AppStartState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8476152B080371008A3CA2 /* AppStartState.swift */; };
 		6B8476182B081DC9008A3CA2 /* AuthenticateNewUserVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8476172B081DC9008A3CA2 /* AuthenticateNewUserVM.swift */; };
-		6B84761A2B0BB4F7008A3CA2 /* HTTPResquestsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8476192B0BB4F7008A3CA2 /* HTTPResquestsVM.swift */; };
+		6BE8F24A2B0FCBE200E3DC99 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE8F2492B0FCBE200E3DC99 /* RegisterView.swift */; };
+		6BE8F24C2B0FD55700E3DC99 /* HandlingLoginErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE8F24B2B0FD55700E3DC99 /* HandlingLoginErrors.swift */; };
 		6C334954EAA4ECE89A84A521 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		99BDFACFE7F9D9C8D69089B9 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		D11D6D4A2B1529DE00A3931C /* APIRequestVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11D6D492B1529DE00A3931C /* APIRequestVM.swift */; };
@@ -138,6 +139,8 @@
 		D11D6D4F2B17B39600A3931C /* AddQuizVote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuizVote.swift; sourceTree = "<group>"; };
 		D11D6D512B17DB9200A3931C /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		D11D6D552B17DBAE00A3931C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		6BE8F2492B0FCBE200E3DC99 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		6BE8F24B2B0FD55700E3DC99 /* HandlingLoginErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandlingLoginErrors.swift; sourceTree = "<group>"; };
 		D13CB5CE2AED6C3C00CFEE02 /* IntegrationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntegrationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D13CB5D12AED6C3C00CFEE02 /* IntegrationAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationAppApp.swift; sourceTree = "<group>"; };
 		D13CB5D32AED6C3C00CFEE02 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -321,6 +324,7 @@
 				6B8476192B0BB4F7008A3CA2 /* HTTPResquestsVM.swift */,
 				05B318D52B0FC9FC009B9C9A /* SurveyOption.swift */,
 				D11D6D492B1529DE00A3931C /* APIRequestVM.swift */,
+				6BE8F24B2B0FD55700E3DC99 /* HandlingLoginErrors.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -333,6 +337,7 @@
 				6B59004B2AF9656600152BBF /* EventView.swift */,
 				05DC71E32AFEC1F800943357 /* ApresentationView.swift */,
 				056F86C32B0291E700CF5334 /* AccessApresentationView.swift */,
+				6BE8F2492B0FCBE200E3DC99 /* RegisterView.swift */,
 				056F86C52B029C4700CF5334 /* IdentityView.swift */,
 				056F86C72B02BF1E00CF5334 /* JoiningGroupView.swift */,
 				0526886C2B06B33F0076F503 /* CreateSurveyView.swift */,
@@ -600,7 +605,7 @@
 				6B59005E2AFABC0F00152BBF /* RectangleBoxComponent.swift in Sources */,
 				05B318D62B0FC9FC009B9C9A /* SurveyOption.swift in Sources */,
 				052486CB2AF96D66004E1692 /* TextFieldComponent.swift in Sources */,
-				6B84761A2B0BB4F7008A3CA2 /* HTTPResquestsVM.swift in Sources */,
+				6BE8F24C2B0FD55700E3DC99 /* HandlingLoginErrors.swift in Sources */,
 				4DC01B5D2AF97D8600970B79 /* HomeView.swift in Sources */,
 				D170B01B2B1920A000D4CB41 /* DataProcessor.swift in Sources */,
 				4DC01B5F2AF9866900970B79 /* MemberButton.swift in Sources */,
@@ -616,6 +621,7 @@
 				D170B01F2B1A513700D4CB41 /* NewValidationMember.swift in Sources */,
 				D19757F72B110CE0004C7954 /* NumberFieldComponent.swift in Sources */,
 				6C334954EAA4ECE89A84A521 /* (null) in Sources */,
+				6BE8F24A2B0FCBE200E3DC99 /* RegisterView.swift in Sources */,
 				4DC01B612AFAAAAC00970B79 /* MembersView.swift in Sources */,
 				1010AEBF58686A0BBBC15FAE /* (null) in Sources */,
 				D11D6D4E2B17A6F000A3931C /* NewTaskMember.swift in Sources */,
@@ -789,6 +795,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"IntegrationApp/Preview Content\"";
 				DEVELOPMENT_TEAM = TNPTQGXSA4;
+				DEVELOPMENT_TEAM = DWZ7HM73F4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = IntegrationApp/Info.plist;
@@ -826,6 +833,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"IntegrationApp/Preview Content\"";
 				DEVELOPMENT_TEAM = TNPTQGXSA4;
+				DEVELOPMENT_TEAM = DWZ7HM73F4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = IntegrationApp/Info.plist;
