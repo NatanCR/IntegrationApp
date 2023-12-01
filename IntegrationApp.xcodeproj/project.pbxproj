@@ -64,6 +64,7 @@
 		D170B01F2B1A513700D4CB41 /* NewValidationMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = D170B01E2B1A513700D4CB41 /* NewValidationMember.swift */; };
 		D170B0202B1A513700D4CB41 /* NewValidationMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = D170B01E2B1A513700D4CB41 /* NewValidationMember.swift */; };
 		D170B0212B1A513700D4CB41 /* NewValidationMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = D170B01E2B1A513700D4CB41 /* NewValidationMember.swift */; };
+		D170B0232B1A6F7C00D4CB41 /* MemberIconComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D170B0222B1A6F7C00D4CB41 /* MemberIconComponent.swift */; };
 		D19757F32B0FD36D004C7954 /* GridIconComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19757F22B0FD36D004C7954 /* GridIconComponent.swift */; };
 		D19757F52B0FE393004C7954 /* SheetCreateFinance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19757F42B0FE393004C7954 /* SheetCreateFinance.swift */; };
 		D19757F72B110CE0004C7954 /* NumberFieldComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19757F62B110CE0004C7954 /* NumberFieldComponent.swift */; };
@@ -152,6 +153,7 @@
 		D170B0162B18CE2000D4CB41 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		D170B01A2B1920A000D4CB41 /* DataProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProcessor.swift; sourceTree = "<group>"; };
 		D170B01E2B1A513700D4CB41 /* NewValidationMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewValidationMember.swift; sourceTree = "<group>"; };
+		D170B0222B1A6F7C00D4CB41 /* MemberIconComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberIconComponent.swift; sourceTree = "<group>"; };
 		D19757F22B0FD36D004C7954 /* GridIconComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridIconComponent.swift; sourceTree = "<group>"; };
 		D19757F42B0FE393004C7954 /* SheetCreateFinance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetCreateFinance.swift; sourceTree = "<group>"; };
 		D19757F62B110CE0004C7954 /* NumberFieldComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFieldComponent.swift; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 				D19757F22B0FD36D004C7954 /* GridIconComponent.swift */,
 				4DC01B582AF963F600970B79 /* Header.swift */,
 				4D1817E22B1514BF0054911F /* EventComponent.swift */,
+				D170B0222B1A6F7C00D4CB41 /* MemberIconComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -602,6 +605,7 @@
 				052486CB2AF96D66004E1692 /* TextFieldComponent.swift in Sources */,
 				6BE8F24C2B0FD55700E3DC99 /* HandlingLoginErrors.swift in Sources */,
 				4DC01B5D2AF97D8600970B79 /* HomeView.swift in Sources */,
+				D170B0232B1A6F7C00D4CB41 /* MemberIconComponent.swift in Sources */,
 				D170B01B2B1920A000D4CB41 /* DataProcessor.swift in Sources */,
 				4DC01B5F2AF9866900970B79 /* MemberButton.swift in Sources */,
 				D11D6D4A2B1529DE00A3931C /* APIRequestVM.swift in Sources */,
