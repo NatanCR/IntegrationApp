@@ -1,19 +1,19 @@
 //
-//  ComponentTextField.swift
+//  NumberFieldComponent.swift
 //  IntegrationApp
 //
-//  Created by Guilherme Borges on 06/11/23.
+//  Created by Natan de Camargo Rodrigues on 24/11/23.
 //
 
 import SwiftUI
 
-struct TextFieldComponent: View {
-    @Binding var valueText: String
-    let placeholder: String
+struct NumberFieldComponent: View {
+    @Binding var totalValue: Double
     @Environment (\.screenSize) var screenSize
     
     var body: some View {
-        TextField(placeholder, text: $valueText)
+        TextField("R$ 00.00", value: $totalValue, format: .number)
+            .keyboardType(.numberPad)
             .padding(.horizontal, 8)
             .frame(width: screenSize.width * 0.9, height: screenSize.height * 0.07)
             .background(Color.primaryBlue)
@@ -23,5 +23,5 @@ struct TextFieldComponent: View {
 }
 
 //#Preview {
-//    TextFieldComponent(text: "", placeholder: "test")
+//    NumberFieldComponent(totalValue: , placeholder: "")
 //}

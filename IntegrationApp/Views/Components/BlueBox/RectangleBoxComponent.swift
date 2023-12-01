@@ -42,7 +42,7 @@ struct RectangleBoxComponent: View {
                 }.padding(.bottom, 10)
                 VStack {
                     //esse text irá receber o nome das pessoas do banco
-                    Text("oiiiiidddddddddddiiiiiiiiddddddddddddiddddddd")
+                    Text("sdhisuda")
                         .frame( maxWidth: .infinity ,alignment: .leading)
                         .lineLimit(1)
                 }.padding(.top, 45)

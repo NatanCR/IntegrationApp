@@ -8,17 +8,27 @@
 import SwiftUI
 
 struct FinanceSubview: View {
+    @Environment (\.screenSize) var screenSize
+    @State var currentWalletValue: Double = 0.00
+    
+    @ObservedObject var objectVM: APIRequestVM
+    
     var body: some View {
         ZStack {
-            Color(.systemYellow)
-            Text("Finance Subview")
+            CreateEventButton(view: SheetCreateFinance(objectVM: objectVM))
+                .position(CGPoint(x: screenSize.width * 0.88, y: screenSize.height * 0.78))
+            
+            WalletCardComponent(walletValue: currentWalletValue)
+                .position(CGPoint(x: screenSize.width * 0.2, y: screenSize.height * 0.78))
         }
-        .padding(.leading, 20)
-        .padding(.trailing, 20)
-        .ignoresSafeArea()
+        .onAppear{
+            //TODO: Função para: - carregar valor do caixa
+            //                   - carregar financeiro em aberto
+            
+        }
     }
 }
 
-#Preview {
-    FinanceSubview()
-}
+//#Preview {
+//    FinanceSubview(currentWalletValue: 0.00)
+//}

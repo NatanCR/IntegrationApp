@@ -8,59 +8,58 @@
 import SwiftUI
 
 struct SheetCreateEvent: View {
-    var closeAndDisplayEventView: () -> Void
-    @Binding var tutorialState: TutorialState
-    @Binding var title: String
-    @Binding var selectedDate: Date
-    @Binding var isSheetPresented: Bool
-    @State private var icons: [String] = ["volleyball.fill","balloon.2.fill","cup.and.saucer.fill","plus"]
+    @Environment(\.dismiss) var dismiss
     @Environment (\.screenSize) var screenSize
-    @State private var newOption = ""
-
+    
+    @State var inputTitle: String = ""
+    @State var selectedDate = Date()
+    let placeholderText: String
+    let sheetBarTitle: String
+    @State private var navigationToEvent: Bool = false
+    @State var tutorialState: TutorialState = .event
+    
+    @ObservedObject var objectVM: APIRequestVM
+    
     var body: some View {
-        NavigationView {
-            Form {
-                Section(header: Text("Título").bold().foregroundColor(.black)){
-                    TextFieldComponent(text: $title, placeholder: "Digite o nome do evento...")
-                        .foregroundColor(Color("TextFieldColor"))
-                }
+        NavigationStack {
+            VStack {
+                Color.primaryBlue
+                    .frame(height: 50)
+                    .ignoresSafeArea()
                 
-                Section(header: Text("Data do Evento").bold().foregroundColor(.black)) {
+                VStack(alignment: .leading) {
+                    Section {
+                        TextFieldComponent(valueText: $inputTitle, placeholder: placeholderText)
+                    } header: {
+                        Text("Título").bold().foregroundStyle(Color.black)
+                    }
                     
-                    ZStack(alignment: .leading) {
-                        RoundedRectangle(cornerRadius: 15)
-                            .fill(Color.primaryBlue)
-                            .frame(width: screenSize.width * 0.9, height: screenSize.height * 0.07)
-                        HStack {
-                            DatePickerComponent(selectedDate: $selectedDate)
-                        }.padding(.horizontal, 10)
+                    Section {
+                        DatePickerComponent(selectedDate: $selectedDate)
+                    } header: {
+                        Text("Data do Evento").bold().foregroundStyle(Color.black)
                     }
                 }
-                
-                Section(header: Text("Ícone").bold().foregroundColor(.black)) {
-                    
-                    LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 4), spacing: 10) {
-                        
-                        ForEach(icons, id: \.self) { iconName in
-                            IconComponent(iconName: iconName)
-                        }
-                    }
-                }
-                .listRowBackground(Color.clear)
-
+                Spacer()
             }
-            .scrollContentBackground(.hidden)
-            .navigationBarTitle("Criar Evento", displayMode: .inline)
-            .toolbarBackground(Color.primaryBlue, for: .navigationBar)
+            .navigationBarTitle(sheetBarTitle, displayMode: .inline)
             .navigationBarItems(
                 leading: Button("Cancelar") {
-                    isSheetPresented = false
+                    dismiss()
                 },
                 trailing: Button("Criar") {
-                    closeAndDisplayEventView()
-                    isSheetPresented = false
-                }
+                    //chamar função de salvar novo evento
+                    let newEvent = Event(id: inputTitle, eventName: inputTitle, eventDate: Formatters.shared.dateToString(chosenDate: selectedDate), activeEvent: true, financeValidation: FinanceAnswer(id: "financeQuestion", title: "Você irá participar financeiramente do integration?"))
+                    objectVM.currentEvent.currentEvent = newEvent
+//                    objectVM.updateEvent(eventData: newEvent)
+                    navigationToEvent = true
+//                    dismiss()
+                }.bold()
             )
+            .background(
+                NavigationLink(destination: EventView(tutorialState: $tutorialState, objectVM: objectVM), isActive: $navigationToEvent, label: { EmptyView() }).hidden()
+            )
+            
         }
         
     }

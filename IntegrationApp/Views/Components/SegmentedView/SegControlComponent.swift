@@ -11,12 +11,13 @@ struct SegControlComponent: View {
     @State var initialProperty = "Tarefa"
     @State private var eventsProperty = ["Tarefa", "Enquetes", "Financeiro"]
     
-    var cornerRadius: CGFloat = 15
+    @ObservedObject var objectVM: APIRequestVM
     
-    init() {
+    init(objectVM: APIRequestVM) {
         if let selectedSegmentColor = UIColor(named: "SegmentedControlSelected") {
             UISegmentedControl.appearance().selectedSegmentTintColor = selectedSegmentColor
         }
+        self.objectVM = objectVM
     }
     
     var body: some View {
@@ -34,14 +35,14 @@ struct SegControlComponent: View {
                         .padding(.horizontal)
                         .padding(.vertical, 8)
                 } background: {
-                    RoundedRectangle(cornerRadius: cornerRadius, style: .circular)
+                    RoundedRectangle(cornerRadius: 15, style: .circular)
                 }
                 .padding(.leading, 20)
                 .padding(.trailing, 20)
                 .frame(height: 55)
                 .padding(.top, 20)
             
-                ScrollViewComponent(selection: initialProperty)
+                ScrollViewComponent(selection: initialProperty, objectVM: objectVM)
             }
         }
         .ignoresSafeArea()

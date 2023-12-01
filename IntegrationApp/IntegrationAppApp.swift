@@ -9,15 +9,18 @@ import SwiftUI
 @main
 struct IntegrationAppApp: App {
     @State private var surveyTitle: String = ""
+    @State var tutorialState: TutorialState = .event
     
     var body: some Scene {
         
         WindowGroup {
             GeometryReader { geo in
+            ContentView()
             // CreateSurveyView(title: $surveyTitle)
-                ContentView()
+                // HomeView()
+//                ApresentationView(tutorialState: $tutorialState)
+//                EventView(tutorialState: $tutorialState)
                     .environment(\.screenSize, geo.size)
-                
             }
         }
     }

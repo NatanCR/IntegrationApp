@@ -31,10 +31,10 @@ struct AcessApresentationView: View {
                     TitleComponent(title: " E-mail").foregroundColor(.segmentedControlSelected)
                 }
                 
-                TextFieldComponent(text: $authNewUser.email, placeholder: "nome@snsp.idserve.net")
+                TextFieldComponent(valueText: $authNewUser.email, placeholder: "nome@snsp.idserve.net")
                     .frame(width: screenSize.width * 0.9, height: screenSize.height * 0.1)
                 TitleComponent(title: " Senha").foregroundColor(.segmentedControlSelected)
-                TextFieldComponent(text: $authNewUser.password, placeholder: "********")
+                TextFieldComponent(valueText: $authNewUser.password, placeholder: "********")
                     .frame(width: screenSize.width * 0.9, height: screenSize.height * 0.1)
                 
                 Spacer()
