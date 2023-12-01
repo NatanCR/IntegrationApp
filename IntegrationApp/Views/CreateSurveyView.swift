@@ -46,13 +46,13 @@ struct CreateSurveyView: View {
                         VStack(alignment: .leading) {
                             // Campo título
                             Section(header: TitleComponent(title: "Título")) {
-                                TextFieldComponent(text: $title, placeholder: "Digite o nome da enquete...")
+                                TextFieldComponent(valueText: $title, placeholder: "Digite o nome da enquete...")
                                     .foregroundColor(Color("TextFieldColor"))
                             }.listRowBackground(Color.clear)
                             
                             // Campo prazo
                             Section(header: TitleComponent(title: "Prazo Final")) {
-                                TextFieldComponent(text: $title, placeholder: "Digite o nome da enquete...")
+                                TextFieldComponent(valueText: $title, placeholder: "Digite o nome da enquete...")
                                     .foregroundColor(Color("TextFieldColor"))
                             }.listRowBackground(Color.clear)
                         }
