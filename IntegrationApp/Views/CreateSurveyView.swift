@@ -39,7 +39,7 @@ struct CreateSurveyView: View {
             Button("Show Results") {
                 showingResults.toggle()
             }
-            // Folha para exibir os resultados quando solicitado
+            // sheet
             .sheet(isPresented: $showingResults) {
                 NavigationStack {
                     ScrollView {
@@ -111,8 +111,7 @@ struct CreateSurveyView: View {
                         VStack(alignment: .leading, spacing: 15){
                             Section(header: TitleComponent(title: "Opções")){
                                 SurveyComponent(
-                                    options: $options,
-                                    isVotingEnabled: false
+                                    isVotingEnabled: false, options: $options
                                 )
                                 .cornerRadius(10)
                             }

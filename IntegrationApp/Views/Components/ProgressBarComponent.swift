@@ -25,7 +25,6 @@ struct ProgressBarComponent: View {
                     .frame(width: min(CGFloat(self.value) * geometry.size.width, geometry.size.width), height: geometry.size.height)
                     .foregroundColor(Color.blue)
             }
-            // Adiciona cantos arredondados à barra de progresso
             .cornerRadius(5.0)
         }
     }
