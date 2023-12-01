@@ -15,8 +15,10 @@ struct SheetCreateEvent: View {
     @State var selectedDate = Date()
     let placeholderText: String
     let sheetBarTitle: String
+    @State private var navigationToEvent: Bool = false
+    @State var tutorialState: TutorialState = .event
     
-    var isFinanceSheetView: Bool
+    @ObservedObject var objectVM: APIRequestVM
     
     var body: some View {
         NavigationStack {
@@ -25,31 +27,40 @@ struct SheetCreateEvent: View {
                     .frame(height: 50)
                     .ignoresSafeArea()
                 
-                    VStack(alignment: .leading) {
-                        Section {
-                            TextFieldComponent(valueText: $inputTitle, placeholder: placeholderText)
-                        } header: {
-                            Text("Título").bold().foregroundStyle(Color.black)
-                        }
-                        
-                        Section {
-                            DatePickerComponent(selectedDate: $selectedDate)
-                        } header: {
-                            Text("Data do Evento").bold().foregroundStyle(Color.black)
-                        }
+                VStack(alignment: .leading) {
+                    Section {
+                        TextFieldComponent(valueText: $inputTitle, placeholder: placeholderText)
+                    } header: {
+                        Text("Título").bold().foregroundStyle(Color.black)
+                    }
+                    
+                    Section {
+                        DatePickerComponent(selectedDate: $selectedDate)
+                    } header: {
+                        Text("Data do Evento").bold().foregroundStyle(Color.black)
                     }
                 }
-                .navigationBarTitle(sheetBarTitle, displayMode: .inline)
-                .navigationBarItems(
-                    leading: Button("Cancelar") {
-                        dismiss()
-                    },
-                    trailing: Button("Criar") {
-                        //chamar função de salvar novo evento
-                        dismiss()
-                    }.bold()
-                )
+                Spacer()
             }
+            .navigationBarTitle(sheetBarTitle, displayMode: .inline)
+            .navigationBarItems(
+                leading: Button("Cancelar") {
+                    dismiss()
+                },
+                trailing: Button("Criar") {
+                    //chamar função de salvar novo evento
+                    let newEvent = Event(id: inputTitle, eventName: inputTitle, eventDate: Formatters.shared.dateToString(chosenDate: selectedDate), activeEvent: true, financeValidation: FinanceAnswer(id: "financeQuestion", title: "Você irá participar financeiramente do integration?"))
+                    objectVM.currentEvent.currentEvent = newEvent
+//                    objectVM.updateEvent(eventData: newEvent)
+                    navigationToEvent = true
+//                    dismiss()
+                }.bold()
+            )
+            .background(
+                NavigationLink(destination: EventView(tutorialState: $tutorialState, objectVM: objectVM), isActive: $navigationToEvent, label: { EmptyView() }).hidden()
+            )
             
+        }
+        
     }
 }

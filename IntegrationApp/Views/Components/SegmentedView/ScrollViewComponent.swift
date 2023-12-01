@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ScrollViewComponent: View {
     var selection: String
+    @ObservedObject var objectVM: APIRequestVM
     
     var body: some View {
         ScrollView {
@@ -21,12 +22,12 @@ struct ScrollViewComponent: View {
                 case "Enquetes":
                     QuizzesSubview()
                 case "Financeiro":
-                    FinanceSubview()
+                    FinanceSubview(objectVM: objectVM)
                 default:
                     TaskSubview()
                 }
                 
-            }.frame(height: 800)
+            }.frame(height: 600)
                 .ignoresSafeArea()
                 
         }

@@ -10,11 +10,14 @@ import Foundation
 struct FinanceAnswer: Codable, Identifiable {
   let id: String
   var title: String?
-  var collaborators: [Member?]?
+  var collaborators: [Member]?
     
-    init(id: String = UUID().uuidString, title: String? = nil, collaborators: [Member?]? = nil) {
+    init(id: String = UUID().uuidString, title: String? = nil, collaborators: [Member]? = nil) {
         self.id = id
         self.title = title
         self.collaborators = collaborators
     }
 }
+
+
+

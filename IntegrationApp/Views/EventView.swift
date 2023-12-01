@@ -11,6 +11,7 @@ import SwiftUI
 struct EventView: View {
     var cornerRadius: CGFloat = 10
     @Binding var tutorialState: TutorialState
+    @ObservedObject var objectVM: APIRequestVM
     
     var body: some View {
         NavigationStack {
@@ -21,7 +22,7 @@ struct EventView: View {
                 }.frame(width: 200, height: 730, alignment: .top)
                 ZStack() {
                     VStack {
-                        SegControlComponent()
+                        SegControlComponent(objectVM: objectVM)
                     }
                     //CreateButtonComponent()
                 }

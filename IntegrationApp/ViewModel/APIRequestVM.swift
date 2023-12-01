@@ -8,12 +8,14 @@
 import Foundation
 
 class APIRequestVM: ObservableObject {
-    @Published var allEvents: EventsTable?
-    @Published var currentEvent: CurrentEvent?
+    static let shared = APIRequestVM()
+    
+    @Published var allEvents = EventsTable()
+    @Published var currentEvent = CurrentEvent()
     
     //MARK: - READ
     /**Função para pegar os dados completos da tabela no banco**/
-    func fetchAllEventsTableData() {
+    func fetchAllEventsTableData() async {
         // Substitua a URL abaixo pela URL da sua API
         guard let url = URL(string: "http://127.0.0.1:5000/get_all_events") else {
             return
@@ -41,7 +43,7 @@ class APIRequestVM: ObservableObject {
     }
     
     /**Função para pegar os dados diretamente do evento atual*/
-    func fetchCurrentEventData() {
+    func fetchCurrentEventData() async {
         // Substitua a URL abaixo pela URL da sua API
         guard let url = URL(string: "http://127.0.0.1:5000/get_current_event") else {
             return
@@ -49,6 +51,7 @@ class APIRequestVM: ObservableObject {
         
         URLSession.shared.dataTask(with: url) { data, response, error in
             if let data = data {
+                print(String(data: data, encoding: .utf8) ?? "Dados não válidos")
                 do {
                     let decodedData = try JSONDecoder().decode(CurrentEvent.self, from: data)
                     DispatchQueue.main.async {
@@ -224,6 +227,35 @@ class APIRequestVM: ObservableObject {
         
         do {
             let jsonData = try JSONEncoder().encode(quizForAdd)
+            print(String(data: jsonData, encoding: .utf8) ?? "Dados não válidos")
+            request.httpBody = jsonData
+        } catch {
+            print("Erro ao codificar dados para JSON: \(error)")
+            return
+        }
+        
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if let error = error {
+                print("Erro na solicitação: \(error)")
+                return
+            }
+            
+            if let data = data {
+                // Processar a resposta, se necessário
+                print("Resposta da API: \(String(data: data, encoding: .utf8) ?? "Dados não válidos")")
+            }
+        }.resume()
+    }
+    
+    /**Função para adicionar um membro financeiramente participante**/
+    func addMemberToFinanceValidation(newMember: NewValidationMember) {
+        let url = URL(string: "http://127.0.0.1:5000/add_member_to_finance_validation")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        do {
+            let jsonData = try JSONEncoder().encode(newMember)
             print(String(data: jsonData, encoding: .utf8) ?? "Dados não válidos")
             request.httpBody = jsonData
         } catch {

@@ -8,10 +8,14 @@
 import Foundation
 
 struct CurrentEvent: Codable {
-    let currentEvent: [Event]
+    var currentEvent: Event?
 
     enum CodingKeys: String, CodingKey {
         case currentEvent = "CurrentEvent"
+    }
+    
+    init(currentEvent: Event? = nil) {
+        self.currentEvent = currentEvent
     }
 }
 

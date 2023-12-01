@@ -17,6 +17,7 @@ struct IntegrationAppApp: App {
         WindowGroup {
             GeometryReader { geo in
                 HomeView()
+//                ApresentationView(tutorialState: $tutorialState)
 //                EventView(tutorialState: $tutorialState)
                     .environment(\.screenSize, geo.size)
             }

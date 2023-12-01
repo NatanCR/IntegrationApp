@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct SheetCreateFinance: View {
-    @State var inputTitle: String = ""
-    @State var selectedDate = Date()
-    @State var inputTotalValue: Double = 0.0
-    @State var valuePerMemberCalculated: Double = 0.0
     @Environment (\.screenSize) var screenSize
     @Environment(\.dismiss) var dismiss
+    
+    @State private var inputTitle: String = ""
+    @State private var selectedDate = Date()
+    @State private var inputTotalValue: Double = 0.0
+    @State private var valuePerMemberCalculated: Double = 0.0
+    @State private var totalCollaborators: Double = 0.0
+    
+    @ObservedObject var objectVM: APIRequestVM
     
     var body: some View {
         NavigationStack {
@@ -61,15 +65,25 @@ struct SheetCreateFinance: View {
                                     .cornerRadius(15)
                                     .foregroundColor(Color("TextFieldColor"))
                             }
-                            
                         }
                     } header: {
                         Text("Valor por Membro").bold().foregroundStyle(Color.black)
                     }
                     
                 }
-                
             }
+            .onChange(of: inputTotalValue) { newValue in
+                print("mudou aqui")
+                self.valuePerMemberCalculated = DataProcessor.shared.valuePerMemberCalculate(members: totalCollaborators, financeValue: inputTotalValue)
+                
+                print(self.valuePerMemberCalculated)
+            }
+            
+            .onAppear {
+                self.totalCollaborators = DataProcessor.shared.calculateMembersCollaborators(members: self.objectVM.currentEvent.currentEvent?.financeValidation?.collaborators ?? [])
+                print(self.totalCollaborators)
+            }
+            
             Spacer()
             .navigationBarTitle("Criar Débito", displayMode: .inline)
             .navigationBarItems(
@@ -77,7 +91,8 @@ struct SheetCreateFinance: View {
                     dismiss()
                 },
                 trailing: Button("Criar") {
-                    //chamar função de salvar novo evento
+                    //chamar função de salvar novo financeiro
+                    let newFinance = Finance(id: inputTitle, title: inputTitle, deadline: Formatters.shared.dateToString(chosenDate: selectedDate), totalValue: inputTotalValue, valuePerMembers: valuePerMemberCalculated)
                     dismiss()
                 }.bold()
             )
@@ -85,6 +100,6 @@ struct SheetCreateFinance: View {
     }
 }
 
-#Preview {
-    SheetCreateFinance()
-}
+//#Preview {
+//    SheetCreateFinance()
+//}

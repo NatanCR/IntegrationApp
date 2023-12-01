@@ -13,6 +13,7 @@ struct NumberFieldComponent: View {
     
     var body: some View {
         TextField("R$ 00.00", value: $totalValue, format: .number)
+            .keyboardType(.numberPad)
             .padding(.horizontal, 8)
             .frame(width: screenSize.width * 0.9, height: screenSize.height * 0.07)
             .background(Color.primaryBlue)

@@ -2,7 +2,6 @@ import SwiftUI
 
 struct CreateEventButton<T: View>: View {
     @State private var isSheetPresented = false
-    @State private var isEventViewPresented = false
     @State private var tutorialState: TutorialState = .introduction
     @Environment (\.screenSize) var screenSize
     let view: T

@@ -8,10 +8,14 @@
 import Foundation
 
 struct EventsTable: Codable {
-    let allEvents: [AllEvents]
+    var allEvents: [AllEvents?]?
 
     enum CodingKeys: String, CodingKey {
         case allEvents = "AllEvents"
+    }
+    
+    init(allEvents: [AllEvents?]? = nil) {
+        self.allEvents = allEvents
     }
 }
 

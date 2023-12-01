@@ -11,9 +11,11 @@ struct FinanceSubview: View {
     @Environment (\.screenSize) var screenSize
     @State var currentWalletValue: Double = 0.00
     
+    @ObservedObject var objectVM: APIRequestVM
+    
     var body: some View {
         ZStack {
-            CreateEventButton(view: SheetCreateFinance())
+            CreateEventButton(view: SheetCreateFinance(objectVM: objectVM))
                 .position(CGPoint(x: screenSize.width * 0.88, y: screenSize.height * 0.78))
             
             WalletCardComponent(walletValue: currentWalletValue)
@@ -27,6 +29,6 @@ struct FinanceSubview: View {
     }
 }
 
-#Preview {
-    FinanceSubview(currentWalletValue: 0.00)
-}
+//#Preview {
+//    FinanceSubview(currentWalletValue: 0.00)
+//}
