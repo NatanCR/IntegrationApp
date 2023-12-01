@@ -6,19 +6,19 @@
 //
 
 import SwiftUI
-
-
+// Componente SwiftUI para criar e gerenciar uma enquete
 struct SurveyComponent: View {
-    // var question: String
-    @State private var newOption = ""
-    @Binding var options: [SurveyOption]
-    var isVotingEnabled: Bool
-    @State private var selectedOptionId: Int?
-    
+    //var question: String
+    var isVotingEnabled: Bool // variavel para habilitar ou desabilitar a votação
+    @State private var newOption = "" // Estado para armazenar a nova opção de enquete
+    @State private var selectedOptionId: Int? // Estado para armazenar a opção selecionada
+    @Binding var options: [SurveyOption] // Binding para as opções da enquete
+
     @Environment(\.screenSize) var screenSize
     
     var body: some View {
         ZStack {
+            // Fundo retangular com bordas arredondadas
             RoundedRectangle(cornerRadius: 10)
                 .stroke(Color.white, lineWidth: 1)
                 .frame(width: screenSize.width * 0.9)
@@ -26,14 +26,13 @@ struct SurveyComponent: View {
             
             ScrollView {
                 VStack(alignment: .leading, spacing: 10) {
-                    // Text(question)
-                    //     .font(.headline)
+                    //Text(question).font(.headline)
                     
                     if options.isEmpty {
-                        // Mostra o TextField quando a lista está vazia
+                        // Campo de texto para adicionar uma nova opção quando a lista está vazia
                         TextField("Toque para adicionar", text: $newOption, onCommit: {
                             if !newOption.isEmpty {
-                                let newId = 1 // Como a lista está vazia, o ID pode começar em 1
+                                let newId = 1 // Define o ID como 1 para a primeira opção
                                 options.append(SurveyOption(id: newId, name: newOption, votes: 0))
                                 newOption = ""
                             }
@@ -41,15 +40,14 @@ struct SurveyComponent: View {
                     } else {
                         ForEach(options.indices, id: \.self) { index in
                             HStack {
-                                Spacer()
-                                    .frame(width: screenSize.width * 0.04)
-                                // Bolinha que muda de cor ao votar
+                                Spacer().frame(width: screenSize.width * 0.04)
+
+                                // Círculo que indica a opção selecionada
                                 Circle()
                                     .stroke(lineWidth: 1.3)
                                     .foregroundStyle(Color.segmentedControlSelected)
                                     .background(Circle().fill(selectedOptionId == options[index].id ? Color.blue : Color.clear))
                                     .frame(width: screenSize.width * 0.06, height: screenSize.height * 0.05)
-                                
                                     .onTapGesture {
                                         if isVotingEnabled && selectedOptionId == nil {
                                             selectedOptionId = options[index].id
@@ -57,24 +55,21 @@ struct SurveyComponent: View {
                                         }
                                     }
                                 
-                                Text(options[index].name)
+                                Text(options[index].name) // Mostra o nome da opção
                                 Spacer()
                                 
-                                Text("\(options[index].votes)")
-                                Spacer()
-                                    .frame(width: screenSize.width * 0.04)
+                                Text("\(options[index].votes)") // Mostra o número de votos
+                                Spacer().frame(width: screenSize.width * 0.04)
                             }
                             Divider()
                                 .frame(width: screenSize.width * 0.9, height: screenSize.height * 0.001)
                                 .background(Color.white)
-                            // ProgressBarComponent(value: Double(options[index].votes) / Double(totalVotes()))
-                            //     .frame(height: 5)
+                            // Comentário removido: ProgressBarComponent(value: Double(options[index].votes) / Double(totalVotes())).frame(height: 5)
                             
-                            // Coloca o TextField após o último item
+                            // Campo de texto para adicionar uma nova opção após a última opção existente
                             if index == options.count - 1 {
                                 HStack{
                                     Spacer().frame(width: screenSize.width * 0.04)
-                                    
                                     
                                     Circle()
                                         .strokeBorder(style: StrokeStyle(lineWidth: 2, dash: [2]))
@@ -87,7 +82,6 @@ struct SurveyComponent: View {
                                             options.append(SurveyOption(id: newId, name: newOption, votes: 0))
                                             newOption = ""
                                         }
-                                        
                                     })
                                     .foregroundStyle(Color.textSurvey)
                                 }
@@ -101,6 +95,7 @@ struct SurveyComponent: View {
         .frame(width: screenSize.width * 0.9)
     }
     
+    // Função para calcular o total de votos
     func totalVotes() -> Int {
         return options.reduce(0) { $0 + $1.votes }
     }
