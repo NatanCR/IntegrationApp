@@ -9,8 +9,9 @@ import SwiftUI
 
 struct HomeView: View {
     @Environment (\.screenSize) var screenSize
-    @StateObject var objectVM = APIRequestVM()
-    
+    @StateObject var objectVM = APIRequestVM()    
+    @State private var events: [AllEvents] = []
+
     var body: some View {
         NavigationStack {
             ZStack {
@@ -18,6 +19,11 @@ struct HomeView: View {
                 VStack {
                     Header()
                     
+                     List(events, id: \.id) { event in
+                        EventComponent()
+                        //Text(event.currentEvent?.eventName ?? "")
+                    }
+
                     Text("Nenhum evento criado...")
                         .foregroundColor(Color.blueText)
                     
@@ -28,9 +34,9 @@ struct HomeView: View {
 //                    await objectVM.fetchAllEventsTableData()
 //                    await objectVM.fetchCurrentEventData()
                 }
+
                 .onAppear {
                                     
-                    
                     let newEvent = Event(id: "Integration Dezembro",eventName: "Integration Dezembro", eventDate: "11/12/2023", eventMembers: [], quiz: [], finance: nil, activeEvent: true, task: [], financeValidation: FinanceAnswer(id: "financeQuestion",title: "Vai participar financeiramente?", collaborators: []))
                     
 //                    let newCurrentEvent = CurrentEvent(currentEvent: newEvent)
@@ -84,7 +90,5 @@ struct HomeView: View {
     }
 }
 
+#Preview { HomeView() }
 
-#Preview {
-    HomeView()
-}
