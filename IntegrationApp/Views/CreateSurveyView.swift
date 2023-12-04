@@ -19,7 +19,7 @@ struct CreateSurveyView: View {
     @State private var selectedSegment2 = 0
 
     // Estado para armazenar as opções da enquete
-    @State private var options: [SurveyOption] = []
+    @State private var options: [QuizAnswer] = []
 
     // Estados para propriedades iniciais de segmentos de controle
     @State var initialProperty1 = "Atividades"
