@@ -17,7 +17,7 @@ class APIRequestVM: ObservableObject {
     /**Função para pegar os dados completos da tabela no banco**/
     func fetchAllEventsTableData() async {
         // Substitua a URL abaixo pela URL da sua API
-        guard let url = URL(string: "http://127.0.0.1:5000/get_all_events") else {
+        guard let url = URL(string: "https://python-api-henna-pi.vercel.app/get_all_events") else {
             return
         }
         
@@ -45,7 +45,7 @@ class APIRequestVM: ObservableObject {
     /**Função para pegar os dados diretamente do evento atual*/
     func fetchCurrentEventData() async {
         // Substitua a URL abaixo pela URL da sua API
-        guard let url = URL(string: "http://127.0.0.1:5000/get_current_event") else {
+        guard let url = URL(string: "https://python-api-henna-pi.vercel.app/get_current_event") else {
             return
         }
         
@@ -67,7 +67,7 @@ class APIRequestVM: ObservableObject {
     //MARK: - UPDATE
     /**Função para  atualizar diretamente os dados do evento atual**/
     func updateEvent(eventData: Event) {
-            guard let url = URL(string: "http://127.0.0.1:5000/update_current_event") else {
+            guard let url = URL(string: "https://python-api-henna-pi.vercel.app/update_current_event") else {
                 return
             }
 
@@ -98,7 +98,7 @@ class APIRequestVM: ObservableObject {
     
     /**Função para adicionar um novo usuário na tabela Users**/
     func addNewUserToUserTable(newUser: Login) {
-        guard let url = URL(string: "http://127.0.0.1:5000/create_user") else {
+        guard let url = URL(string: "https://python-api-henna-pi.vercel.app/create_user") else {
             return
         }
 
@@ -129,7 +129,7 @@ class APIRequestVM: ObservableObject {
     
     /**Função para atualizar o valor da wallet**/
     func updateWalletValue(wallet: Wallet) {
-        guard let url = URL(string: "http://127.0.0.1:5000/add_wallet_value") else {
+        guard let url = URL(string: "https://python-api-henna-pi.vercel.app/add_wallet_value") else {
             return
         }
 
@@ -160,7 +160,7 @@ class APIRequestVM: ObservableObject {
     
     /**Função para adicionar membro no evento**/
     func addEventMember(newMember: Member) {
-        guard let url = URL(string: "http://127.0.0.1:5000/add_event_member") else {
+        guard let url = URL(string: "https://python-api-henna-pi.vercel.app/add_event_member") else {
             return
         }
 
@@ -191,7 +191,7 @@ class APIRequestVM: ObservableObject {
     
     /**Função para adicionar um novo membro na task**/
     func addTaskMember(newMember: NewTaskMember) {
-        let url = URL(string: "http://127.0.0.1:5000/add_member_to_task")!
+        let url = URL(string: "https://python-api-henna-pi.vercel.app/add_member_to_task")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -220,7 +220,7 @@ class APIRequestVM: ObservableObject {
     
     /**Função para incrementar um voto na resposta do quiz**/
     func addQuizVote(quizForAdd: AddQuizVote) {
-        let url = URL(string: "http://127.0.0.1:5000/increment_vote")!
+        let url = URL(string: "https://python-api-henna-pi.vercel.app/increment_vote")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -249,7 +249,7 @@ class APIRequestVM: ObservableObject {
     
     /**Função para adicionar um membro financeiramente participante**/
     func addMemberToFinanceValidation(newMember: NewValidationMember) {
-        let url = URL(string: "http://127.0.0.1:5000/add_member_to_finance_validation")!
+        let url = URL(string: "https://python-api-henna-pi.vercel.app/add_member_to_finance_validation")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -279,7 +279,7 @@ class APIRequestVM: ObservableObject {
     //MARK: - CREATE
     /**Função para criar a tabela completa no banco**/
     func createAllEventsTable(allEvents: AllEvents) {
-            guard let url = URL(string: "http://127.0.0.1:5000/create_all_events_table") else {
+            guard let url = URL(string: "https://python-api-henna-pi.vercel.app/create_all_events_table") else {
                 return
             }
 
@@ -310,7 +310,7 @@ class APIRequestVM: ObservableObject {
     
     /**Função para criar a tabela de usuários vazia**/
     func createUserTable() {
-        guard let url = URL(string: "http://127.0.0.1:5000/create_user_table") else {
+        guard let url = URL(string: "https://python-api-henna-pi.vercel.app/create_user_table") else {
             return
         }
 
@@ -341,7 +341,7 @@ class APIRequestVM: ObservableObject {
     
     /**Função para criar um novo quiz no evento**/
     func createQuiz(newQuiz: Quiz) {
-        guard let url = URL(string: "http://127.0.0.1:5000/create_quiz") else {
+        guard let url = URL(string: "https://python-api-henna-pi.vercel.app/create_quiz") else {
             return
         }
 
@@ -372,7 +372,7 @@ class APIRequestVM: ObservableObject {
     
     /**Função para criar uma nova task no evento**/
     func createTask(newTask: EventTask) {
-        guard let url = URL(string: "http://127.0.0.1:5000/create_task") else {
+        guard let url = URL(string: "https://python-api-henna-pi.vercel.app/create_task") else {
             return
         }
 
@@ -403,7 +403,7 @@ class APIRequestVM: ObservableObject {
     
     /**Função para criar um resgistro financeiro no evento**/
     func createFinance(newFinance: Finance) {
-        guard let url = URL(string: "http://127.0.0.1:5000/create_finance") else {
+        guard let url = URL(string: "https://python-api-henna-pi.vercel.app/create_finance") else {
             return
         }
 
