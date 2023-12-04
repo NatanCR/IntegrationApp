@@ -53,8 +53,8 @@ struct HomeView: View {
 //                    
 //                    let newFinance = Finance(id: "Compra geral", title: "Compra geral", deadline: "28/09/2023", totalValue: 230.00, valuePerMembers: 23.89)
 //                    
-                    let member = Member(id: "Natan", name: "Natan", financeMember: true)
-//                    
+                    let member = Member(id: "Natan", name: "Natan", financeMember: true, icon: "😁")
+//
 //                    let newTaskMember = NewTaskMember(member: member, id: newTask.id)
 //                    
 //                    let addVote = AddQuizVote(id: newQuiz.id, optionId: quizAnswer.optionId)

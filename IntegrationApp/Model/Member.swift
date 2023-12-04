@@ -7,14 +7,16 @@
 
 import Foundation
 
-struct Member: Codable, Identifiable {
-  let id: String
-  var name: String?
-  var financeMember: Bool?
+struct Member: Codable, Identifiable, Hashable {
+    let id: String
+    var name: String?
+    var financeMember: Bool?
+    var icon: String?
     
-    init(id: String = UUID().uuidString, name: String? = nil, financeMember: Bool? = nil) {
+    init(id: String = UUID().uuidString, name: String? = nil, financeMember: Bool? = nil, icon: String? = nil) {
         self.id = id
         self.name = name
         self.financeMember = financeMember
+        self.icon = icon
     }
 }
