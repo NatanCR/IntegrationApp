@@ -52,7 +52,7 @@ struct FinanceBlueBoxComponent: View {
                     }
                 }
                 .padding(.horizontal, 30)
-                .padding(.top, 20)
+                .padding(.top, 15)
                 HStack {
                     VStack {
                         Text("Valor pago: \(valuePayed, specifier: "%.2f")")
@@ -70,7 +70,6 @@ struct FinanceBlueBoxComponent: View {
                                weight: .light,
                                design: .rounded))
                 ActionBlueBoxButtonComponent(buttonTitle: "Definir como pago")
-                    .padding(.top, 10)
             }
         }
     }
