@@ -37,7 +37,6 @@ struct FinanceBlueBoxComponent: View {
                                 .foregroundStyle(Color.white)
                                 .font(.title2)
                         }
-                    //TODO: Colocar fonte e tamanho
                     VStack(alignment: .leading) {
                         Text(financeCardTitle)
                             .font(.custom("Poppins-SemiBold", size: 15))
@@ -52,9 +51,8 @@ struct FinanceBlueBoxComponent: View {
                             .font(.custom("Poppins-Regular", size: 12))
                     }
                 }
-                .padding(.bottom, 25)
                 .padding(.horizontal, 30)
-                
+                .padding(.top, 20)
                 HStack {
                     VStack {
                         Text("Valor pago: \(valuePayed, specifier: "%.2f")")
@@ -66,16 +64,13 @@ struct FinanceBlueBoxComponent: View {
                             .font(.custom("Poppins-Regular", size: 12))
                     }
                 }
+                .padding(.top, 20)
                 .padding(.horizontal, 30)
-                .padding(.bottom, 40)
                 .font(.system(size: 13,
                                weight: .light,
                                design: .rounded))
-            }
-            VStack {
-                Spacer()
                 ActionBlueBoxButtonComponent(buttonTitle: "Definir como pago")
-                    .padding(.vertical, 290)
+                    .padding(.top, 10)
             }
         }
     }

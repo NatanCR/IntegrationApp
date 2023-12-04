@@ -25,12 +25,12 @@ struct Event: Codable, Identifiable {
   var eventDate: String?
   var eventMembers: [Member?]?
   var quiz: [Quiz?]?
-  var finance: Finance?
+  var finance: [Finance]?
   var activeEvent: Bool?
   var task: [EventTask?]?
   var financeValidation: FinanceAnswer?
 
-    init(id: String = UUID().uuidString, eventName: String? = nil, eventDate: String? = nil, eventMembers: [Member?]? = nil, quiz: [Quiz?]? = nil, finance: Finance? = nil, activeEvent: Bool? = nil, task: [EventTask?]? = nil, financeValidation: FinanceAnswer? = nil) {
+    init(id: String = UUID().uuidString, eventName: String? = nil, eventDate: String? = nil, eventMembers: [Member?]? = nil, quiz: [Quiz?]? = nil, finance: [Finance]? = nil, activeEvent: Bool? = nil, task: [EventTask?]? = nil, financeValidation: FinanceAnswer? = nil) {
         self.id = id
         self.eventName = eventName
         self.eventDate = eventDate

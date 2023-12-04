@@ -29,7 +29,6 @@ class APIRequestVM: ObservableObject {
             
             if let data = data {
                 print(String(data: data, encoding: .utf8) ?? "Dados não válidos")
-                
                 do {
                     let decodedData = try JSONDecoder().decode(EventsTable.self, from: data)
                     DispatchQueue.main.async {

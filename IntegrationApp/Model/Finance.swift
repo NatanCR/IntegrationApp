@@ -7,18 +7,21 @@
 
 import Foundation
 
-struct Finance: Codable, Identifiable {
-  let id: String
-  var title: String?
-  var deadline: String?
-  var totalValue: Double?
-  var valuePerMembers: Double?
+struct Finance: Codable, Identifiable, Hashable {
+    let id: String
+    var title: String?
+    var deadline: String?
+    var totalValue: Double?
+    var valuePerMembers: Double?
+    var valuePayed: Double?
     
-    init(id: String = UUID().uuidString, title: String? = nil, deadline: String? = nil, totalValue: Double? = nil, valuePerMembers: Double? = nil) {
+    
+    init(id: String = UUID().uuidString, title: String? = nil, deadline: String? = nil, totalValue: Double? = nil, valuePerMembers: Double? = nil, valuePayed: Double? = nil) {
         self.id = id
         self.title = title
         self.deadline = deadline
         self.totalValue = totalValue
         self.valuePerMembers = valuePerMembers
+        self.valuePayed = valuePayed
     }
 }

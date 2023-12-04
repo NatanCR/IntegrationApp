@@ -49,8 +49,8 @@ struct SheetCreateEvent: View {
                 },
                 trailing: Button("Criar") {
                     //chamar função de salvar novo evento
-                    let newEvent = Event(id: inputTitle, eventName: inputTitle, eventDate: Formatters.shared.dateToString(chosenDate: selectedDate), activeEvent: true, financeValidation: FinanceAnswer(id: "financeQuestion", title: "Você irá participar financeiramente do integration?"))
-                    objectVM.currentEvent.currentEvent = newEvent
+//                    let newEvent = Event(id: inputTitle, eventName: inputTitle, eventDate: Formatters.shared.dateToString(chosenDate: selectedDate), activeEvent: true, financeValidation: FinanceAnswer(id: "financeQuestion", title: "Você irá participar financeiramente do integration?"))
+//                    objectVM.currentEvent.currentEvent = newEvent
 //                    objectVM.updateEvent(eventData: newEvent)
                     navigationToEvent = true
 //                    dismiss()
