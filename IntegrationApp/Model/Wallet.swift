@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Wallet: Codable, Identifiable {
+public struct Wallet: Codable, Identifiable, Hashable {
     public let id: String?
     public var value: Double?
     

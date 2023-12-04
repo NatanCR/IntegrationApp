@@ -10,7 +10,7 @@ import Foundation
 class APIRequestVM: ObservableObject {
     static let shared = APIRequestVM()
     
-    @Published var allEvents = EventsTable()
+    @Published var allEventsTable = EventsTable()
     @Published var currentEvent = CurrentEvent()
     
     //MARK: - READ
@@ -28,11 +28,11 @@ class APIRequestVM: ObservableObject {
             }
             
             if let data = data {
-                print(String(data: data, encoding: .utf8) ?? "Dados não válidos")
+//                print(String(data: data, encoding: .utf8) ?? "Dados não válidos")
                 do {
                     let decodedData = try JSONDecoder().decode(EventsTable.self, from: data)
                     DispatchQueue.main.async {
-                        self.allEvents = decodedData
+                        self.allEventsTable = decodedData
                     }
                 } catch {
                     print("Erro ao decodificar JSON: \(error)")
@@ -50,7 +50,7 @@ class APIRequestVM: ObservableObject {
         
         URLSession.shared.dataTask(with: url) { data, response, error in
             if let data = data {
-                print(String(data: data, encoding: .utf8) ?? "Dados não válidos")
+//                print(String(data: data, encoding: .utf8) ?? "Dados não válidos")
                 do {
                     let decodedData = try JSONDecoder().decode(CurrentEvent.self, from: data)
                     DispatchQueue.main.async {
@@ -318,7 +318,7 @@ class APIRequestVM: ObservableObject {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
 
         do {
-            let jsonData = try JSONEncoder().encode(allEvents)
+            let jsonData = try JSONEncoder().encode(allEventsTable)
             request.httpBody = jsonData
         } catch {
             print("Erro ao codificar dados para JSON: \(error)")

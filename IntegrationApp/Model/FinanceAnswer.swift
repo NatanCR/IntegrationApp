@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FinanceAnswer: Codable, Identifiable {
+struct FinanceAnswer: Codable, Identifiable, Hashable {
   let id: String
   var title: String?
   var collaborators: [Member]?

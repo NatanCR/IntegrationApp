@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct EventTask: Codable, Identifiable {
+struct EventTask: Codable, Identifiable, Hashable {
   let id: String
   var title: String?
   var deadline: String?

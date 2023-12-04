@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct EventComponent: View {
-//    var name
-//    var date
-//    var members
+    var eventTitle: String
+    var eventDate: String
+//    var members: [Member]
     
     var body: some View {
         ZStack(alignment: .leading) {
@@ -18,7 +18,7 @@ struct EventComponent: View {
                 .frame(width: 355, height: 120)
                 .foregroundColor(Color.segmentedControlNotSelected)
                 .cornerRadius(20)
-            Text("Nome do Evento")
+            Text(eventTitle)
                 .offset(x: 80)
                 .offset(y: -35)
                 .foregroundColor(.black)
@@ -28,7 +28,7 @@ struct EventComponent: View {
                 .offset(y: -10)
                 .foregroundColor(.black)
                 .font(.callout)
-            Text("Data: 26/11")
+            Text(eventDate)
                 .offset(x: 250)
                 .offset(y: -35)
                 .foregroundColor(.black)
@@ -56,6 +56,6 @@ struct EventComponent: View {
     }
 }
 
-#Preview {
-    EventComponent()
-}
+//#Preview {
+//    EventComponent()
+//}

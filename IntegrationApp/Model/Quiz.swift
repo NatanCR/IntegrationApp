@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Quiz: Codable, Identifiable {
+struct Quiz: Codable, Identifiable, Hashable {
   let id: String
   var title: String?
   var category: QuizCategory?

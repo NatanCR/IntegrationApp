@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct QuizAnswer: Codable {
+struct QuizAnswer: Codable, Hashable {
   let optionId: String
   var title: String?
   var votes: Int?

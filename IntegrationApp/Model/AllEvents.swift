@@ -8,18 +8,18 @@
 import Foundation
 
 struct EventsTable: Codable {
-    var allEvents: [AllEvents?]?
+    var allEvents: [AllEvents]?
 
     enum CodingKeys: String, CodingKey {
         case allEvents = "AllEvents"
     }
     
-    init(allEvents: [AllEvents?]? = nil) {
+    init(allEvents: [AllEvents]? = nil) {
         self.allEvents = allEvents
     }
 }
 
-struct AllEvents: Codable, Identifiable {
+struct AllEvents: Codable, Identifiable, Hashable {
     var id: String?
     var currentEvent: Event?
     var previousEvent: [Event?]?

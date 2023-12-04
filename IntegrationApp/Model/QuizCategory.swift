@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum QuizCategory: String, Codable {
+public enum QuizCategory: String, Codable, Hashable {
   case finance = "FINANCE"
   case activities = "ACTIVITIES"
 }

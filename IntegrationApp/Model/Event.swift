@@ -19,7 +19,7 @@ struct CurrentEvent: Codable {
     }
 }
 
-struct Event: Codable, Identifiable {
+struct Event: Codable, Identifiable, Hashable {
   let id: String
   var eventName: String?
   var eventDate: String?

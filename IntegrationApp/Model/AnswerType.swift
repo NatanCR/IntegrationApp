@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum AnswerType: String, Codable {
+public enum AnswerType: String, Codable, Hashable {
   case multiple = "MULTIPLE"
   case unique = "UNIQUE"
 }
