@@ -51,7 +51,7 @@ struct HomeView: View {
 //                    
 //                    let newTask = EventTask(id: "Comprar salgados", title: "Comprar Salgados", deadline: "26/09/2023", collaborators: [], status: .on, icon: "plus")
 //                    
-//                    let newFinance = Finance(id: "Compra geral", title: "Compra geral", deadline: "28/09/2023", totalValue: 230.00, valuePerMembers: 23.89)
+                    let newFinance = Finance(id: "Compra geral", title: "Compra geral", deadline: "28/09/2023", totalValue: 230.00, valuePerMembers: 23.89)
 //                    
                     let member = Member(id: "Natan", name: "Natan", financeMember: true, icon: "😁")
 //
@@ -59,7 +59,7 @@ struct HomeView: View {
 //                    
 //                    let addVote = AddQuizVote(id: newQuiz.id, optionId: quizAnswer.optionId)
                     
-                    let newFinanceValidationMember = NewValidationMember(id: newEvent.financeValidation?.id, member: member)
+//                    let newFinanceValidationMember = NewValidationMember(id: newEvent.financeValidation?.id, member: member)
                     
                     
 //                                    objectVM.updateEvent(eventData: newEvent)
@@ -70,10 +70,10 @@ struct HomeView: View {
                     //                objectVM.addEventMember(newMember: Member(id: "Joao", name: "Joao", financeMember: true))
                     //                objectVM.createQuiz(newQuiz: newQuiz)
                     //                objectVM.createTask(newTask: newTask)
-                    //                objectVM.createFinance(newFinance: newFinance)
+                                    objectVM.createFinance(newFinance: newFinance)
                     //                objectVM.addTaskMember(newMember: newTaskMember)
                     //                objectVM.addQuizVote(quizForAdd: addVote)
-                    objectVM.addMemberToFinanceValidation(newMember: newFinanceValidationMember)
+//                    objectVM.addMemberToFinanceValidation(newMember: newFinanceValidationMember)
                 }
                 
             }
