@@ -84,6 +84,7 @@
 		D19758302B150714004C7954 /* FinanceBlueBoxComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D197582F2B150714004C7954 /* FinanceBlueBoxComponent.swift */; };
 		D19758322B15100D004C7954 /* ActionBlueBoxButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19758312B15100D004C7954 /* ActionBlueBoxButtonComponent.swift */; };
 		D19758342B151ACB004C7954 /* WalletCardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19758332B151ACB004C7954 /* WalletCardComponent.swift */; };
+		D1A455A22B1E090900F0FBA0 /* Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A455A12B1E090900F0FBA0 /* Properties.swift */; };
 		D1D680232B1A78B000CB592D /* GridMembersIconComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D680222B1A78B000CB592D /* GridMembersIconComponent.swift */; };
 /* End PBXBuildFile section */
 
@@ -174,6 +175,7 @@
 		D197582F2B150714004C7954 /* FinanceBlueBoxComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceBlueBoxComponent.swift; sourceTree = "<group>"; };
 		D19758312B15100D004C7954 /* ActionBlueBoxButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionBlueBoxButtonComponent.swift; sourceTree = "<group>"; };
 		D19758332B151ACB004C7954 /* WalletCardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletCardComponent.swift; sourceTree = "<group>"; };
+		D1A455A12B1E090900F0FBA0 /* Properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Properties.swift; sourceTree = "<group>"; };
 		D1D680222B1A78B000CB592D /* GridMembersIconComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridMembersIconComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -287,6 +289,7 @@
 			children = (
 				D16252F02AED71E40077D469 /* Formatters.swift */,
 				D170B01A2B1920A000D4CB41 /* DataProcessor.swift */,
+				D1A455A12B1E090900F0FBA0 /* Properties.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -565,6 +568,7 @@
 				D197581C2B113709004C7954 /* Wallet.swift in Sources */,
 				6B5900562AFA8A5400152BBF /* FinanceSubview.swift in Sources */,
 				D19758262B113749004C7954 /* FinanceAnswer.swift in Sources */,
+				D1A455A22B1E090900F0FBA0 /* Properties.swift in Sources */,
 				6B8476182B081DC9008A3CA2 /* AuthenticateNewUserVM.swift in Sources */,
 				056F86C62B029C4800CF5334 /* IdentityView.swift in Sources */,
 				D19758222B11372E004C7954 /* Finance.swift in Sources */,
