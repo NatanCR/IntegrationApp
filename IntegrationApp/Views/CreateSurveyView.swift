@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CreateSurveyView: View {
-    @Binding var title: String
+    @State var title: String = ""
     @State private var showingResults = false
     @State var selectedDate = Date()
     // Estado para armazenar uma nova opção de enquete

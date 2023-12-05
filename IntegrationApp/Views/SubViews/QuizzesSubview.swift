@@ -9,10 +9,7 @@ import SwiftUI
 
 struct QuizzesSubview: View {
     var body: some View {
-        ZStack {
-            Color(.systemMint)
-            Text("QUIZZESSSSS Subview")
-    
+        VStack {
             
         }
         .padding(.leading, 20)

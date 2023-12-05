@@ -18,7 +18,7 @@ struct ScrollViewComponent: View {
                 case "Tarefa":
                     TaskSubview()
                 case "Enquetes":
-                    QuizzesSubview()
+                    CreateSurveyView()
                 case "Financeiro":
                     FinanceSubview(objectVM: objectVM)
                 default:
