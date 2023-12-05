@@ -30,7 +30,7 @@ struct SurveyComponent: View {
                     
                     if options.isEmpty {
                         // Campo de texto para adicionar uma nova opção quando a lista está vazia
-                        TextField("Toque para adicionar", text: $newOption, onCommit: {
+                        TextField("Toque para adicionar...", text: $newOption, onCommit: {
                             if !newOption.isEmpty {
                                 let newOptionId = UUID().uuidString
                                 options.append(QuizAnswer(optionId: newOptionId, title: newOption, votes: 0))

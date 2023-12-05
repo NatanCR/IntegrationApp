@@ -10,7 +10,7 @@ import SwiftUI
 struct CreateSurveyView: View {
     @Binding var title: String
     @State private var showingResults = false
-
+    @State var selectedDate = Date()
     // Estado para armazenar uma nova opção de enquete
     @State private var newOption = ""
 
@@ -51,15 +51,15 @@ struct CreateSurveyView: View {
                             }.listRowBackground(Color.clear)
                             
                             // Campo prazo
-                            Section(header: TitleComponent(title: "Prazo Final")) {
-                                TextFieldComponent(valueText: $title, placeholder: "Digite o nome da enquete...")
-                                    .foregroundColor(Color("TextFieldColor"))
-                            }.listRowBackground(Color.clear)
-                        }
+                            Section {
+                                DatePickerComponent(selectedDate: $selectedDate)
+                            } header: {
+                                Text("Data do Evento").bold().foregroundStyle(Color.black)
+                            }                        }
                         
                         VStack(alignment: .leading, spacing: 15) {
                             //escolher o tipo de enquete(Segment que peguei da barbaresca)
-                            Section(header: TitleComponent(title: "Tipo de Enquete")) {
+                            Section(header: TitleComponent(title: "Tipo de Enquete").padding(.leading, 20)) {
                                 // Controle de segmento para selecionar o tipo de enquete
                                 SegmentControlView(segments: eventsProperty1,
                                                    selected: $initialProperty1,
@@ -81,7 +81,7 @@ struct CreateSurveyView: View {
                                 
                                 // Controle de segmento para o tipo de escolha
                                 VStack(alignment: .leading,  spacing: 15) {
-                              Section(header: TitleComponent(title: "Tipo de Escolha")) {
+                              Section(header: TitleComponent(title: "Tipo de Escolha").padding(.leading, 20)) {
                                     SegmentControlView(segments: eventsProperty2,
                                                        selected: $initialProperty2,
                                                        titleNormalColor: .white,
@@ -113,11 +113,11 @@ struct CreateSurveyView: View {
                                 .cornerRadius(10)
                             }
                         }
-                    }
-                        
+                        VStack(alignment: .leading){
+                            GridIconComponent()
+                        }
+                    }.background(Color.apresentationView)
                     
-                    
-                    Spacer()
                         .navigationBarTitle("Criar Enquete", displayMode: .inline)
                         .navigationBarItems(
                             leading: Button("Cancelar") {
