@@ -14,14 +14,20 @@ struct Finance: Codable, Identifiable, Hashable {
     var totalValue: Double?
     var valuePerMembers: Double?
     var valuePayed: Double?
+    var whoPayed: [WhoPayed]?
     
-    
-    init(id: String = UUID().uuidString, title: String? = nil, deadline: String? = nil, totalValue: Double? = nil, valuePerMembers: Double? = nil, valuePayed: Double? = nil) {
+    init(id: String = UUID().uuidString, title: String? = nil, deadline: String? = nil, totalValue: Double? = nil, valuePerMembers: Double? = nil, valuePayed: Double? = nil, whoPayed: [WhoPayed]? = nil) {
         self.id = id
         self.title = title
         self.deadline = deadline
         self.totalValue = totalValue
         self.valuePerMembers = valuePerMembers
         self.valuePayed = valuePayed
+        self.whoPayed = whoPayed
     }
+}
+
+struct WhoPayed: Codable, Hashable {
+    var collaborator: Member
+    var isPayed: Bool
 }

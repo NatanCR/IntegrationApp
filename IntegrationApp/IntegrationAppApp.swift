@@ -10,6 +10,8 @@ import SwiftUI
 struct IntegrationAppApp: App {
     @State private var surveyTitle: String = ""    
     @State private var tutorialState: TutorialState = .introduction
+    @StateObject var objectVM = APIRequestVM()
+    
     var body: some Scene {
         
         WindowGroup {
@@ -18,11 +20,15 @@ struct IntegrationAppApp: App {
 //            ContentView()
             // CreateSurveyView(title: $surveyTitle)
 //                ApresentationView(tutorialState: $tutorialState)
-//                EventView(tutorialState: $tutorialState)
+//                EventView(objectVM: objectVM)
                 // RegisterView(tutorialState: $tutorialState)
                 
 //                RegisterView(tutorialState: $tutorialState)
                     .environment(\.screenSize, geo.size)
+            }
+            .task {
+                await objectVM.fetchAllEventsTableData()
+                await objectVM.fetchCurrentEventData()
             }
         }
     }

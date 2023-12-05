@@ -37,21 +37,21 @@ struct EventComponent: View {
                 .offset(x: 10)
                 .offset(y: -18)
             
-            Button(action: {
-                print("Botão pressionado!")
-            }) {
-                ZStack {
-                    Rectangle()
-                        .frame(width: 355, height: 60)
-                        .foregroundColor(Color.segmentedControlSelected)
-                        .cornerRadius(20)
-                        .offset(y: 55)
-                    Text("Participar")
-                        .foregroundColor(.white)
-                        .font(.headline)
-                        .offset(y: 55)
-                }
-            }
+//            Button(action: {
+//                print("Botão pressionado!")
+//            }) {
+//                ZStack {
+//                    Rectangle()
+//                        .frame(width: 355, height: 60)
+//                        .foregroundColor(Color.segmentedControlSelected)
+//                        .cornerRadius(20)
+//                        .offset(y: 55)
+//                    Text("Participar")
+//                        .foregroundColor(.white)
+//                        .font(.headline)
+//                        .offset(y: 55)
+//                }
+//            }
         }
     }
 }

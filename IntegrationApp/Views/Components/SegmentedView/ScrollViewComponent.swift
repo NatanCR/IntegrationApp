@@ -12,10 +12,9 @@ struct ScrollViewComponent: View {
     @ObservedObject var objectVM: APIRequestVM
     
     var body: some View {
-        ScrollView {
+//        ScrollView {
             VStack(spacing: 30) {
                 //Enquete criada
-                
                 switch selection {
                 case "Tarefa":
                     TaskSubview()
@@ -27,10 +26,12 @@ struct ScrollViewComponent: View {
                     TaskSubview()
                 }
                 
-            }.frame(height: 600)
-                .ignoresSafeArea()
-                
-        }
+            }
+            .frame(height: 600)
+//            .ignoresSafeArea()
+////        }
+//        .padding(.top, 10)
+//        .padding(.bottom, 80)
     }
 }
 

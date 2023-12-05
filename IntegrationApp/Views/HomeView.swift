@@ -22,7 +22,11 @@ struct HomeView: View {
                             
                             Section {
                                 ForEach(allEvents, id: \.self) { event in
-                                    EventComponent(eventTitle: event.currentEvent?.eventName ?? "Integration", eventDate: event.currentEvent?.eventDate ?? "")
+                                    NavigationLink {
+                                        EventView(objectVM: objectVM)
+                                    } label: {
+                                        EventComponent(eventTitle: event.currentEvent?.eventName ?? "Integration", eventDate: event.currentEvent?.eventDate ?? "")
+                                    }
                                 }
                             } header: {
                                 Text("Evento em andamento")
@@ -41,14 +45,13 @@ struct HomeView: View {
                                     .font(.custom("Poppins-SemiBold", size: 15))
                                     .foregroundStyle(Color.textSection)
                             }
-                            //                        .padding(.vertical, 40)
+                                                    .padding(.vertical, 40)
                             
                         } else {
                             Text("Nenhum evento criado...")
                                 .foregroundColor(Color.blueText)
                         }
                     }
-                    
                     
                     CreateEventButton(view: SheetCreateEvent(placeholderText: "Digite o nome do evento...", sheetBarTitle: "Criar Evento", objectVM: objectVM))
 //                        .position(CGPoint(x: screenSize.width * 0.90, y: screenSize.height * 0.45))
@@ -74,7 +77,7 @@ struct HomeView: View {
                 //
                 //                    let newTask = EventTask(id: "Comprar salgados", title: "Comprar Salgados", deadline: "26/09/2023", collaborators: [], status: .on, icon: "plus")
                 //
-                //                    let newFinance = Finance(id: "Compra geral", title: "Compra geral", deadline: "28/09/2023", totalValue: 230.00, valuePerMembers: 23.89, valuePayed: 150.00)
+//                                    let newFinance = Finance(id: "Compra geral", title: "Compra geral", deadline: "28/09/2023", totalValue: 230.00, valuePerMembers: 23.89, valuePayed: 150.00, whoPayed: [])
                 //
                 //                    let member = Member(id: "Natan", name: "Natan", financeMember: true, icon: "😁")
                 //
@@ -93,7 +96,7 @@ struct HomeView: View {
                 //                objectVM.addEventMember(newMember: Member(id: "Joao", name: "Joao", financeMember: true))
                 //                objectVM.createQuiz(newQuiz: newQuiz)
                 //                objectVM.createTask(newTask: newTask)
-                //                    objectVM.createFinance(newFinance: newFinance)
+//                                    objectVM.createFinance(newFinance: newFinance)
                 //                objectVM.addTaskMember(newMember: newTaskMember)
                 //                objectVM.addQuizVote(quizForAdd: addVote)
                 //                    objectVM.addMemberToFinanceValidation(newMember: newFinanceValidationMember)

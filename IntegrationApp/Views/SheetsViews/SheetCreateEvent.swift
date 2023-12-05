@@ -57,7 +57,7 @@ struct SheetCreateEvent: View {
                 }.bold()
             )
             .background(
-                NavigationLink(destination: EventView(tutorialState: $tutorialState, objectVM: objectVM), isActive: $navigationToEvent, label: { EmptyView() }).hidden()
+                NavigationLink(destination: EventView(objectVM: objectVM), isActive: $navigationToEvent, label: { EmptyView() }).hidden()
             )
             
         }

@@ -13,9 +13,10 @@ struct TaskSubview: View {
             //Color(.systemCyan)
             Text("TASK Subview")
             RectangleBoxComponent()
-        }.padding(.leading, 20)
-            .padding(.trailing, 20)
-            .ignoresSafeArea()
+        }
+        .padding(.leading, 20)
+        .padding(.trailing, 20)
+        //            .ignoresSafeArea()
     }
 }
 

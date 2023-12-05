@@ -26,5 +26,5 @@ struct Properties {
     
     let gridHeightMembers: CGFloat = 500
     
-    let gridHeightFinance: CGFloat = 400
+    let gridHeightFinance: CGFloat = 360
 }

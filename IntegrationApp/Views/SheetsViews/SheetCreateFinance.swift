@@ -92,7 +92,8 @@ struct SheetCreateFinance: View {
                 },
                 trailing: Button("Criar") {
                     //chamar função de salvar novo financeiro
-                    let newFinance = Finance(id: inputTitle, title: inputTitle, deadline: Formatters.shared.dateToString(chosenDate: selectedDate), totalValue: inputTotalValue, valuePerMembers: valuePerMemberCalculated)
+//                    let newFinance = Finance(id: inputTitle, title: inputTitle, deadline: Formatters.shared.dateToString(chosenDate: selectedDate), totalValue: inputTotalValue, valuePerMembers: valuePerMemberCalculated, valuePayed: 0.0, whoPayed: [])
+//                    objectVM.createFinance(newFinance: newFinance)
                     dismiss()
                 }.bold()
             )
