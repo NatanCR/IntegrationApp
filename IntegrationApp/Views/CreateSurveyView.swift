@@ -39,6 +39,8 @@ struct CreateSurveyView: View {
             Button("Show Results") {
                 showingResults.toggle()
             }
+            
+            SurveyResultsView(options: $options)
             // sheet
             .sheet(isPresented: $showingResults) {
                 NavigationStack {
