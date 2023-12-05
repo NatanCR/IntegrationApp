@@ -12,15 +12,21 @@ struct WalletCardComponent: View {
     
     var body: some View {
         ZStack(alignment: .leading) {
-            Rectangle()
-                .fill(Color(.financeBlueBoxButton))
-                .frame(width: 125, height: 50)
-                .clipShape(RoundedRectangle(cornerRadius: 15))
-            Text("R$ \(walletValue, specifier: "%.2f")")
-                .foregroundStyle(Color.white)
-                .font(.custom("Poppins-Regular", size: 14))
-                .padding()
-            
+            Button {
+                
+            } label: {
+                ZStack(alignment: .leading) {
+                    Rectangle()
+                        .fill(Color(.financeBlueBoxButton))
+                        .frame(width: 125, height: 50)
+                        .clipShape(RoundedRectangle(cornerRadius: 15))
+                    Text("R$ \(walletValue, specifier: "%.2f")")
+                        .foregroundStyle(Color.white)
+                        .font(.custom("Poppins-Regular", size: 14))
+                        .padding()
+                    
+                }
+            }
         }
     }
 }

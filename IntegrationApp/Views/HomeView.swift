@@ -63,7 +63,7 @@ struct HomeView: View {
             }
             .onAppear {
                 
-                //                    let newEvent = Event(id: "Integration Dezembro",eventName: "Integration Dezembro", eventDate: "11/12/2023", eventMembers: [], quiz: [], finance: nil, activeEvent: true, task: [], financeValidation: FinanceAnswer(id: "financeQuestion",title: "Vai participar financeiramente?", collaborators: []))
+                                    let newEvent = Event(id: "Integration Dezembro",eventName: "Integration Dezembro", eventDate: "11/12/2023", eventMembers: [], quiz: [], finance: [], activeEvent: true, task: [], financeValidation: FinanceAnswer(id: "financeQuestion",title: "Vai participar financeiramente?", collaborators: []))
                 
                 //                    let newCurrentEvent = CurrentEvent(currentEvent: newEvent)
                 
@@ -88,7 +88,7 @@ struct HomeView: View {
                 //                    let newFinanceValidationMember = NewValidationMember(id: newEvent.financeValidation?.id, member: member)
                 
                 
-                //                                    objectVM.updateEvent(eventData: newEvent)
+                                                    objectVM.updateEvent(eventData: newEvent)
                 //                                    objectVM.createAllEventsTable(allEvents: allEvents)
                 //                objectVM.createUserTable()
                 //                objectVM.addNewUserToUserTable(newUser: newUser)

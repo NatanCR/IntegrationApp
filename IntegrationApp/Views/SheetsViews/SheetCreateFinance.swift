@@ -26,7 +26,7 @@ struct SheetCreateFinance: View {
                     .frame(height: 50)
                     .ignoresSafeArea()
                 
-                VStack(alignment: .leading){
+                VStack(alignment: .leading) {
                     Section {
                         TextFieldComponent(valueText: $inputTitle, placeholder: "Digite o nome do débito...")
                     } header: {
@@ -41,9 +41,6 @@ struct SheetCreateFinance: View {
                     
                     Section {
                         NumberFieldComponent(totalValue: $inputTotalValue)
-                            .onChange(of: inputTotalValue) { newValue in
-                                //chama a função para atualizar o valor por membro
-                            }
                     } header: {
                         Text("Valor Total").bold().foregroundStyle(Color.black)
                     }
@@ -58,7 +55,7 @@ struct SheetCreateFinance: View {
                                     .cornerRadius(15)
                                     .foregroundColor(Color("TextFieldColor"))
                             } else {
-                                Text("\(valuePerMemberCalculated)")
+                                Text("\(valuePerMemberCalculated, specifier: "%.2f")")
                                     .padding(.horizontal, 8)
                                     .frame(width: screenSize.width * 0.9, height: screenSize.height * 0.07)
                                     .background(Color.primaryBlue)
@@ -73,15 +70,11 @@ struct SheetCreateFinance: View {
                 }
             }
             .onChange(of: inputTotalValue) { newValue in
-                print("mudou aqui")
-                self.valuePerMemberCalculated = DataProcessor.shared.valuePerMemberCalculate(members: totalCollaborators, financeValue: inputTotalValue)
-                
-                print(self.valuePerMemberCalculated)
+                self.valuePerMemberCalculated = DataProcessor.shared.valuePerMemberCalculate(members: totalCollaborators, financeValue: inputTotalValue)                
             }
             
             .onAppear {
                 self.totalCollaborators = DataProcessor.shared.calculateMembersCollaborators(members: self.objectVM.currentEvent.currentEvent?.financeValidation?.collaborators ?? [])
-                print(self.totalCollaborators)
             }
             
             Spacer()
@@ -92,8 +85,8 @@ struct SheetCreateFinance: View {
                 },
                 trailing: Button("Criar") {
                     //chamar função de salvar novo financeiro
-//                    let newFinance = Finance(id: inputTitle, title: inputTitle, deadline: Formatters.shared.dateToString(chosenDate: selectedDate), totalValue: inputTotalValue, valuePerMembers: valuePerMemberCalculated, valuePayed: 0.0, whoPayed: [])
-//                    objectVM.createFinance(newFinance: newFinance)
+                    let newFinance = Finance(id: inputTitle, title: inputTitle, deadline: Formatters.shared.dateToString(chosenDate: selectedDate), totalValue: inputTotalValue, valuePerMembers: valuePerMemberCalculated, valuePayed: 0.0, whoPayed: [])
+                    objectVM.createFinance(newFinance: newFinance)
                     dismiss()
                 }.bold()
             )

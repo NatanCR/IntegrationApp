@@ -12,7 +12,6 @@ struct ScrollViewComponent: View {
     @ObservedObject var objectVM: APIRequestVM
     
     var body: some View {
-//        ScrollView {
             VStack(spacing: 30) {
                 //Enquete criada
                 switch selection {
@@ -28,10 +27,6 @@ struct ScrollViewComponent: View {
                 
             }
             .frame(height: 600)
-//            .ignoresSafeArea()
-////        }
-//        .padding(.top, 10)
-//        .padding(.bottom, 80)
     }
 }
 

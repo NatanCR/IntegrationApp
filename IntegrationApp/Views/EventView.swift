@@ -12,16 +12,17 @@ struct EventView: View {
     @ObservedObject var objectVM: APIRequestVM
     
     var body: some View {
-        ZStack {
-            HStack {
-                Text(objectVM.currentEvent.currentEvent?.eventName ?? "Integration")
-            }
-            .frame(width: 200, height: 730, alignment: .top)
-            
-            VStack {
-                SegControlComponent(objectVM: objectVM)
-            }
-        }.ignoresSafeArea()
+        VStack {
+            SegControlComponent(objectVM: objectVM)
+        }
+        .navigationTitle("\(objectVM.currentEvent.currentEvent?.eventName ?? "Integration")")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbarBackground(
+            Color.navigationArea,
+            for: .navigationBar
+        )
+        .toolbarBackground(.visible, for: .navigationBar)
+        .ignoresSafeArea()
     }
 }
 
