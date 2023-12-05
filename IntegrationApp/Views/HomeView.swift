@@ -16,8 +16,8 @@ struct HomeView: View {
             ZStack {
                 Color.blueBg
                 VStack {
-                    Header()
                     ScrollView {
+                    Header()
                         if let allEvents = objectVM.allEventsTable.allEvents {
                             
                             Section {
@@ -30,6 +30,8 @@ struct HomeView: View {
                                 }
                             } header: {
                                 Text("Evento em andamento")
+                                    .frame(maxWidth:.infinity, alignment: .leading)
+                                    .padding(.horizontal, 20)
                                     .font(.custom("Poppins-SemiBold", size: 15))
                                     .foregroundStyle(Color.textSection)
                             }
@@ -42,10 +44,12 @@ struct HomeView: View {
                                 }
                             } header: {
                                 Text("Eventos passados")
+                                    .frame(maxWidth:.infinity, alignment: .leading)
+                                    .padding(.horizontal, 20)
+                                    .padding(.vertical, 40)
                                     .font(.custom("Poppins-SemiBold", size: 15))
                                     .foregroundStyle(Color.textSection)
                             }
-                                                    .padding(.vertical, 40)
                             
                         } else {
                             Text("Nenhum evento criado...")
@@ -54,7 +58,7 @@ struct HomeView: View {
                     }
                     
                     CreateEventButton(view: SheetCreateEvent(placeholderText: "Digite o nome do evento...", sheetBarTitle: "Criar Evento", objectVM: objectVM))
-//                        .position(CGPoint(x: screenSize.width * 0.90, y: screenSize.height * 0.45))
+                        .position(x: 350, y: 350)
                 }
                 .task {
                     await objectVM.fetchAllEventsTableData()
@@ -63,7 +67,7 @@ struct HomeView: View {
             }
             .onAppear {
                 
-                                    let newEvent = Event(id: "Integration Dezembro",eventName: "Integration Dezembro", eventDate: "11/12/2023", eventMembers: [], quiz: [], finance: [], activeEvent: true, task: [], financeValidation: FinanceAnswer(id: "financeQuestion",title: "Vai participar financeiramente?", collaborators: []))
+                                   // let newEvent = Event(id: "Integration Dezembro",eventName: "Integration Dezembro", eventDate: "11/12/2023", eventMembers: [], quiz: [], finance: [], activeEvent: true, task: [], financeValidation: FinanceAnswer(id: "financeQuestion",title: "Vai participar financeiramente?", collaborators: []))
                 
                 //                    let newCurrentEvent = CurrentEvent(currentEvent: newEvent)
                 
@@ -88,7 +92,8 @@ struct HomeView: View {
                 //                    let newFinanceValidationMember = NewValidationMember(id: newEvent.financeValidation?.id, member: member)
                 
                 
-                                                    objectVM.updateEvent(eventData: newEvent)
+                                                   // objectVM.updateEvent(eventData: newEvent)
+                objectVM.moveCurrentEventToPreviousEvent()
                 //                                    objectVM.createAllEventsTable(allEvents: allEvents)
                 //                objectVM.createUserTable()
                 //                objectVM.addNewUserToUserTable(newUser: newUser)
@@ -113,6 +118,3 @@ struct HomeView: View {
         }
     }
 }
-
-//#Preview { HomeView() }
-
