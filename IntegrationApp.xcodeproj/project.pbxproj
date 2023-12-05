@@ -16,6 +16,7 @@
 		0526886B2B06B3020076F503 /* SurveyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0526886A2B06B3020076F503 /* SurveyComponent.swift */; };
 		0526886D2B06B33F0076F503 /* CreateSurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0526886C2B06B33F0076F503 /* CreateSurveyView.swift */; };
 		0526886F2B07E7A80076F503 /* ProgressBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0526886E2B07E7A80076F503 /* ProgressBarComponent.swift */; };
+		0562B8822B1FA1B300B27943 /* SurveyResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0562B8812B1FA1B300B27943 /* SurveyResultsView.swift */; };
 		056F86C42B0291E700CF5334 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056F86C32B0291E700CF5334 /* LoginView.swift */; };
 		056F86C62B029C4800CF5334 /* IdentityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056F86C52B029C4700CF5334 /* IdentityView.swift */; };
 		056F86C82B02BF1E00CF5334 /* JoiningGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056F86C72B02BF1E00CF5334 /* JoiningGroupView.swift */; };
@@ -115,6 +116,7 @@
 		0526886A2B06B3020076F503 /* SurveyComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyComponent.swift; sourceTree = "<group>"; };
 		0526886C2B06B33F0076F503 /* CreateSurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSurveyView.swift; sourceTree = "<group>"; };
 		0526886E2B07E7A80076F503 /* ProgressBarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarComponent.swift; sourceTree = "<group>"; };
+		0562B8812B1FA1B300B27943 /* SurveyResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyResultsView.swift; sourceTree = "<group>"; };
 		056F86C32B0291E700CF5334 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		056F86C52B029C4700CF5334 /* IdentityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityView.swift; sourceTree = "<group>"; };
 		056F86C72B02BF1E00CF5334 /* JoiningGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoiningGroupView.swift; sourceTree = "<group>"; };
@@ -341,6 +343,7 @@
 				056F86C52B029C4700CF5334 /* IdentityView.swift */,
 				056F86C72B02BF1E00CF5334 /* JoiningGroupView.swift */,
 				0526886C2B06B33F0076F503 /* CreateSurveyView.swift */,
+				0562B8812B1FA1B300B27943 /* SurveyResultsView.swift */,
 				D1B6EBF02AFC20C70079B309 /* Components */,
 			);
 			path = Views;
@@ -569,6 +572,7 @@
 				6B5900562AFA8A5400152BBF /* FinanceSubview.swift in Sources */,
 				D19758262B113749004C7954 /* FinanceAnswer.swift in Sources */,
 				D1A455A22B1E090900F0FBA0 /* Properties.swift in Sources */,
+				0562B8822B1FA1B300B27943 /* SurveyResultsView.swift in Sources */,
 				6B8476182B081DC9008A3CA2 /* AuthenticateNewUserVM.swift in Sources */,
 				056F86C62B029C4800CF5334 /* IdentityView.swift in Sources */,
 				D19758222B11372E004C7954 /* Finance.swift in Sources */,

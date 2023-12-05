@@ -9,10 +9,10 @@ import SwiftUI
 // Componente SwiftUI para criar e gerenciar uma enquete
 struct SurveyComponent: View {
     //var question: String
-    var isVotingEnabled: Bool // variavel para habilitar ou desabilitar a votação
+    var isVotingEnabled: Bool // Variável para habilitar ou desabilitar a votação
     @State private var newOption = "" // Estado para armazenar a nova opção de enquete
-    @State private var selectedOptionId: Int? // Estado para armazenar a opção selecionada
-    @Binding var options: [SurveyOption] // Binding para as opções da enquete
+    @State private var selectedOptionId: String? // Estado para armazenar a opção selecionada como String
+    @Binding var options: [QuizAnswer] // Binding para as opções da enquete
 
     @Environment(\.screenSize) var screenSize
     
@@ -30,10 +30,10 @@ struct SurveyComponent: View {
                     
                     if options.isEmpty {
                         // Campo de texto para adicionar uma nova opção quando a lista está vazia
-                        TextField("Toque para adicionar", text: $newOption, onCommit: {
+                        TextField("Toque para adicionar...", text: $newOption, onCommit: {
                             if !newOption.isEmpty {
-                                let newId = 1 // Define o ID como 1 para a primeira opção
-                                options.append(SurveyOption(id: newId, name: newOption, votes: 0))
+                                let newOptionId = UUID().uuidString
+                                options.append(QuizAnswer(optionId: newOptionId, title: newOption, votes: 0))
                                 newOption = ""
                             }
                         }).foregroundStyle(Color.textSurvey)
@@ -46,25 +46,24 @@ struct SurveyComponent: View {
                                 Circle()
                                     .stroke(lineWidth: 1.3)
                                     .foregroundStyle(Color.segmentedControlSelected)
-                                    .background(Circle().fill(selectedOptionId == options[index].id ? Color.blue : Color.clear))
+                                    .background(Circle().fill(selectedOptionId == options[index].optionId ? Color.blue : Color.clear))
                                     .frame(width: screenSize.width * 0.06, height: screenSize.height * 0.05)
                                     .onTapGesture {
                                         if isVotingEnabled && selectedOptionId == nil {
-                                            selectedOptionId = options[index].id
-                                            options[index].votes += 1
+                                            selectedOptionId = options[index].optionId
+                                            options[index].votes? += 1
                                         }
                                     }
                                 
-                                Text(options[index].name) // Mostra o nome da opção
+                                Text(options[index].title ?? "") // Mostra o nome da opção
                                 Spacer()
                                 
-                                Text("\(options[index].votes)") // Mostra o número de votos
+                                Text("\(options[index].votes ?? 0)") // Mostra o número de votos
                                 Spacer().frame(width: screenSize.width * 0.04)
                             }
                             Divider()
                                 .frame(width: screenSize.width * 0.9, height: screenSize.height * 0.001)
                                 .background(Color.white)
-                            // ProgressBarComponent(value: Double(options[index].votes) / Double(totalVotes())).frame(height: 5)
                             
                             // Campo de texto para adicionar uma nova opção após a última opção existente
                             if index == options.count - 1 {
@@ -78,8 +77,8 @@ struct SurveyComponent: View {
                                     
                                     TextField("Toque para adicionar", text: $newOption, onCommit: {
                                         if !newOption.isEmpty {
-                                            let newId = options.count + 1
-                                            options.append(SurveyOption(id: newId, name: newOption, votes: 0))
+                                            let newOptionId = UUID().uuidString
+                                            options.append(QuizAnswer(optionId: newOptionId, title: newOption, votes: 0))
                                             newOption = ""
                                         }
                                     })
@@ -97,7 +96,7 @@ struct SurveyComponent: View {
     
     // Função para calcular o total de votos
     func totalVotes() -> Int {
-        return options.reduce(0) { $0 + $1.votes }
+        return options.reduce(0) { $0 + ($1.votes ?? 0) }
     }
 }
 
