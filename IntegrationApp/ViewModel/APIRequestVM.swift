@@ -95,6 +95,40 @@ class APIRequestVM: ObservableObject {
             }.resume()
         }
     
+    /**Função para passar evento atual para passados e limpar evento atual**/
+    func moveCurrentEventToPreviousEvent() {
+        guard let url = URL(string: "https://python-api-henna-pi.vercel.app/move_to_previous_event") else {
+            return
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if let error = error {
+                print("Erro na solicitação: \(error)")
+                return
+            }
+
+            guard let data = data else {
+                print("Dados vazios na resposta.")
+                return
+            }
+
+            do {
+                if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                    print("Resposta da API: \(json)")
+                    // Trate a resposta conforme necessário
+                } else {
+                    print("Resposta da API não é um JSON válido.")
+                }
+            } catch {
+                print("Erro ao analisar a resposta JSON: \(error)")
+            }
+        }.resume()
+    }
+    
     /**Função para adicionar um novo usuário na tabela Users**/
     func addNewUserToUserTable(newUser: Login) {
         guard let url = URL(string: "https://python-api-henna-pi.vercel.app/create_user") else {
