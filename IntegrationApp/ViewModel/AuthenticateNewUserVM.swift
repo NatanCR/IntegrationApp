@@ -12,6 +12,7 @@ class AuthenticateNewUserVM: ObservableObject {
     @Published var showAlertImage = false
     @Published var stateAuthenticationEmail = false
     @Published var stateAuthenticationPassword = false
+    @Published var loginState = false
     @Published var stateError = ""
     @Published var name = ""
     @Published var email = ""
@@ -30,6 +31,58 @@ class AuthenticateNewUserVM: ObservableObject {
                 print("Received data:\n\(str ?? "")")
             }
         }
+        task.resume()
+    }
+    //diminuir essa func
+    func loginUser(email: String, password: String) {
+        guard let url = URL(string: "http://127.0.0.1:5001/login") else {
+            print("Não foi possível encontrar a URL")
+            return
+        }
+
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        let parameters: [String: Any] = [
+            "email": email,
+            "password": password
+        ]
+
+        do {
+            request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)
+        } catch let error {
+            print("Erro ao serializar os parâmetros: \(error.localizedDescription)")
+            return
+        }
+
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            if let error = error {
+                print("Erro na solicitação: \(error.localizedDescription)")
+                return
+            }
+
+            guard let data = data else {
+                print("Dados vazios na resposta.")
+                return
+            }
+
+            do {
+                let jsonResponse = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+
+                if let status = jsonResponse?["status"] as? String, status == "success" {
+                    print("Login bem-sucedido!")
+                    DispatchQueue.main.async {
+                          self.loginState.toggle()
+                      }
+                } else {
+                    print("Falha no login. Verifique as credenciais.")
+                }
+            } catch let error {
+                print("Erro ao analisar os dados da resposta: \(error.localizedDescription)")
+            }
+        }
+
         task.resume()
     }
     
@@ -61,11 +114,11 @@ class AuthenticateNewUserVM: ObservableObject {
     
     private func emailIsAssociatedWithAccount(_ email: String) -> Bool {
         //firebase
-      
-         return true
-     }
-
-
+        
+        return true
+    }
+    
+    
     func verifyPassword(password: String) {
         let passwordPattern = "^.{6,}$"
         let passwordPredicate = NSPredicate(format: "SELF MATCHES %@", passwordPattern)

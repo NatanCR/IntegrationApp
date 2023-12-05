@@ -16,9 +16,9 @@ struct IntegrationAppApp: App {
         
         WindowGroup {
             GeometryReader { geo in
-             HomeView()
-//            ContentView()
-//             CreateSurveyView(title: $surveyTitle)
+//             HomeView()
+            ContentView()
+            // CreateSurveyView(title: $surveyTitle)
 //                ApresentationView(tutorialState: $tutorialState)
 //                EventView(objectVM: objectVM)
                 // RegisterView(tutorialState: $tutorialState)
