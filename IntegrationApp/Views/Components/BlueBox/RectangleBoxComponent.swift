@@ -36,13 +36,13 @@ struct RectangleBoxComponent: View {
                 }
                 .padding(.bottom, 80)
                 HStack(spacing: 195) {
-                    Text("Chegandor")
-                    Text("data ")
+                    Text("Comprar")
+                    Text("12 out 2023")
 
                 }.padding(.bottom, 10)
                 VStack {
                     //esse text irá receber o nome das pessoas do banco
-                    Text("sdhisuda")
+                    Text("Barbara, Rebeca, Gui...")
                         .frame( maxWidth: .infinity ,alignment: .leading)
                         .lineLimit(1)
                 }.padding(.top, 45)
