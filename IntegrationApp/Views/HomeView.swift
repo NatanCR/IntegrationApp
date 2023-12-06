@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     @Environment (\.screenSize) var screenSize
     @StateObject var objectVM = APIRequestVM()
+    @State var showProgressLoading: Bool = true
     
     var body: some View {
         NavigationStack {
@@ -60,7 +61,7 @@ struct HomeView: View {
                                     Image(.imagemEventos)
                                         .resizable()
                                         .scaledToFit()
-                                }
+                                }                                
                             }
                         }
                     }
@@ -73,9 +74,10 @@ struct HomeView: View {
                     await objectVM.fetchCurrentEventData()
                 }
             }
+            
             .onAppear {
                 
-//                let newEvent = Event(id: "Integration Dezembro",eventName: "Integration Dezembro", eventDate: "11/12/2023", eventMembers: [], quiz: [], finance: [], activeEvent: true, task: [], financeValidation: FinanceAnswer(id: "financeQuestion",title: "Vai participar financeiramente?", collaborators: []))
+                //                let newEvent = Event(id: "Integration Dezembro",eventName: "Integration Dezembro", eventDate: "11/12/2023", eventMembers: [], quiz: [], finance: [], activeEvent: true, task: [], financeValidation: FinanceAnswer(id: "financeQuestion",title: "Vai participar financeiramente?", collaborators: []))
                 
                 //                    let newCurrentEvent = CurrentEvent(currentEvent: newEvent)
                 
@@ -91,13 +93,13 @@ struct HomeView: View {
                 //
                 //                                    let newFinance = Finance(id: "Compra geral", title: "Compra geral", deadline: "28/09/2023", totalValue: 230.00, valuePerMembers: 23.89, valuePayed: 150.00, whoPayed: [])
                 //
-//                let member = Member(id: "Joao", name: "Joao", financeMember: true, icon: "😁")
+                //                let member = Member(id: "Joao", name: "Joao", financeMember: true, icon: "😁")
                 //
                 //                    let newTaskMember = NewTaskMember(member: member, id: newTask.id)
                 //
                 //                    let addVote = AddQuizVote(id: newQuiz.id, optionId: quizAnswer.optionId)
                 
-//                let newFinanceValidationMember = NewValidationMember(id: newEvent.financeValidation?.id, member: member)
+                //                let newFinanceValidationMember = NewValidationMember(id: newEvent.financeValidation?.id, member: member)
                 
                 
                 // objectVM.updateEvent(eventData: newEvent)
@@ -106,13 +108,13 @@ struct HomeView: View {
                 //                objectVM.createUserTable()
                 //                objectVM.addNewUserToUserTable(newUser: newUser)
                 //                objectVM.updateWalletValue(wallet: Wallet(id: "Wallet", value: 2.0))
-//                                                objectVM.addEventMember(newMember: member)
+                //                                                objectVM.addEventMember(newMember: member)
                 //                objectVM.createQuiz(newQuiz: newQuiz)
                 //                objectVM.createTask(newTask: newTask)
                 //                                    objectVM.createFinance(newFinance: newFinance)
                 //                objectVM.addTaskMember(newMember: newTaskMember)
                 //                objectVM.addQuizVote(quizForAdd: addVote)
-//                                                    objectVM.addMemberToFinanceValidation(newMember: newFinanceValidationMember)
+                //                                                    objectVM.addMemberToFinanceValidation(newMember: newFinanceValidationMember)
             }
             .navigationTitle("Integration App")
             .toolbar {

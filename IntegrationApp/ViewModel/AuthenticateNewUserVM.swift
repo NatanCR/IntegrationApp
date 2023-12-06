@@ -20,7 +20,7 @@ class AuthenticateNewUserVM: ObservableObject {
     @Published var passwordConfirmation = ""
     
     func registerUser() {
-        let url = URL(string: "http://127.0.0.1:5000/register?email=\(email)&password=\(password)")!
+        let url = URL(string: "https://python-api-henna-pi.vercel.app/register?email=\(email)&password=\(password)")!
         print("url do usuario \(url)")
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let error = error {
@@ -35,7 +35,7 @@ class AuthenticateNewUserVM: ObservableObject {
     }
     //diminuir essa func
     func loginUser(email: String, password: String) {
-        guard let url = URL(string: "http://127.0.0.1:5001/login") else {
+        guard let url = URL(string: "https://python-api-henna-pi.vercel.app/login") else {
             print("Não foi possível encontrar a URL")
             return
         }

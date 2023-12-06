@@ -79,7 +79,7 @@ struct SheetCreateFinance: View {
             
             .onDisappear {
                 Task {
-                    await objectVM.fetchAllEventsTableData()
+//                    await objectVM.fetchAllEventsTableData()
                     await objectVM.fetchCurrentEventData()
                 }
             }
