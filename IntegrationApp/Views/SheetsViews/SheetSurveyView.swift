@@ -93,6 +93,9 @@ struct SheetSurveyView: View {
                                 .frame(height: 55)
                             }
                         }
+                        // Estado para armazenar as opções da enquete
+                        //                    @State private var options: [QuizAnswer] = []
+                        //                        SurveyResultsView(options: $options)
                     }
                 }
                 

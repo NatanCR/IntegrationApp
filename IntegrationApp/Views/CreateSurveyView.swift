@@ -10,10 +10,7 @@ import SwiftUI
 struct CreateSurveyView: View {
     //    @State var title: String = ""
     @State private var showingResults = false
-    
-    //    // Estado para armazenar as opções da enquete
-    @State private var options: [QuizAnswer] = []
-    
+        
     var cornerRadius: CGFloat = 15
     @ObservedObject var objectVM: APIRequestVM
     
@@ -39,8 +36,6 @@ struct CreateSurveyView: View {
             } else {
                 // Botão para mostrar os resultados da enquete
             }
-            
-            SurveyResultsView(options: $options)
         }
         .padding()
     }
