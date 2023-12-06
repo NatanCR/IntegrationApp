@@ -9,7 +9,6 @@ import SwiftUI
 
 struct SheetSurveyView: View {
     @State var title: String = ""
-    @State private var showingResults = false
     @State var selectedDate = Date()
     // Estado para armazenar uma nova opção de enquete
     @State private var newOption = ""
@@ -28,6 +27,8 @@ struct SheetSurveyView: View {
     // Arrays para as opções dos segmentos de controle
     @State private var eventsProperty1 = ["Atividades", "Financeiro"]
     @State private var eventsProperty2 = ["Única", "Múltipla"]
+    
+    @Environment(\.dismiss) var dismiss
     
     var cornerRadius: CGFloat = 15
     
@@ -116,10 +117,10 @@ struct SheetSurveyView: View {
                 .navigationBarTitle("Criar Enquete", displayMode: .inline)
                 .navigationBarItems(
                     leading: Button("Cancelar") {
-                        showingResults = false
+                        dismiss()
                     },
                     trailing: Button("Criar") {
-                        showingResults = false
+                        dismiss()
                     }
                 )
         }
