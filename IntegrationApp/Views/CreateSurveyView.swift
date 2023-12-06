@@ -17,7 +17,7 @@ struct CreateSurveyView: View {
     @Environment (\.screenSize) var screenSize
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
+        VStack(alignment: .leading) {
             if objectVM.currentEvent.currentEvent?.quiz?.count == 0 {
                 VStack(alignment: .center) {
                     Text("Nenhuma enquete criada...")
@@ -27,16 +27,15 @@ struct CreateSurveyView: View {
                         .resizable()
                         .scaledToFit()
                 }
-                Spacer()
                 HStack {
                     Spacer()
                     CreateEventButton(view: SheetSurveyView())
                         .padding(.trailing, 10)
                 }
+                .padding(.top, 65)
             } else {
                 // Botão para mostrar os resultados da enquete
             }
         }
-        .padding()
     }
 }
