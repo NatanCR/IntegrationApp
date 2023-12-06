@@ -17,6 +17,7 @@
 		0526886D2B06B33F0076F503 /* CreateSurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0526886C2B06B33F0076F503 /* CreateSurveyView.swift */; };
 		0526886F2B07E7A80076F503 /* ProgressBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0526886E2B07E7A80076F503 /* ProgressBarComponent.swift */; };
 		0562B8822B1FA1B300B27943 /* SurveyResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0562B8812B1FA1B300B27943 /* SurveyResultsView.swift */; };
+		0562B8842B20073B00B27943 /* SheetSurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0562B8832B20073B00B27943 /* SheetSurveyView.swift */; };
 		056F86C42B0291E700CF5334 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056F86C32B0291E700CF5334 /* LoginView.swift */; };
 		056F86C62B029C4800CF5334 /* IdentityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056F86C52B029C4700CF5334 /* IdentityView.swift */; };
 		056F86C82B02BF1E00CF5334 /* JoiningGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056F86C72B02BF1E00CF5334 /* JoiningGroupView.swift */; };
@@ -117,6 +118,7 @@
 		0526886C2B06B33F0076F503 /* CreateSurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSurveyView.swift; sourceTree = "<group>"; };
 		0526886E2B07E7A80076F503 /* ProgressBarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarComponent.swift; sourceTree = "<group>"; };
 		0562B8812B1FA1B300B27943 /* SurveyResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyResultsView.swift; sourceTree = "<group>"; };
+		0562B8832B20073B00B27943 /* SheetSurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetSurveyView.swift; sourceTree = "<group>"; };
 		056F86C32B0291E700CF5334 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		056F86C52B029C4700CF5334 /* IdentityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityView.swift; sourceTree = "<group>"; };
 		056F86C72B02BF1E00CF5334 /* JoiningGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoiningGroupView.swift; sourceTree = "<group>"; };
@@ -373,6 +375,7 @@
 			children = (
 				052486D02AF96E1F004E1692 /* SheetCreateEvent.swift */,
 				D19757F42B0FE393004C7954 /* SheetCreateFinance.swift */,
+				0562B8832B20073B00B27943 /* SheetSurveyView.swift */,
 			);
 			path = SheetsViews;
 			sourceTree = "<group>";
@@ -605,6 +608,7 @@
 				0526886F2B07E7A80076F503 /* ProgressBarComponent.swift in Sources */,
 				052486CF2AF96DEE004E1692 /* CreateEventButton.swift in Sources */,
 				0526886B2B06B3020076F503 /* SurveyComponent.swift in Sources */,
+				0562B8842B20073B00B27943 /* SheetSurveyView.swift in Sources */,
 				052486CD2AF96D8E004E1692 /* DatePickerComponent.swift in Sources */,
 				D11D6D502B17B39600A3931C /* AddQuizVote.swift in Sources */,
 				D19757F32B0FD36D004C7954 /* GridIconComponent.swift in Sources */,
