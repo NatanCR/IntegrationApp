@@ -19,7 +19,7 @@ struct ApresentationView: View {
                     .font(.title)
                     .foregroundColor(.segmentedControlSelected)
                     .padding(5)
-                Text(" \"Nome do APP\" é um aplicativo direcionado \n aos alunos da Apple Developer Academy | \n Senac!")
+                Text("Integration é um aplicativo direcionado \n aos alunos da Apple Developer Academy | \n Senac!")
                     .foregroundColor(.segmentedControlSelected)
                 Spacer()
                 ColaborateComponent(title: "Próximo", action: {
