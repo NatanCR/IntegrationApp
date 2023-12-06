@@ -30,14 +30,26 @@ struct CreateSurveyView: View {
     @State private var eventsProperty2 = ["Única", "Múltipla"]
 
     var cornerRadius: CGFloat = 15
+    @ObservedObject var objectVM: APIRequestVM
 
     @Environment (\.screenSize) var screenSize
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            // Botão para mostrar os resultados da enquete
-            Button("Show Results") {
-                showingResults.toggle()
+            if objectVM.currentEvent.currentEvent?.quiz?.count == 0 {
+                VStack(alignment: .center) {
+                    Text("Nenhuma enquete criada...")
+                        .font(.custom("Poppins-Regular", size: 15))
+                        .foregroundStyle(Color.blueText)
+                    Image(.imagemEnquete)
+                        .resizable()
+                        .scaledToFit()
+                }
+            } else {
+                // Botão para mostrar os resultados da enquete
+                Button("Show Results") {
+                    showingResults.toggle()
+                }
             }
             
             SurveyResultsView(options: $options)

@@ -16,13 +16,13 @@ struct ScrollViewComponent: View {
                 //Enquete criada
                 switch selection {
                 case "Tarefa":
-                    TaskSubview()
+                    TaskSubview(objectVM: objectVM)
                 case "Enquetes":
-                    CreateSurveyView()
+                    CreateSurveyView(objectVM: objectVM)
                 case "Financeiro":
                     FinanceSubview(objectVM: objectVM)
                 default:
-                    TaskSubview()
+                    TaskSubview(objectVM: objectVM)
                 }
                 
             }

@@ -8,11 +8,22 @@
 import SwiftUI
 
 struct TaskSubview: View {
+    @ObservedObject var objectVM: APIRequestVM
+    
     var body: some View {
-        ZStack {
-            //Color(.systemCyan)
-            Text("TASK Subview")
-            RectangleBoxComponent()
+        VStack {
+//            if objectVM.currentEvent.currentEvent?.task?.count == 0 {
+//                VStack(alignment: .center) {
+//                    Text("Nenhuma enquete criada...")
+//                        .font(.custom("Poppins-Regular", size: 15))
+//                        .foregroundStyle(Color.blueText)
+//                    Image(.imagemEnquete)
+//                        .resizable()
+//                        .scaledToFit()
+//                }
+//            } else {
+                RectangleBoxComponent()
+//            }
         }
         .padding(.leading, 20)
         .padding(.trailing, 20)
@@ -20,6 +31,6 @@ struct TaskSubview: View {
     }
 }
 
-#Preview {
-    TaskSubview()
-}
+//#Preview {
+//    TaskSubview()
+//}

@@ -15,6 +15,12 @@ struct EventView: View {
         VStack {
             SegControlComponent(objectVM: objectVM)
         }
+        .onAppear{
+            Task {
+                await objectVM.fetchAllEventsTableData()
+                await objectVM.fetchCurrentEventData()
+            }
+        }
         .navigationTitle("\(objectVM.currentEvent.currentEvent?.eventName ?? "Integration")")
         .navigationBarTitleDisplayMode(.inline)
         .toolbarBackground(

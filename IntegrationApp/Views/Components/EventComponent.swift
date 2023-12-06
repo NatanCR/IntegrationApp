@@ -10,7 +10,7 @@ import SwiftUI
 struct EventComponent: View {
     var eventTitle: String
     var eventDate: String
-//    var members: [Member]
+    @ObservedObject var objectVM: APIRequestVM
     
     var body: some View {
         ZStack(alignment: .leading) {
@@ -21,17 +21,27 @@ struct EventComponent: View {
             Text(eventTitle.prefix(15))
                 .offset(x: 80)
                 .offset(y: -35)
-                .foregroundColor(.black)
+                .foregroundStyle(Color.titleEventCard)
                 .font(.headline)
-            Text("Natan, Rebeca e Thiago")
+//            HStack {
+//                ForEach(objectVM.currentEvent.currentEvent?.eventMembers ?? [], id: \.self) { name in
+//                    Text(name?.name ?? "")
+//                        .offset(x: 80)
+//                        .offset(y: -10)
+//                        .foregroundColor(.black)
+//                        .font(.callout)
+//                }
+//            }
+            Text("Rebeca, Natan, Gui...")
                 .offset(x: 80)
                 .offset(y: -10)
-                .foregroundColor(.black)
+                .foregroundStyle(Color.nameMembers)
                 .font(.callout)
+            
             Text(eventDate)
                 .offset(x: 250)
                 .offset(y: -35)
-                .foregroundColor(.black)
+                .foregroundStyle(Color.nameMembers)
                 .font(.headline)
             IconComponent(iconName: "CheckBoxFill")
                 .offset(x: 10)

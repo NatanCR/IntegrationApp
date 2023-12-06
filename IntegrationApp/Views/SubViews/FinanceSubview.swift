@@ -25,7 +25,6 @@ struct FinanceSubview: View {
                             .resizable()
                             .scaledToFit()
                     }
-                    
                 }
             } else {
                 VStack {

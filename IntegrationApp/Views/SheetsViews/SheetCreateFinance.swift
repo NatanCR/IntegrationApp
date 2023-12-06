@@ -77,6 +77,13 @@ struct SheetCreateFinance: View {
                 self.totalCollaborators = DataProcessor.shared.calculateMembersCollaborators(members: self.objectVM.currentEvent.currentEvent?.financeValidation?.collaborators ?? [])
             }
             
+            .onDisappear {
+                Task {
+                    await objectVM.fetchAllEventsTableData()
+                    await objectVM.fetchCurrentEventData()
+                }
+            }
+            
             Spacer()
             .navigationBarTitle("Criar Débito", displayMode: .inline)
             .navigationBarItems(
